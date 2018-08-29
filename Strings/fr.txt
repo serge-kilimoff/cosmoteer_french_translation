@@ -71,29 +71,85 @@ LobbyScreen
     Host = "Héberger une partie"
     HostTip = "Créer une nouvelle partie que d'autres joueurs peuvent rejoindre. Vous pourrez modifier les réglages de la partie."
     Join = "Rejoindre une partie"
-    JoinTip = "Rejoindre la partie sélectionnée hébergée par un autre joueur."
-    LAN = "Réseau Local"
-    DirectConnect = "Se connecter par I.P."
+    JoinTip = "Rejoindre la partie sélectionnée, hébergée par un autre joueur."
+    Online = "En ligne"
+    LAN = "Réseau local (L.A.N.)"
+    DirectConnect = "Connexion via I.P."
     DirectConnectTip = "Se connecter à une partie hébergée par un autre joueur en saisissant son adresse I.P. publique."
-    DirectConnectMsg = "Entrez l'adresse I.P. publique de l'ordinateur hébergeant la partie."
-    Joining = "Vous rejoignez la partie..."
-    TimedOut = "La requête a expiré."
-    Searching = "Recherche de parties sur votre réseau local..."
+    DirectConnectMsg = "Saisissez l'adresse I.P. publique de l'ordinateur hébergeant la partie."
+    ConnectingToServerFmt = "Connexion au serveur '{0}'…"
+    ServerConnectionTimedOut = "La connexion au serveur a expirée."
+    ServerConnectionDenied = "Connexion au serveur refusée."
+    EnterPassword = "Cette partie nécessite un mot de passe : "
+    Joining = "Vous rejoignez la partie…"
+    TimedOut = "La requête a expirée."
+    SearchingOnlineFmt = "Recherche de parties sur le serveur '{0}'…"
+    SearchingLan = "Recherche de parties sur votre réseau local…"
     Incompatible = "<bad>INCOMPATIBLE</bad>"
-    HostMods = "Mods que l'hôte utilise mais pas vous:"
-    YourMods = "Mods que vous utilisez mais pas l'hôte:"
-    PlayerName = "Pseudo: "
+    Full = "<bad>PLEIN</bad>"
+    InProgress = "<bad>EN COURS</bad>"
+    Closed = "<bad>FERMÉ</bad>"
+    PlayerName = "Pseudonyme : "
+    Server = "Serveur : "
+    AddCustomServer = "Ajouter un serveur personnalisé"
+    EditCustomServer = "Modifier ce serveur"
+    RemoveCustomServer = "Supprimer ce serveur"
+    ConfirmRemoveCustomServerFmt = "Êtes-vous sûr de vouloir supprimer '{0}' de la liste des serveurs personnalisés ?"
     PlayersFmt = "{0}/{1}"
-    GameFullTip = "La partie est pleine."
+    Mute = "Mettre en sourdine"
+    MuteTip = "Si coché, vous ne verrez plus de messages de tchat envoyés par ce joueur."
+    Ban = "Bannir de mes parties"
+    BanTip = "Si coché, ce joueur ne sera plus en mesure de rejoindre une partie que vous hébergez."
+    LatencyFmt = "{0} ms"
+    PasswordTip = "Mot de passe requis"
 
-    JoinDenyReason
+    GameInfo
     {
-        GameNotRunning = "Cet hôte n'est pas en partie."
-        GameFull = "Cette partie est pleine pour l'instant."
-        VersionIncompatible = "Votre version de Cosmoteer n'est pas la même que celle de l'hôte. Tous les joueurs doivent utiliser la même version de Cosmoteer."
-        DataIncompatible = "Les fichiers de votre jeu sont incompatibles avec ceux du jeu de l'hôte. Ceci peut être dû aux mods."
-        OSIncompatible = "Votre système d'exploitation n'est pas compatible avec celui de l'hôte. Cette erreur se produit fréquemment lorsque le système d'exploitation de l'hôte est un 32-bits mais le vôtre un 64-bits ou l'inverse."
+        InProgress = "<bad>PARTIE EN COURS</bad>"
+        Incompatible = "<bad>INCOMPATIBLE</bad>"
+        Closed = "<bad>LA PARTIE EST CLOSE</bad>"
+        Full = "<bad>LES PARTIES SONT PLEINES…</bad>"
+        GameModeFmt = "<b>Mode de jeu :</b> <good>{0}</good>"
+        HostFmt = "<b>Hôte :</b> {0}"
+        PlayersFmt = "<b>Joueurs :</b> {0}/{1}"
+        PasswordYes = "<b>Nécessite un mot de passe :</b> <bad>OUI</bad>"
+        PasswordNo = "<b>Nécessite un mot de passe :</b> <bad>NON</bad>"
+        HostMods = "Mods que l'hôte utilise mais pas vous : "
+        YourMods = "Mods que vous utilisez mais pas l'hôte : "
+        SettingFmt = "<b>{0} :</b> {1}"
+        SettingYes = "OUI"
+        SettingNo = "NON"
+    }
+
+    ServerJoinDenyReason
+    {
+        ServerNotRunning = "Le serveur n'accepte aucune connexion."
+        VersionIncompatible = "Votre version de Cosmoteer n'est pas compatible avec la version du serveur.\nVous devez jouer avec une version compatible pour pouvoir vous connecter."
+        IncorrectPassword = "Mot de passe incorrect."
+        ServerFull = "Le serveur est complet et n'accepte aucun joueur supplémentaire."
+        Banned = "Vous avez été bannis de ce serveur."
+    }
+
+    GameJoinDenyReason
+    {
+        GameNotRunning = "Cet hôte n'a pas de partie en cours."
+        GameClosed = "L'hôte a fermé la partie afin qu'aucun autre joueur de puisse y participer."
+        GameFull = "Cette partie est actuellement complète."
+        VersionIncompatible = "Votre version de Cosmoteer n'est pas la même que la version de l'hôte. Tous les joueurs doivent utiliser la même version de Cosmoteer."
+        DataIncompatible = "Vos données sont incompatible avec les données de l'hôte. Cela peut être causé par des mods."
+        OSIncompatible = "Votre système d'exploitation (OS) est incompatible avec l'OS de l'hôte. Cela se produit généralement quand l'OS de l'hôte est en 32bits et que votre OS est en 64bits (ou l'inverse)."
         ModsIncompatible = "Vous et l'hôte utilisez des mods incompatibles."
+        IncorrectPassword = "Mot de passe incorrect."
+        Banned = "L'hôte vous a bannis de ses parties."
+        Unknown = "Impossible de rejoindre la partie, raison inconnue."
+    }
+
+    CustomServer
+    {
+        Nickname = "Nom :"
+        Address = "Adresse IP ou hostname :"
+        Port = "Port (facultatif) :"
+        Password = "Mot de passe (facultatif) :"
     }
 }
 
