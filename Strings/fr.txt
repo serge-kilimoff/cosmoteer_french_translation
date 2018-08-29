@@ -55,7 +55,7 @@ TitleScreen
 
 NewGame
 {
-    StartNewGame = "Commencer une nouvelle partie"
+    StartNewGame = "Nouvelle partie"
 }
 
 LobbyScreen
