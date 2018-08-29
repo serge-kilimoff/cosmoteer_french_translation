@@ -1,5 +1,4 @@
-Traduction française pour Cosmoteer
-###################################
+# Traduction française pour Cosmoteer
 
 
 Installation
@@ -14,6 +13,8 @@ Pour le futur
 
 Je corrige actuellement les petites erreurs dans la traduction.
 Je m'attelle ensuite à la traduction des choses manquantes.
+
+Le travail en cours peut être vu sur la branche `nouvelles_traductions`.
 
 
 Historique
