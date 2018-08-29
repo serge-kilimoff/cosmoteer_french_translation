@@ -230,6 +230,19 @@ GameLaunchFlow
     ClientStarting = &HostStarting
 }
 
+GameResyncFlow
+{
+    HostSaving = "Partie désynchronisée, resynchonisation…\n(Sauvegarde de l'état de la partie)"
+    HostSending = "Partie désynchronisée, resynchonisation…\n(Envoi de l'état de la partie)"
+    HostInitializing = "Partie désynchronisée, resynchonisation…\n(Initialisation)"
+    HostWaiting = "Partie désynchronisée, resynchonisation…\n(En attente des autres joueurs)"
+    HostResuming = "Reprise de la partie !"
+    ClientReceiving = "Partie désynchronisée, resynchonisation…\n(Récéption de l'état de la partie)"
+    ClientInitializing = &HostInitializing
+    ClientWaiting = &HostWaiting
+    ClientResuming = &HostResuming
+}
+
 ChatBox
 {
     Send = "Envoyer"
