@@ -220,14 +220,14 @@ GameSetupScreen
 
 GameLaunchFlow
 {
-    ServerInitializing = "Lancement de la partie...\n(Initializing)"
-    ServerSending = "Lancement de la partie...\n(Sending data)"
-    ServerWaiting = "Lancement de la partie...\n(Waiting for other players)"
-    ServerStarting = "Démarrage de la partie!"
-    ClientReceiving = "Lancement de la partie...\n(Receiving data)"
-    ClientInitializing = &ServerInitializing
-    ClientWaiting = &ServerWaiting
-    ClientStarting = &ServerStarting
+    HostInitializing = "Lancement de la partie…\n(Initialisation)"
+    HostSending = "Lancement de la partie…\n(Envoi des données)"
+    HostWaiting = "Lancement de la partie…\n(En attente des autres joueurs)"
+    HostStarting = "Démarrage de la partie !"
+    ClientReceiving = "Lancement de la partie…\n(Récéption des données)"
+    ClientInitializing = &HostInitializing
+    ClientWaiting = &HostWaiting
+    ClientStarting = &HostStarting
 }
 
 ChatBox
