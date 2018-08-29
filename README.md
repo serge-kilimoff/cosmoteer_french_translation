@@ -5,24 +5,19 @@ Installation
 ------------
 
 À installer dans C:\Program Files\Cosmoteer\Standard Mods\, en créant un sous-dossier `french_translation`.
-Activer ensuite dans le menu mod de Cosmoteer. Il y aura un avertissement de compatibilité, ne pas en tenir compte.
+Activer ensuite dans le menu mod de Cosmoteer.
 
 
-Pour le futur
+En cours
 -------------
 
-Je corrige actuellement les petites erreurs dans la traduction.
-Je m'attelle ensuite à la traduction des choses manquantes.
-
-Le travail en cours peut être vu sur la branche `nouvelles_traductions`.
+Je corrige actuellement les petites erreurs de la version précédente et la traduction des choses manquantes.
 
 
 Historique
 ----------
 
-Fichiers récupérés depuis le forum de Cosmoteer :
-    
-    https://forum.cosmoteer.net/d/3520-full-french-translation-traduction-fran-aise-compl-te-version-0-13-1
+Fichiers récupérés depuis le forum de Cosmoteer : https://forum.cosmoteer.net/d/3520-full-french-translation-traduction-fran-aise-compl-te-version-0-13-1
 
 J'ai utilisé les outils suivants pour que la traduction soit compatible avec la version 0.14.3 de Cosmoteer.
     
