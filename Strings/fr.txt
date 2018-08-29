@@ -58,6 +58,14 @@ NewGame
     StartNewGame = "Nouvelle partie"
 }
 
+News
+{
+    TitleFmt = "Actualités ({0}/{1})"
+    Previous = "◀ Précédente"
+    Next = "Suivante ▶"
+    Close = "Fermer"
+}
+
 LobbyScreen
 {
     Host = "Héberger une partie"
