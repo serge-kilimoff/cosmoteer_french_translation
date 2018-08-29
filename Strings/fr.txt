@@ -255,26 +255,27 @@ ChatBox
 
 Multiplayer
 {
-    DefaultPlayerName = "Joueur sans nom"
-    DefaultGameName = "Partie  sans nom"
+    DefaultPlayerName = "Joueur anonyme"
+    DefaultGameName = "Partie sans nom"
     DefaultGameNameFmt = "Partie de {0}"
-    ShuttingDown = "Veuillez patienter..."
-    TieGame = "ENNUYANT!"
-    Victory = "VICTOIRE!"
-    Defeat = "DÉFAITE!"
-    ExitGame = "Quitter la partie"
-    TimeRemainingTip = "Temps restant avant que la partie se termine et que l'équipe avec le plus de force restantes soit déclarée vainqueur."
-    TeamStrengthTipFmt = "Force restante de l'équipe {0}. Ils seront vaincus une fois cette barre vide."
+    ShuttingDown = "Veuillez patienter…"
+    WinnerFmt = "{0} à gagné !"
+    TieGame = "MATCH NUL"
+    TimeRemainingTip = "Temps restant avant que la partie ne se termine et que l'équipe avec le plus de force restantes soit déclarée vainqueur."
+    TeamStrengthTipFmt = "Force restante du joueur ou de l'équipe. Ils seront vaincus une fois la barre vide."
     TeamFmt = "Équipe {0}"
     PlayerLeft = "{0} a quitté la partie."
-    NextGameCountdownFmt = "La prochaine partie commence dans {0} secondes..."
+    NextGameCountdownFmt = "Prochaine partie dans {0} secondes…"
     AddressAlreadyInUseFmt = "Un autre programme utilise déjà le port UDP {0} et doit être fermé avant que vous puissiez jouer en multijoueur."
+    ErrorInitializingFmt = "Erreur lors de l'initialisation du multi : {0}"
+    Forfeit = "Déclarer forfait"
+    ForfeitConfirm = "Étes-vous sûr de vouloir déclarer forfait ?"
 
     GameEndReason
     {
         Deliberate = "L'hôte a mis fin à la partie."
         ConnectionLost = "Connexion perdue"
-        OutOfSync = "Partie désynchronisée!"
+        ServerDisconnected = "Connexion perdue au serveur de la partie."
     }
 }
 
