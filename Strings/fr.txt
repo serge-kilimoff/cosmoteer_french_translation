@@ -6,21 +6,24 @@ Misc
 {
 	Okay = "Confirmer"
 	Cancel = "Annuler"
+    Apply = "Appliquer"
 	Yes = "Oui"
 	No = "Non"
-	MenuBack = "Retour"
-	ScreenshotSavedFmt = "Capture d'écran sauvegardée à l'emplacement<b>{0}</b>"
+	MenuBack = "◀ Retour"
+	ScreenshotSavedFmt = "Capture d'écran sauvegardée à l'emplacement <b>{0}</b>"
 	ScreenshotOpenFolder = "Ouvrir le dossier"
-	DefaultShipName = "Vaisseau sans nom"
-	SavedGameIncompatible = "Cette sauvegarde est incompatible avec cette version de Cosmoteer. Désolé!"
-	SavedShipIncompatible = "La sauvegarde de ce vaisseau est incompatible avec cette version de Cosmoteer. Désolé!"
-	SaveShipError = "Une erreur est survenue lors de la sauvegarde de ce vaisseau dans le fichier \"{0}\": {1}"
-	LoadShipError = "Ce fichier semble ne pas être une sauvegarde de vaisseau valide. Erreur: {0}"
-	SaveGameError = "Une erreur est survenue lors de la sauvegarde de cette partie dans le fichier: \"{0}\": {1}"
-	ShipClassIncompatible = "Classe de vaisseau incompatible."
-	NoBlueprints = "Le vaisseau n'a pas de plans."
-	GpuDriversOutOfDateFmt = "<bad><b>AVERTISSEMENT:</b></bad> Vos drivers graphiques datent de plus de <b>{0} mois</b>! Les drivers graphiques obsolètes sont connus pour causer des plantages en jouant à Cosmoteer. "\
-	                         "Il est <b>fortement recommandé</b> de mettre à jour vos drivers! (Cet avertissement peut être désactivé dans les réglages \"Divers\".)"
+	DefaultShipName = "Vaisseau anonyme"
+    SavedGameIncompatible = "Sauvegarde de partie incompatible avec cette version de Cosmoteer. Désolé !"
+    SavedShipIncompatible = "Sauvegarde de vaisseau incompatible avec cette version de Cosmoteer. Désolé !"
+    SaveShipError = "Erreur pendant la sauvegarde du vaisseau dans le fichier \"{0}\" : {1}"
+    LoadShipError = "Le fichier n'est pas un vaisseau compatible. Error: {0}"
+    SaveGameError = "Erreur pendant la sauvegarde de la partie dans le fichier \"{0}\": {1}"
+    ShipClassIncompatible = "Classe de vaisseau incompatible."
+    NoBlueprints = "Le vaisseau n'a pas de plans."
+    GpuDriversOutOfDateFmt = "<bad><b>AVERTISSEMENT:</b></bad> Vos drivers graphiques datent de plus de <b>{0} mois</b> ! Les vieux drivers graphiques peuvent provoquer des plantages en jouant à Cosmoteer. "\
+                             "Si vous rencontrez des plantages, mettez à jour vos drivers graphique, s'il vous plait (cet avertissement peut être désactivé dans les réglages \"Divers\")."
+    LoadingUncachedAssets = "Chargement des assets du jeu pour la première fois.\nCela peut prendre plus de temps que d'habitude."
+    OpenUrlConfirm = "Minimisera Cosmoteer et ouvrira une page dans votre navigateur internet."
 }
 
 TitleScreen
