@@ -281,14 +281,14 @@ Multiplayer
 
 LoadSaveGame
 {
-    TitleLoad = "Charger partie"
-    TitleSave = "Sauvegarder partie"
-    OkayLoad = "Charger"
-    OkaySave = "Sauvegarder"
-    OpenFolder = "Ouvrir dossier"
+    TitleLoad = "Charger une partie"
+    TitleSave = "Sauvegarder une partie"
+    OkayLoad = "Charger la partie"
+    OkaySave = "Sauvegarder la partie"
+    OpenFolder = "Ouvrir un dossier"
     Delete = "Supprimer"
-    ConfirmDeleteFmt = "Êtes-vous sûr de vouloir supprimer '{0}'?"
-    ConfirmOverwrite = "Écraser la sauvegarde existante?"
+    ConfirmDeleteFmt = "Étes-vous sûr de vouloir supprimer '{0}' ? Cela mettra le fichier à la corbeille."
+    ConfirmOverwrite = "Écraser la sauvegarde déjà existante ?"
 
     Manual = "Sauvegardes Manuelles"
     Auto = "Sauvegardes Automatiques"
