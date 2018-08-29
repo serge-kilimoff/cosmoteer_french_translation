@@ -245,7 +245,12 @@ GameResyncFlow
 
 ChatBox
 {
-    Send = "Envoyer"
+    Send = "Envoyez"
+    ToggleTeam = "Équipe"
+    ToggleTeamTip = "Si coché, vos messages ne seront envoyés qu'au membre de votre équipe.\n\nRaccourci : <btn id='Multiplayer.ToggleTeamChat'/>"
+    SendingTooFast = "Oulà, doucement malheureux ! Tu envois tes messages bien trop rapidement !"
+    ChatFmt = "<good>{0} : </good>{1}"
+    TeamChatFmt = "<good>{0} : </good><bad>(ÉQUIPE)</bad> {1}"
 }
 
 Multiplayer
