@@ -1413,7 +1413,6 @@ TeamVersusModeConfig : VersusModeConfig
     LockTeamsTip = "Si coché, les joueurs ne seront pas autorisés à changer d'équipe. Toutefois, l'hôte est autorisé à changer un joueur d'équipe."
     PerimeterDistance = "Le Cercle de la Mort"
     PerimeterDistanceTip = "Le rayon du cercle en dehors duquel les vaisseaux prendront rapidement des dommages."
-    ShrinkingPerimeter = " (\"Battle Royale\")"
     ShrinkingPerimeter = "Resserrement du Cercle de la Mort (\"Battle Royale\")"
     ShrinkingPerimeterTip = "Si coché, le Cercle de la Mort va continuellement se resserer."
 
@@ -1434,11 +1433,11 @@ TeamVersusModeConfig : VersusModeConfig
 
 FFAVersusModeConfig : VersusModeConfig
 {
-    Name = "Last Player Standing"
-    Description = "<b>Last Player Standing</b>\nAll players for themselves; the last surviving player wins!"
+    Name = "Il n'en restera qu'un !"
+    Description = "<b>Il n'en restera qu'un !</b>\nChaque joueur combat pour lui-même; le survivant ultime gagnera !"
 
-    Funds = "Credits Per Player"
-    FundsTip = "The total number of credits (₡) that each player has to spend on their entire fleet."
+    Funds = "Crédits par joueur"
+    FundsTip = "Le montant total de crédits (₡) que chaque joueur peut dépenser pour sa flotte."
 }
 
 MapSizes
