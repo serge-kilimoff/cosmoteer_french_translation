@@ -297,58 +297,58 @@ LoadSaveGame
 
 ShipLibrary
 {
-    TitleLoad = "Charger vaisseau"
-    TitleSave = "Sauvegarder vaisseau"
-    TitleBuy = "Acheter vaisseau"
-    TitlePlaytest = "Galerie de vaisseaux"
-    TitleOrganize = "Galerie de vaisseaux"
+    TitleLoad = "Charger un vaisseau"
+    TitleSave = "Sauvegarder le vaisseau"
+    TitleBuy = "Acheter un vaisseau"
+    TitlePlaytest = "Bibliothèque de vaisseaux"
+    TitleOrganize = "Bibliothèque de vaisseaux"
 
     SmallIcons = "Petites icônes"
     LargeIcons = "Grandes icônes"
 
-    OkayLoad = "Charger vaisseau"
-    OkaySave = "Sauvegarder vaisseau"
-    OkayBuy = "Acheter"
+    OkayLoad = "Charger le vaisseau"
+    OkaySave = "Sauvegarder le vaisseau"
+    OkayBuy = "Acheter le vaisseau"
     OkayPlaytest = "Tester"
     CrewCountFmt = "{0} membres d'équipage"
-    ConfirmOverwrite = "Écraser le vaisseau existant?"
+    ConfirmOverwrite = "Écraser le vaisseau existant ?"
 
     RenameShip = "Renommer"
-    RenameShipMsg = "Entrez un nouveau nom pour ce vaisseau:"
+    RenameShipMsg = "Entrez un nouveau nom pour ce vaisseau :"
     DeleteShip = "Supprimer"
-    ConfirmDeleteShipFmt = "Êtes-vous sûr de vouloir supprimer '{0}'?"
+    ConfirmDeleteShipFmt = "Êtes-vous sûr de vouloir supprimer '{0}' ?"
 
     NewFolder = "Nouveau dossier"
     NewFolderMsg = "Entrez un nom pour le dossier:"
-    RenameFolder = "Renommer dossier"
+    RenameFolder = "Renommer le dossier"
     RenameFolderMsg = "Entrez un nouveau nom pour le dossier:"
-    DeleteFolder = "Supprimer dossier"
-    DeleteFolderFmt = "Êtes-vous sûr de vouloir supprimer: <b>{0}</b>?"
+    DeleteFolder = "Supprimer le dossier"
+    DeleteFolderFmt = "Êtes-vous sûr de vouloir supprimer le dossier <b>{0}</b>?"
     OpenFolder = "Ouvrir le dossier"
 
-    Organize = "Trier"
+    Organize = "Organiser"
 
-    ImportError = "Il y a eu une erreur lors du chargement de ce vaisseau: {0}"
-    ImportCustomName = "Veuillez entrez un nom pour ce vaisseau:"
+    ImportError = "Erreur lors du chargement de ce vaisseau: {0}"
+    ImportCustomName = "Veuillez entrez un nom pour ce vaisseau :"
 
     SortTip = "Détermine l'ordre dans lequel les vaisseaux sont triés."
-    SearchTip = "Filtrez les vaisseaux ci-dessous pour montrer seulement ceux dont le nom correspond au texte que vous tapez ici."
+    SearchTip = "Filtrez les vaisseaux ci-dessous pour montrer seulement ceux dont le nom correspond au texte saisi ici."
 
     SortMode
     {
-        Name = "Trier par: Nom"
-        NameTip = "Trie les vaisseaux dans l'ordre alphabétique par nom."
-        CostLow = "Trier par: Prix (Ascendant)"
+        Name = "Trier par : Nom"
+        NameTip = "Trie les vaisseaux par ordre alphabétique des noms."
+        CostLow = "Trier par : Prix (Ascendant)"
         CostLowTip = "Trie les vaisseaux du moins cher au plus cher."
-        CostHigh = "Trier par: Prix (Descendant)"
+        CostHigh = "Trier par : Prix (Descendant)"
         CostHighTip = "Trie les vaisseaux du plus cher au moins cher."
-        CrewLeast = "Trier par: Membres d'équipage (Ascendant)"
+        CrewLeast = "Trier par : Membres d'équipage (Ascendant)"
         CrewLeastTip = "Trie les vaisseaux du moins peuplé au plus peuplé."
         CrewMost = "Trier par: Membres d'équipage (Descendant)"
         CrewMostTip = "Trie les vaisseaux du plus peuplé au moins peuplé."
-        Newest = "Trier par: Nouveauté"
+        Newest = "Trier par : Nouveauté"
         NewestTip = "Trie les vaisseaux du plus récemment modifié au plus anciennement modifié."
-        Oldest = "Trier par: Ancienneté"
+        Oldest = "Trier par : Ancienneté"
         OldestTip = "Trie les vaisseaux du plus anciennement modifié au plus récemment modifié."
     }
 }
