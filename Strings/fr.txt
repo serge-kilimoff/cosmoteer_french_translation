@@ -1213,22 +1213,22 @@ BountyMode
     SellShip = "Vendre"
     SellShipTip = "Vend ce vaisseau, vous donnant <money>₡ crédits</money> en retour."
     NoSellCombat = "Impossible de de vendre un vaisseau durant un combat."
-    SellConfirmFmt = "Êtes-vous sûr de vouloir vendre le <u>{0}</u>?"
+    SellConfirmFmt = "Êtes-vous sûr de vouloir vendre le <u>{0}</u> ?"
     Sell = "VENDRE"
     NotInSight = "<bad>Doit être en vue de vos vaisseaux!</bad>"
-    EnemyTooClose = "<bad>Trop près de l'ennemi!</bad>"
+    EnemyTooClose = "<bad>Trop près de l'ennemi !</bad>"
     BuyFuel = "Acheter"
-    BuyFuelDialogFmt = "Acheter <b>{0}</b> pour {1}?"
+    BuyFuelDialogFmt = "Acheter <b>{0}</b> pour {1} ?"
     FuelDebtFmt = "Ravitailler vous coûterait <ins_money>{0}</ins_money> mais vous n'avez que {1}. "\
-                  "Vous pouvez vous endetter pour ravitailler, mais tant que vous serez endetté vous ne pourrez acheter aucun module pour votre vaisseau."
+                  "Vous pouvez vous endetter pour ravitailler, mais tant que vous serez endetté, vous ne pourrez acheter aucun module pour votre vaisseau."
     BuyShipIllegalClass = "Cette classe de vaisseau ne peut pas être achetée."
     BuyShipIllegalDesign = "Ce design de vaisseau est illégal et ne peut pas être acheté."
 
     MapNodeFlyOut
     {
-        FriendliesFmt = "<good>Alliés présents: <b>{0}x</b></good>"
-        EnemiesFmt = "Ennemis: <b>{0}x</b>"
-        EnemiesNone = "Ennemis: <b>Aucun</b>"
+        FriendliesFmt = "<good>Alliés présents : <b>{0}x</b></good>"
+        Enemies = "Difficulté : "
+        EnemiesNone = "Aucun enemi détecté"
     }
 
     ThreatLevels
