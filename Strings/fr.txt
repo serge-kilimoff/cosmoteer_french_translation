@@ -1485,14 +1485,14 @@ GameMenu
 Hud
 {
     Menu = "Menu"
-    MenuTip = "Mettre la partie en Pause et afficher le menu.\n\nRaccourci: <btn id='General.Cancel'/>"
+    MenuTip = "Mettre la partie en pause et afficher le menu.\n\nRaccourci : <btn id='General.Cancel'/>"
 
-    MapTip = "Afficher/cacher la carte de la galaxie."
+    MapTip = "Basculer la carte de la galaxie."
 
     Paused = "EN PAUSE"
-    PauseTip = "Pause\n\nRaccourci: <btn id='Game.PauseToggle'/>"
-    DecreaseSpeedTip = "Ralentir la vitesse du jeu\n\nRaccourci: <btn id='Game.DecreaseSpeed'/>"
-    IncreaseSpeedTip = "Augmenter la vitesse du jeu\n\nRaccourci: <btn id='Game.IncreaseSpeed'/>"
+    PauseTip = "Pause\n\nRaccourci : <btn id='Game.PauseToggle'/>"
+    DecreaseSpeedTip = "Ralentir la vitesse du jeu\n\nRaccourci : <btn id='Game.DecreaseSpeed'/>"
+    IncreaseSpeedTip = "Augmenter la vitesse du jeu\n\nRaccourci : <btn id='Game.IncreaseSpeed'/>"
     SpeedPaused = "--"
     SpeedQuarter = "¼"
     SpeedQuarterLong = "Très Lent (¼)"
@@ -1505,68 +1505,74 @@ Hud
     Speed4 = "4x"
     Speed4Long = "Très Rapide (4x)"
 
-    ClickToFocus = "Cliquez pour centrer la vue.\n\nRaccourci: <btn id='View.FocusSelected'/>"
+    ClickToFocus = "Cliquez pour centrer la vue.\n\nRaccourci : <btn id='View.FocusSelected'/>"
     ClickToSelect = "Cliquez pour sélectionner."
     ClickToRename = "Cliquez pour renommer ce vaisseau."
 
-    SelfDestruct = "Auto-Détruire"
+    SelfDestruct = "Auto-Destruction"
     SelfDestructTip = "Démarre la séquence d'auto-destruction."
-    ConfirmSelfDestruct = "Détruire le(s) vaisseau(x) sélectionné(s)? Cette action est irréversible!"
-    SelfDestructOkay = "DÉTRUIRE!!"
+    ConfirmSelfDestruct = "Détruire le(s) vaisseau(x) sélectionné(s) ? Cette action est irréversible !"
+    SelfDestructOkay = "DÉTRUIRE !!"
 
-    PartDestruct = "Auto-Détruire"
-    PartDestructTip = "Détruis le(s) module(s) sélectionné(s)."
-    ConfirmPartDestruct = "Détruire le(s) module(s) sélectionné(s)? Cette action est irréversible et pourrait causer des dommages collatéraux additionnels!"
-    PartDestructOkay = "DÉTRUIRE!!"
+    PartAutoFire = "Tir automatique"
+    PartAutoFireTip = "Si coché, l'arme sélectionnée fera feu continuellement même si elle n'a pas de cible.\n\nRaccourci : <btn id='Game.ToggleAutoFire'/>"
 
-    PartAutoFire = "Feu à volonté"
-    PartAutoFireTip = "Si cette option est cochée, l'arme sélectionnée fera feu continuellement même si elle n'a pas de cible."
+    BuildTip = "<b>Construire</b>\n\nModifier le design de vos vaisseaux.\n\nRaccourci : <btn id='Design.BuildOpen'/>"
+    PaintTip = "<b>Peindre</b>\n\nPeindre l'extérieur de votre vaisseau et appliquer des vignettes.\n\nRaccourci : <btn id='Design.PaintOpenClose'/>"
+    RepairTip = "<b>Réparations</b>\n\nRéparer les dégâts de vos vaisseaux.\n\nRaccourci : <btn id='Repair.OpenClose'/>  (Maintenez <btn id='Repair.SuppressRepair'/> pour accéder au menu Construire.)"
+    CrewTip = "<b>Équipage</b>\n\nGérer les effectifs de l'équipage de vos vaisseaux.\n\nRaccourci : <btn id='Crew.OpenClose'/>"
+    InteriorTip = "Basculer l'affichage de l'intérieur du vaisseau.\n\nRaccourci : <btn id='View.ToggleInteriors'/>"
+    CancelPartSelectTip = "Annuler le contrôle du module et retourner au contrôle du vaisseau.\n\nRaccourci : <btn id='General.Cancel'/>"
 
-    BuildTip = "<b>Construire</b>\n\nModifier le design de vos vaisseaux.\n\nRaccourci: <btn id='Design.BuildOpen'/>"
-    PaintTip = "<b>Peindre</b>\n\nPeindre l'extérieur de votre vaisseau et appliquer des vignettes.\n\nRaccourci: <btn id='Design.PaintOpenClose'/>"
-    RepairTip = "<b>Réparations</b>\n\nRéparer les dégâts de vos vaisseaux.\n\nRaccourci: <btn id='Repair.OpenClose'/>  (Maintenez <btn id='Repair.SuppressRepair'/> pour accéder au menu Construire.)"
-    CrewTip = "<b>Équipage</b>\n\nGérer les effectifs de l'équipage de vos vaisseaux.\n\nRaccourci: <btn id='Crew.OpenClose'/>"
-    InteriorTip = "Afficher/cacher les intérieurs de vaisseau.\n\nRaccourci: <btn id='View.ToggleInteriors'/>"
-    CancelPartSelectTip = "Annuler le contrôle du module et retourner au contrôle du vaisseau.\n\nRaccourci: <btn id='General.Cancel'/>"
-    CancelTargetTip = "Annuler le(s) cible(s) de l'armement.\n\nRaccourci: <btn id='Game.CancelWeaponTargets'/>"
-    FormationTip = "<b>Formations</b>"
+    MoveTip = "<b>Déplacement / Suivre</b>\n\nSe déplacer vers une position définie ou suivre un autre vaisseau.\n\nRaccourci : <btn id='Game.Move'/>"
+    ForceMoveTip = "<b>Mouvement forcé</b>\n\nDéplacement sans éviter aucun obstacle.\n\nRaccourci : <btn id='Game.ForceMove'/>"
+    RotateTip = "<b>Rotation</b>\n\nTourner le vaisseau sur place.\n\nRaccourci : <btn id='Game.Rotate'/>"
+    StrafeTip = "<b>Déplacement latéral</b>\n\nSe déplacer sans tourner.\n\nRaccourci : <btn id='Game.Strafe'/>"
+    AttackTip = "<b>Attaque</b>\n\nAttaquer un autre vaisseau, qu'il soit ennemi ou un des vôtres.\n\nRaccourci : <btn id='Game.Attack'/>"
+    FormationTip = "<b>Formations</b>\n\nVos vaisseaux dans la flotte se mettent en formation."
+    HaltTip = "<b>Stopper</b>\n\nAnnuler tous les autres ordres.\n\nRaccourci : <btn id='Game.Halt'/>"
+
+    TargetTip = "<b>Ciblage des armes</b>\n\nVise avec les armes sélectionnées, qu'il soit ennemi ou un des vôtres.\n\nRaccourci : <btn id='Game.TargetWeapon'/>"
+    CancelTargetTip = "Annuler le ciblage des armes.\n\nRaccourci : <btn id='Game.CancelWeaponTargets'/>"
 
     MoneyTip = "Crédits Intergalactiques "
-    FtlFuelTip = "Carburant hyperpropulsion"
+    FtlFuelTip = "Carburant pour saut supraluminique"
 
-    FtlGuiTitle = "Activation de l'hyperpropulsion..."
+    FtlGuiTitle = "Activation du moteur de saut supraluminique…"
     FtlStatusPercentFmt = "{0:0}%"
     FtlStatusReady = "<good>PRÊT</good>"
     FtlStatusCanceled = "<bad><s12>RESTANT</s12></bad>"
-    FtlStatusNoFtl = "<bad>PAS D'HYPERPROPULSION</bad>"
+    FtlStatusNoFtl = "<bad>PAS DE SAUT SUPRALUMINIQUE</bad>"
     FtlDoJumpFmt = "SAUTER<s6>\n\n</s6>{0}"
-    FtlDoJumpTip = "Tous les vaisseaux qui sont <good>PRÊTS</good> vont sauter vers le secteur choisi comme destination.\n\nRaccourci: <btn id='Game.DoFtlJump'/>"
+    FtlDoJumpTip = "Tous les vaisseaux qui sont <good>PRÊTS</good> vont sauter vers le secteur de destination.\n\nRaccourci : <btn id='Game.DoFtlJump'/>"
     FtlCancelJump = "Annuler"
-    FtlCancelJumpTip = "Tous les vaisseaux vont éteindre leur hyperpropulsion et le saut sera annulé.\n\nRaccourci: <btn id='Game.CancelFtlJump'/>"
-    FtlShipsNotReady = "Tous les vaisseaux ne sont pas prêts pour l'hyperpropulsion. Sauter quand même et laisser ces vaisseaux sur place?"
+    FtlCancelJumpTip = "Tous les vaisseaux vont éteindre leur moteur supraluminique et le saut sera annulé.\n\nRaccourci : <btn id='Game.CancelFtlJump'/>"
+    FtlShipsNotReady = "Tous les vaisseaux ne sont pas prêts pour le saut supraluminique. Sauter quand même et laisser ces vaisseaux sur place ?"
 
     SelectSingleShip = "Sélectionnez un seul vaisseau."
-    NoTargetsToCancel = "Aucune cible à annuler pour l'armement."
-    NoControlRoom = "Commandement impossible sans salle de contrôle."
+    SelectShip = "Sélectionnez au moins un vaisseau."
+    SelectMultipleShips = "Sélectionnez au moins deux vaisseaux."
+    NoCommandsToCancel = "Aucune commande à annuler."
+    NoTargetsToCancel = "Aucune ciblage à annuler pour l'armement."
     CantBuildNeedsRepair = "Impossible de construire lorsque votre vaisseau a besoin de réparations majeures."
     CantBuildInCombat = "Impossible de construire durant un combat."
     NoRepairsNeeded = "Aucune réparation nécessaire."
-    CantRepairInCombat = "Impossible de répare durant un combat."
+    CantRepairInCombat = "Impossible de réparer durant un combat."
 
-    ShipWeightFmt = "Masse: <b>{0:.0} Tonnes</b>"
+    ShipWeightFmt = "Masse : <b>{0:.0} tonnes</b>"
     ShipWeightTip = "Masse totale du vaisseau, indiquant sa taille approximative."
-    ShipCrewFmt = "Équipage: <b>{0} Âmes</b>"
+    ShipCrewFmt = "Équipage : <b>{0} âmes</b>"
     ShipCrewTip = "Nombre de membres d'équipage vivants à bord de ce vaisseau."
-    ShipValueFmt = "Valeur: <money><b>{0}</b></money>"
+    ShipValueFmt = "Valeur : <money><b>{0}</b></money>"
     ShipValueTip = "Valeur monétaire totale de ce vaisseau, telle que calculée selon son prix de construction et le recrutement de son équipage moins les réparations nécessaires."
     NoControlRoomAlert = "<bad>PAS DE SALLE DE CONTRÔLE</bad>"
     ControlRoomNotOperationalAlert = "<bad>SALLE DE CONTRÔLE\nNON OPÉRATIONNELLE</bad>"
 
-    RenameShip = "Renommer le Vaisseau"
-    RenameShipTip = "Changez le nom de votre vaisseau!"
-    RenameShipPrompt = "\"Comment devrions-nous le baptiser, capitaine?\""
+    RenameShip = "Renommer le vaisseau"
+    RenameShipTip = "Changez le nom de votre vaisseau !"
+    RenameShipPrompt = "\"Comment devrions-nous le baptiser, cap'taine ?\"" // Pensez à mettre des guillemets françaises
 
-    SaveShip = "Sauvegarder le design du vaisseau"
+    SaveShip = "Sauvegarder le design du vaisseau" // Toujours du mal avec le mot design, qui se rapproche d'une conception graphique en français
     SaveShipTip = "Sauvegarder les plans et les peintures du vaisseau dans un fichier pour pouvoir les charger plus tard."
 
     Screenshot = "Capture d'écran"
@@ -1577,7 +1583,7 @@ Hud
     ScreenshotInteriorTip = "Prendre une capture d'écran du pont intérieur du vaisseau et la sauvegarder dans un fichier."
     ScreenshotInteriorFilenameFmt = "{0} (Interior).png"
     ScreenshotBlueprints = "Plans"
-    ScreenshotBlueprintsTip = "Prendre une capture d'écran des plans du vaisseau et la sauvegarder dans un fichier."
+    ScreenshotBlueprintsTip = "Prendre une capture d'écran des plans du vaisseau et les sauvegarder dans un fichier."
     ScreenshotBlueprintsFilenameFmt = "{0} (Blueprints).png"
 
     DistFmt = "{0:0.00}km"
@@ -1590,11 +1596,18 @@ Hud
 
     FlightDirection = "Direction de vol"
 
+    FormationOrder = "Ordre de formation"
+    FormationOrderFmt = "#{0}"
+
     ResetDefaults = "Restaurer les valeurs d'attaque par défaut"
     ResetDefaultsTip = "Lorsque vous définissez manuellement la distance ou l'angle d'attaque, ils seront mémorisés la prochaine fois que vous donnerez un ordre d'attaque. "\
                        "Cette option réinitialisera la distance et l'angle d'attaque à leurs valeurs par défaut."
 
     PartHealthFmt = "{0} / {1}"
+
+    DisplayShips = "Affichage"
+    DisplaySelectedShips = "Du vaisseau sélectionné uniquement"
+    DisplayAllShips = "De tous les vaisseaux"
 }
 
 Formations
