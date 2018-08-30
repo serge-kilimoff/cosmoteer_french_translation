@@ -1362,6 +1362,84 @@ CreativeMode
     }
 }
 
+VersusModeConfig
+{
+    MaxPlayers = "Nombre de joueurs maximum"
+    MaxPlayersTip = "Le nombre maximum de joueurs pouvant rejoindre la partie, incluant l'hôte."
+    GameSpeed = "Vitesse de jeu"
+    GameSpeedTip = "La vitesse à laquelle se déroulera la bataille. Ne peut être changée une fois la bataille lancée."
+    MaxShips = "Vaisseaux par joueurs"
+    MaxShipsTip = "Le nombre maximum de vaisseaux que chaque joueur peut avoir dans sa flotte."
+    MaxShipValue = "Valeur maximale par vaisseau"
+    MaxShipValueTip = "Le crédit (₡) maximum autorisé par vaisseau."
+    ShipPreviewMode = "Aperçus des vaisseaux"
+    ShipPreviewModeTip = "Détermine si les joueurs peuvent voir les vaisseaux que les autres joueurs ont choisi avant que la partie ne commence."
+    TimeLimit = "Durée maximale"
+    TimeLimitTip = "La durée maximale de la partie avant que l'équipe avec la plus grande force restant ne soit déclarée vainqueur."
+    TimeLimitFmt = "{0} minutes"
+    TimeLimitNone = "Aucune"
+    VictoryCondition = "Condition de victoire"
+    VictoryConditionTip = "Détermine à partir de quel point une des équipes est déclarée vainqueur."
+    DestructionGoalFmt = "{0}% de destruction"
+    InitToMax = "Débute avec les vaisseaux à pleine puissance de feu et de munitions"
+    InitToMaxTip = "Si coché, les vaisseaux débute avec tous les systèmes pleinement chargés en puissance et munitions, prêt à la bataille. Si non coché, les vaisseaux devront produire et charger leurs munitions dès le début de la bataille."
+    FogOfWar = "Brouillard de guerre"
+    FogOfWarTip = "Les vaisseaux ont une ligne de vue limitée, au delà de laquelle les vaisseaux ennemis ne pourront pas être vus."
+    AllowObservers = "Autoriser les observateurs"
+    AllowObserversTip = "Si coché, les joueurs dans cette partie seront autorisés à observer la bataille, sans devoir choisir et commander un vaisseau."
+    AllowIllegalShips = "Autoriser les vaisseaux illégaux"
+    AllowIllegalShipsTip = "Si coché, les joueurs seront autorisés à utiliser des conceptions de vaisseaux qui sont autrement illégaux."
+
+    ShipPreviewModes
+    {
+        Off = "Désactivé"
+        Team = "Même équipe seulement"
+        All = "Tout le monde"
+    }
+}
+
+TeamVersusModeConfig : VersusModeConfig
+{
+    Name = "Team vs Team"
+    Description = "<b>Team vs Team</b>\nTwo teams of players battle head-to-head in a fight to the death!"
+
+    Funds = "Credits Per Team"
+    FundsTip = "The total number of credits (₡) that each team has to spend on its entire fleet."
+    FleetDistance = "Distance Between Teams"
+    FleetDistanceTip = "The distance between each team's fleet at the start of the game."
+    ShareFunds = "Share Team Credits"
+    ShareFundsTip = "If checked, the credits for each player on a team will be pooled together."
+    LockTeams = "Lock Teams"
+    LockTeamsTip = "If checked, then players will not be able to change what team they are on. The host will still be able to change the team for any player in the game."
+    PerimeterDistance = "Ring of Death"
+    PerimeterDistanceTip = "The radius of the circle outside of which ships will rapidly take damage."
+    ShrinkingPerimeter = "Shrinking Ring of Death (\"Battle Royale\")"
+    ShrinkingPerimeterTip = "If checked, the Ring of Death will gradually shrink over time."
+
+    PerimeterDistances
+    {
+        NearFmt = "Near ({0} meters)"
+        NormalFmt = "Normal ({0} meters)"
+        FarFmt = "Far ({0} meters)"
+    }
+
+    FleetDistances
+    {
+        ShortFmt = "Short ({0} meters)"
+        NormalFmt = "Normal ({0} meters)"
+        LongFmt = "Long ({0} meters)"
+    }
+}
+
+FFAVersusModeConfig : VersusModeConfig
+{
+    Name = "Last Player Standing"
+    Description = "<b>Last Player Standing</b>\nAll players for themselves; the last surviving player wins!"
+
+    Funds = "Credits Per Player"
+    FundsTip = "The total number of credits (₡) that each player has to spend on their entire fleet."
+}
+
 MapSizes
 {
     None = "Pas de Galaxie"
