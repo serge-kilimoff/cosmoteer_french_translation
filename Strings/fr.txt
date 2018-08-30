@@ -1818,6 +1818,56 @@ PaintBox
     NoDecalsCopied = "Aucune vignette copiée pour l'instant."
 }
 
+MirrorAxis
+{
+    Vertical = "Miroir : axe vertical"
+    Horizontal = "Miroir : Axe horizontal"
+    Both = "Miroir : tous les deux"
+}
+
+Brushes
+{
+    Block1x1 = "1x1 Block"
+    Block1x1Icon = "1x1"
+    Block2x2 = "2x2 Block"
+    Block2x2Icon = "2x2"
+    Block3x3 = "3x3 Block"
+    Block3x3Icon = "3x3"
+    Block4x4 = "4x4 Block"
+    Block4x4Icon = "4x4"
+    Block5x5 = "5x5 Block"
+    Block5x5Icon = "5x5"
+    Block6x6 = "6x6 Block"
+    Block6x6Icon = "6x6"
+    Block7x7 = "7x7 Block"
+    Block7x7Icon = "7x7"
+    Block8x8 = "8x8 Block"
+    Block8x8Icon = "8x8"
+    Block9x9 = "9x9 Block"
+    Block9x9Icon = "9x9"
+    Block10x10 = "10x10 Block"
+    Block10x10Icon = "10x10"
+
+    Line = "Line"
+    LineIcon = "Line"
+    LineTip = "Hold <btn id='Design.RestrictShapeMode'/> to make a straight line."
+
+    Box = "Box"
+    BoxIcon = "Box"
+    BoxTip = "Hold <btn id='Design.RestrictShapeMode'/> to make a perfect square."
+
+    Oval = "Oval"
+    OvalIcon = "Oval"
+    OvalTip = "Hold <btn id='Design.RestrictShapeMode'/> to make a perfect circle."
+
+    Triangle = "Triangle"
+    TriangleIcon = "Tri."
+    TriangleTip = "Hold <btn id='Design.RestrictShapeMode'/> to make a perfect isoscelese triangle."
+
+    Fill = "Flood Fill"
+    FillIcon = "Fill"
+}
+
 RepairBox
 {
     Title = "Réparations"
