@@ -1163,13 +1163,13 @@ ShipClasses
 }
 
 StarterShips
-{
-    ModelL = "Le Model-L est très manoeuvrable et est livré avec trois blasters laser qui sont efficaces pour détruire les sous-systèmes ennemis. "\
-             "Il manque cependant de véritables défenses."
-    ModelC = "Le Model-C est lent, bien renforcé et équipé d'une paire de puissants canons qui sont peu précis mais peuvent pénétrer "\
+{   // La description a été réduite pour pouvoir voir toutes les informations
+    ModelL = "Très manoeuvrable et livré avec trois blasters lasers pour détruire les sous-systèmes ennemis. "\
+             "Mais manque de véritables défenses."
+    ModelC = "Lent, bien renforcé et équipé d'une paire de canons peu précis mais pouvant pénétrer "\
              "l'intérieur des vaisseaux ennemis."
-    ModelS = "Le Model-S troque puissance de feu et armure pour un générateur de bouclier et un électro-rayon capable de désactiver "\
-             "les armes énergétiques et boucliers ennemis."
+    ModelS = "Troque puissance de feu et armure contre un générateur de bouclier et un électro-rayon pouvant désactiver "\
+             "armes énergétiques et boucliers."
 }
 
 BountyModeConfig
