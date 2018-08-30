@@ -662,6 +662,10 @@ Inputs
 
 Settings
 {
+    RestartRequired = "Un des réglage ayant été modifié ne peut prendre effet qu'au redémarrage du jeu."
+    RestartNow = "Redémarrer maintenant"
+    RestartLater = "Redémarrer plus tard"
+
     Graphics
     {
         TabName = "Graphismes"
@@ -671,7 +675,7 @@ Settings
         ExclusiveFullScreen = "Plein écran exclusif"
         ExclusiveFullScreenTip = "Le jeu utilisera tout l'écran et vous permettra de choisir la résolution d'affichage. "\
                                  "Ce mode peut être nécessaire pour utiliser des fonctionnalités avancées du GPU comme G-SYNC et FreeSync."
-        ResizableWindow = "Fenêtre réajustable"
+        ResizableWindow = "Fenêtre réajustable" // Le terme "réajustable" d'origine est plus joli et juste que "redimensionnable"
         ResizableWindowTip = "Le jeu tournera dans une fenêtre sur votre bureau. Vous pourrez bouger et redimensionner la fenêtre librement."
         BorderlessFullScreen = "Plein écran sans bordures"
         BorderlessFullScreenTip = "Le jeu va utiliser tout votre écran et s'adapter à la résolution de votre bureau. "\
@@ -698,9 +702,12 @@ Settings
         VSyncTriBuf = "Activée (Triple-Buffered)"
         VSyncTriBufTip = "Cette variante de la synchronisation verticale peut améliorer votre fréquence d'affichage mais peut aussi augmenter la latence d'entrée."
 
-        HighDpi = "Affichage haute résolution"
-        HighDpiTip = "Si cette option est cochée, l'interface utilisateur et le jeu seront affichés au double de l'échelle normale. Cela peut être utile lorsque vous jouez sur des écrans haute résolution."
-        HighDpiDisabledTip = "La taille actuelle de la fenêtre ou la résolution de l'écran n'est pas assez grande pour supporter High D.P.I. Mode."
+        DpiScaling = "Mise à l'échelle PPP"
+        DpiScalingTip = "Réglage de la taille de l'interface utilisateur. Augmenter cette valeur à plus de 100% peut rendre le jeu plus agréable à jouer à haute résolution."
+        DpiScaleDisabledTip = "La taille de la fenêtre ou la résolution écran n'est pas suffisament grande pour supporter cette mise à l'échelle PPI."
+        Dpi100 = "100%"
+        Dpi150 = "150%"
+        Dpi200 = "200%"
 
         LimitFps = "Limiter le taux rafraîchissement"
         LimitFpsTip = "Si cette option est cochée, le jeu ne fonctionnera pas plus rapidement qu'un taux de rafraîchissement particulier."
@@ -713,8 +720,12 @@ Settings
         FancyParticles = "Particules Fantaisie"
         FancyParticlesTip = "Si activé, des effets de particules supplémentaires seront affichés. Désactiver cette option peut améliorer les performances."
 
+        UncompressedTextures = "Utiliser des textures non compressées"
+        UncompressedTexturesTip = "Si activé, les textures ne seront pas compressées. L'activation de cette option améliore très légèrement la qualité visuelle et augmente considérablement l'utilisation de RAM/VRAM. "\
+                                  "La modification de cette option nécessite le redémarrage du jeu."
+
         ScreenShake = "Tremblement d'écran"
-        ScreenShakeTip = "Si cette case est cochée, certains événements dans le jeu tels que des explosions provoqueront un tremblement de l'écran."
+        ScreenShakeTip = "Si coché, certains événements dans le jeu tels que des explosions provoqueront un tremblement de l'écran."
     }
 
     Audio
@@ -735,32 +746,50 @@ Settings
     {
         TabName = "Gameplay"
 
-        AutoFtlJump = "Enclencher automatiquement l'hyperpropulsion"
-        AutoFtlJumpTip = "Si cette option est cochée, l'hyperpropulsion sera enclenchée automatiquement dès que tous les vaisseaux sont prêts à sauter."
+        AutoFtlJump = "Enclencher automatiquement la propulsion supraluminique"
+        AutoFtlJumpTip = "Si cette option est cochée, la propulsion supraluminique sera enclenchée automatiquement dès que tous les vaisseaux sont prêts à sauter."
 
         OnShipIndicators = "Afficher les indicateurs d'état du vaisseau"
         OnShipIndicatorsTip = "Si cette option est cochée, affiche des indicateurs lorsqu'il n'y a plus de membres d'équipage, de munitions ou d'énergie."
 
+        OffScreenBlips = "Afficher l'écho radar pour les vaisseaux hors-écran"
+        OffScreenBlipsTip = "Si coché, des échos radars colorés seront affichés sur les bords de l'écran pour afficher la position des vaisseaux."
+
+        ZoomedOutBlips = "Afficher l'écho radar quand dézoomer"
+        ZoomedOutBlipsTip = "Si coché, des échos radars colorés seront affichés pour les petits vaisseaux lors du dézoom."
+
         PartToolTips = "Afficher les bulles d'aide des modules"
-        PartToolTipsTip = "Si cette option est cochée, les informations s'affichent après avoir laissé brièvement le curseur de la souris sur un module d'un navire."
+        PartToolTipsTip = "Si cette option est cochée, les informations s'affichent après avoir laissé brièvement le curseur de la souris sur un module installé sur un vaisseau."
 
         AllowShipDeselection = "Autoriser la désélection de vaisseau"
         AllowShipDeselectionTip = "Si cette option est cochée, un clic gauche sur un endroit vide désélectionnera tout vaisseau actuellement sélectionné."
 
+        ShowAdvancedCommands = "Affichage des contrôles avancés pour les vaisseaux"
+        ShowAdvancedCommandsTip = "Si coché, les contrôles avancés seront affichés dans l'interface utilisateur. "\
+                                  "Et même si ce n'est pas coché, les raccourcis claviers seront tout de même utilisable."
+
         CtrlSelectsParts = "Forcer <btn id='Game.SelectParts' xml='false'/> pour sélectionner des modules"
         CtrlSelectsPartsTip = "Si cette option est cochée, la touche <btn id='Game.SelectParts'/> doit être maintenue en cliquant sur des modules pour pouvoir les sélectionner."
+        CtrlSelectsPartsDisabledTip = "Ce paramètre ne peut être changer jusqu'à la complétion du tutoriel \"Micromanager votre vaisseau\", ou que les tutoriels soient désactivés."
 
-        AlwaysShowCommandWidgets = "Toujours afficher les outils de repositionnement"
-        AlwaysShowCommandWidgetsTip = "Si cette option est cochée, vous ne devrez pas maintenir la touche <btn id='Game.AppendSelection'/> pour afficher les outils de repositionnement."
+        AlwaysShowCommandWidgets = "Toujours afficher les poignées de commandes"
+        AlwaysShowCommandWidgetsTip = "Si coché, vous ne devrez pas maintenir la touche <btn id='Game.AppendSelection'/> pour afficher les poignées de commandes du vaisseau."
+
+        PreferShipRelativeAttackAngle = "Préférer l'angle d'attaque relatif au vaisseau"
+        PreferShipRelativeAttackAngleTip = "Si coché, cliquer droit et glisser sur un vaisseau ennemi utilisera un angle d'attaque relatif au vaisseau ennemi au lieu de l'angle de la grille d'arrière-plan. Maintenez <btn id='Game.ShipRelativeAttackAngle'/> pour utiliser l'autre mode."
 
         PreferWorldRelativeAttackAngle = "Préférer les angles d'attaque relatifs à la grille"
-        PreferWorldRelativeAttackAngleTip = "Si cette option est cochée, cliquer droit et glisser sur un vaisseau ennemi utilisera un angle d'attaque relatif à la grille en arrière-plan plutôt qu'au vaisseau ennemi. Maintenez <btn id='Game.WorldRelativeAttackAngle'/> pour utiliser l'autre mode."
-
-        PreferWorldRelativeFollowAngle = "Préférer les angles de suivi relatifs à la grille"
-        PreferWorldRelativeFollowAngleTip = "Si cette option est cochée, cliquer droit et glisser sur un vaisseau allié utilisera un angle de suivi relatid à la grille en arrière-plan plutôt qu'au vaisseau allié. Maintenez <btn id = 'Game.WorldRelativeAttackAngle' /> pour utiliser l'autre mode."
+        PreferWorldRelativeAttackAngleTip = "Si coché, cliquer droit et glisser sur un vaisseau ennemi utilisera un angle d'attaque relatif à la grille en arrière-plan plutôt qu'au vaisseau ennemi. Maintenez <btn id='Game.WorldRelativeAttackAngle'/> pour utiliser l'autre mode."
 
         AdHocFormations = "Formations automatiques de vaisseaux"
-        AdHocFormationsTip = "Si cette option est cochée, les vaisseaux seront automatiquement regroupés dans une formation ad hoc lorsque vous donnez un ordre à plusieurs vaisseaux à la fois."
+        AdHocFormationsTip = "Si coché, les vaisseaux seront automatiquement regroupés dans une formation ad hoc lorsque vous donnez un ordre à plusieurs vaisseaux à la fois."
+
+        EnableCollisionAvoidance = "Détection de collision lors d'un clic droit"
+        EnableCollisionAvoidanceTip = "Si coché, cliquer droit pour déplacer le vaisseau l'obligera à manoeuvrer pour tenter éviter des collisions avec d'autres vaisseaux. "\
+                                      "Vous pouvez utiliser les commandes \"Déplacement\" et \"Déplacement forcé\" pour utiliser ou non explicitement la détection de collision."
+
+        BreakFormationToAttack = "Biser la formation pour attaquer"
+        BreakFormationToAttackTip = "Si coché, la flotte brisera automatiquement la formation lors de l'entrée de la zone d'attaque de l'ennemi."
     }
 
     Camera
@@ -768,17 +797,17 @@ Settings
         TabName = "Caméra"
 
         EdgePan = "Déplacement latéral"
-        EdgePanTip = "Définit si la caméra peut être déplacée en positionnant le curseur de la souris sur le bord de l'écran."
+        EdgePanTip = "Définit si la caméra peut être déplacée en déplaçant le curseur de la souris contre le bord de l'écran."
         EdgePanNone = "Désactivé"
-        EdgePanNoneTip = "La caméra ne se déplace pas lorsque le curseur de la souris est sur le bord de l'écran. Il est toujours possible d'utiliser les touches fléchées ou le bouton central de la souris."
+        EdgePanNoneTip = "La caméra ne se déplace pas lorsque le curseur de la souris rencontre le bord de l'écran. Il est toujours possible d'utiliser les touches fléchées ou le bouton central de la souris."
         EdgePanAnalog = "Analogique"
-        EdgePanAnalogTip = "Lorsque vous déplacez le curseur de la souris sur le bord de l'écran, la vue se déplacera dans la direction exacte tirée du centre de l'écran vers le curseur de la souris."
+        EdgePanAnalogTip = "Lorsque vous déplacez le curseur de la souris contre le bord de l'écran, la vue se déplacera dans la direction exacte tirée du centre de l'écran vers le curseur de la souris."
         EdgePanEightWay = "Huit directions"
-        EdgePanEightWayTip = "Quand vous bougez le curseur au bord de l'écran, la caméra va se déplacer uniquement dans une des 8 directions possibles. "\
+        EdgePanEightWayTip = "Quand vous bougez le curseur contre les bords de l'écran, la caméra va se déplacer uniquement dans une des 8 directions possibles. "\
                              "La direction dépend de quel bord ou coin votre curseur touche."
 
         EdgePanSpeed = "Vitesse de déplacement latéral"
-        EdgePanSpeedTip = "Contrôle la vitesse de déplacement lorsque le curseur de la souris est sur le bord de l'écran."
+        EdgePanSpeedTip = "Contrôle la vitesse de déplacement lorsque le curseur de la souris est contre le bord de l'écran."
 
         KeyPanSpeed = "Vitesse de déplacement clavier"
         KeyPanSpeedTip = "Contrôle la vitesse de déplacement lorsque les touches flèchées sont utilisées."
@@ -806,7 +835,11 @@ Settings
         StickyFocusTip = "Lorsque vous mettez votre vue sur un vaisseau, la vue va se \"coller\" au vaisseau. "\
                          "La vue se \"décollera\" une fois que le centre de la vue aura bougé en dehors du cercle du vaisseau."
 
-        MiniviewLbl = "Incrustation d'image"
+        ShowMidpointFocusWidget = "Montre le point médian pour le focus (l'icône d'œil)"
+        ShowMidpointFocusWidgetTip = "Si coché, une icône d'œil apparaîtra entre votre vaisseau et votre cible."\
+                                     "Cliquer sur celui-ci centrera la caméra sur le point médian entre les deux vaisseaux."
+
+        MiniviewLbl = "Incrustation d'image (PIP)"
 
         MiniviewCombatModeLbl = "En Combat"
         MiniviewCombatModeLblTip = "Choisissez si et quand l'incrustation d'image s'affiche pendant le combat."
@@ -838,7 +871,7 @@ Settings
 
     Designer
     {
-        TabName = "Designer de vaisseaux"
+        TabName = "Concepteur de vaisseaux"
 
         BuildAutoFocus = "Centrer automatiquement la vue sur le vaisseau"
         BuildAutoFocusTip = "Si cette option est cochée, l'ouverture du panneau de construction centrera automatiquement la vue sur le vaisseau sélectionné."
@@ -853,10 +886,10 @@ Settings
         BuildAllowOverwriteTip = "Si cette option est cochée, essayer d'ajouter un module à un vaisseau remplacera les modules existants."
 
         GrabLeavesCorridors = "Déplacer laisse des couloirs"
-        GrabLeavesCorridorsTip = "Lorsqu'un module est \"déplacé\" à l'aide de l'Outil Déplacement, des cases de couloir seront laissées à sa place."
+        GrabLeavesCorridorsTip = "Lorsqu'un module est déplacé à l'aide de l'Outil Déplacement, des cases de couloir seront laissées à sa place."
 
         BuildAutoDoors = "Ajouter des portes automatiquement"
-        BuildAutoDoorsTip = "Si cette option est cochée, des portes seront automatiquelent créées lorsque vous ajoutez un module à un vaisseau."
+        BuildAutoDoorsTip = "Si cette option est cochée, des portes seront automatiquement créées lorsque vous ajoutez un module à un vaisseau."
 
         BuildEnforceCrewAccess = "Forcer l'accès de l'équipage"
         BuildEnforceCrewAccessTip = "Si cette option est cochée, vous ne pourrez pas ajouter de modules à un endroit auquel votre équipage n'a pas accès. "\
@@ -868,12 +901,18 @@ Settings
         BlueprintAutoPause = "Pause automatique lors du mode plan"
         BlueprintAutoPauseTip = "Si cette option est cochée, l'ouverture du menu des plans mettra le jeu en pause automatiquement."
 
+        ShowInvalidBlueprints = "Afficher les plans illégaux en rouge"
+        ShowInvalidBlueprintsTip = "Si coché, les plans illégaux clignoteront en rouge."
+
         DefaultBuildTool = "Outil par défaut"
         DefaultBuildToolTip = "L'outil à sélectionner par défaut lors de l'ouverture du panneau de construction."
         BuildGrabTool = "Outil de déplacement"
         BuildGrabToolTip = "\"L'Outil de déplacement\" sera l'outil par défaut lors de l'ouverture du panneau de construction."
         BuildSelectTool = "Outil de sélection"
         BuildSelectToolTip = "\"L'Outil de sélection\" sera l'outil par défaut lors de l'ouverture du panneau de construction."
+
+        RowsOfParts = "Rangées de modules"
+        RowsOfPartsTip = "Le nombre de lignes de modules qui seront affichées sans avoir besoin de défiler."
     }
 
     Painter
@@ -881,13 +920,13 @@ Settings
         TabName = "Éditeur de peintures"
 
         PaintAutoFocus = "Centrer le vaisseau automatiquement"
-        PaintAutoFocusTip = "Si cette option est cochée, l'ouverture du panneau de peinture centrera automatiquement la vue sur le vaisseau sélectionné."
+        PaintAutoFocusTip = "Si coché, l'ouverture du panneau de peinture centrera automatiquement la vue sur le vaisseau sélectionné."
 
         PaintAutoRotate = "Aligner la rotation au vaisseau automatiquement."
-        PaintAutoRotateTip = "Si cette option est cochée, l'ouverture du panneau de peinture alignera automatiquement la vue au vaisseau sélectionné."
+        PaintAutoRotateTip = "Si coché, l'ouverture du panneau de peinture alignera automatiquement la vue au vaisseau sélectionné."
 
         PaintAllowOverwrite = "Écraser les vignettes existantes"
-        PaintAllowOverwriteTip = "Si cette option est cochée, essayer d'ajouter une vignette à un vaisseau à un endroit où une autre vignette est déjà placée écradera la vignette existante."
+        PaintAllowOverwriteTip = "Si coché, essayer d'ajouter une vignette à un endroit où une autre vignette est déjà en place écrasera la vignette existante."
 
         DefaultPaintTool = "Outil par défaut"
         DefaultPaintToolTip = "L'outil à sélectionner par défaut lorsque l'un des onglets 'Vignettes' du panneau de peinture est ouvert."
@@ -902,44 +941,53 @@ Settings
         TabName = "Réparations de vaisseau"
 
         RepairAutoFocus = "Centrer le vaisseau automatiquement"
-        RepairAutoFocusTip = "Si cette option est cochée, l'ouverture du panneau de réparations centrera automatiquement la vue sur le vaisseau sélectionné."
+        RepairAutoFocusTip = "Si coché, l'ouverture du panneau de réparations centrera automatiquement la vue sur le vaisseau sélectionné."
 
         RepairAutoRotate = "Aligner la rotation au vaisseau automatiquement."
-        RepairAutoRotateTip = "Si cette option est cochée, l'ouverture du panneau de réparations alignera automatiquement la vue au vaisseau sélectionné."
+        RepairAutoRotateTip = "Si coché, l'ouverture du panneau de réparations alignera automatiquement la vue au vaisseau sélectionné."
 
         RepairAutoDoors = "Reconstruction automatique des portes."
-        RepairAutoDoorsTip = "Si cette option est cochée, reconstruire un module détruit reconstruira automatiquement les portes connectées."
+        RepairAutoDoorsTip = "Si coché, reconstruire un module détruit reconstruira automatiquement les portes connectées."
     }
 
     Saves
     {
-        TabName = "Parties Sauvegardées"
+        TabName = "Sauvegarde automatique"
 
         AutoSave = "Sauvegarde automatique"
-        AutoSaveTip = "Si cette option est cochée, le jeu sauvegardera automatiquement la progression à une certaine fréquence."
+        AutoSaveTip = "Si coché, le jeu sauvegardera automatiquement la progression à intervalle régulier."
         AutoSaveEvery = "Toutes les "
         AutoSaveEveryMinutes = " minutes"
         AutoSaveEveryMinutesTip = "Intervalle en minutes entre deux sauvegardes automatiques."
 
-        FtlAutoSave = "Sauvegarde automatique avant le saut hyperpropulsé"
-        FtlAutoSaveTip = "Si cette option est cochée, la progression sera sauvegardée automatiquement avant chaque saut hyperpropulsé."
+        FtlAutoSave = "Sauvegarde automatique avant le saut supraluminique"
+        FtlAutoSaveTip = "Si coché, la progression sera sauvegardée automatiquement avant chaque saut supraluminique."
 
         AutoSavesToKeep1 = "Conserve les "
-        AutoSavesToKeep2 = " sauvegardes auto les plus récentes."
+        AutoSavesToKeep2 = " sauvegardes automatiques les plus récentes."
         AutoSavesToKeepTip = "Les sauvegardes auto les plus anciennes seront effacées automatiquement afin qu'il n'y en ait pas plus que ce nombre."
 
         QuickSavesToKeep1 = "Conserve les "
         QuickSavesToKeep2 = " sauvegardes rapides les plus récentes."
         QuickSavesToKeepTip = "Les sauvegardes rapides les plus anciennes seront effacées automatiquement afin qu'il n'y en ait pas plus que ce nombre."
+
+        SaveLostShips = "Sauvegarde le plan de conception du vaisseau perdu"
+        SaveLostShipsTip = "Si coché, les vaisseaux perdus avec un plan de conception non enregistré seront automatiquement sauvegardés dans le dossier \"Vaisseaux perdus\"."
+
+        LostShipsToKeep1 = "Conserve les "
+        LostShipsToKeep2 = " plus récents fichiers de vaisseaux perdus."
+        LostShipsToKeepTip = "Les fichiers de vaisseaux perdus les plus anciens seront effacées automatiquement afin qu'il n'y en ait pas plus que ce nombre."
     }
 
     Multiplayer
     {
-        TabName = "Multijoueur"
+        TabName = "Multijoueurs"
 
         ColorMode = "Couleurs des vaisseaux"
         ColorModeTip = "Couleurs dans lesquelles les vaisseaux apparaîtront dans les parties multijoueur. Ce réglage n'affecte aucun autre joueur dans la partie."
-        RandomPerPlayer = "Aléatoire par joueur"
+        BlipColorMode = "Couleurs des échos radars"
+        BlipColorModeTip = "Les couleurs des échos vaisseaux sur la minimap et dans le brouillard de guerre apparaîtront comme dans les parties multijoueurs. Ce réglage n'affecte aucun autre joueur dans la partie."
+        RandomPerPlayer = "Couleurs aléatoire par joueur"
         RandomPerPlayerTip = "Les vaisseaux auront des couleurs aléatoires désignant le joueur qui les contrôle."
         FriendAndFoe = "Amis et ennemis"
         FriendAndFoeTip = "Les vaisseaux que vous contrôlez seront verts, les vaisseaux des autre joueurs de votre équipe seront jaunes, et les vaisseaux de l'équipe ennemie seront rouges."
@@ -947,10 +995,10 @@ Settings
         OriginalTip = "Les vaisseaux seront colorés tels qu'ils ont été designés."
 
         AutoPortForwarding = "Redirection de port automatique avec UPnP"
-        AutoPortForwardingTip = "Si cette case est cochée, lorsque vous hébergez une partie multijoueur, Cosmoteer tentera d'utiliser la fonctionnalité \"Universal Plug and Play\" (UPnP) de votre routeur pour rediriger les ports"\
+        AutoPortForwardingTip = "Si coché, lorsque vous hébergez une partie multijoueur, Cosmoteer tentera d'utiliser la fonctionnalité \"Universal Plug and Play\" (UPnP) de votre routeur pour rediriger les ports"\
                                 " nécessaires pour que les joueurs hors de votre réseau local puissent rejoindre votre partie."
-        DisplayPublicIP = "Donnez-moi mon adresse I.P. publique"
-        DisplayPublicIPTip = "Si cette case est cochée, héberger une partie multijoueur fera apparaître l'adresse I.P. publique de votre ordinateur et la copiera dans votre presse-papier."
+        DisplayPublicIP = "Me donnez mon adresse IP publique"
+        DisplayPublicIPTip = "Si coché, héberger une partie multijoueur fera apparaître l'adresse I.P. publique de votre ordinateur et la copiera dans votre presse-papier."
     }
 
     Colors
@@ -966,9 +1014,9 @@ Settings
 
     Controls
     {
-        TabName = "Raccourcis clavier"
+        TabName = "Raccourcis clavier"  // Vérifier s'il s'agit bien des raccourcis claviers. Le fichier anglais parle de contrôle sans plus de précision
         Defaults = "Restaurer les raccourcis par défaut"
-        ConfirmDefaults = "Êtes-vous sûr de vouloir réinitialiser tous les raccourcis à leurs réglages par défaut?"
+        ConfirmDefaults = "Êtes-vous sûr de vouloir réinitialiser tous les raccourcis à leurs réglages par défaut ?"
     }
 
     Misc
@@ -976,10 +1024,10 @@ Settings
         TabName = "Divers"
 
         Language = "Langue"
-        LanguageTip = "La langue utilisée pour l'interface. D'autres traductions peuvent être trouvées ici: http://forum.cosmoteer.net/"
+        LanguageTip = "La langue utilisée pour l'interface. D'autres traductions peuvent être trouvées sur http://forum.cosmoteer.net/"
 
         LockCursor = "Verrouillage du curseur"
-        LockCursorTip = "Si cette case est cochée, le curseur ne pourra pas sortir de la fenêtre en jeu. "\
+        LockCursorTip = "Si coché, le curseur ne pourra pas sortir de la fenêtre en jeu. "\
                         "Si vous jouez en Plein écran exclusif le curseur ne quittera pas la fenêtre que cette case soit cochée ou non."
 
         LostFocusPause = "Mettre en pause quand inactif"
@@ -998,7 +1046,13 @@ Settings
             UnstableTip = "Le jeu recherchera des mises-à-jour, y compris les plus récentes, qui n'ont pas été autant testées et sont donc susceptibles de contenir plus de bugs."
         }
 
-        ShowFps = "Montrer les I.P.S."
+        ShowNews = "Afficher les actualités non lues au démarrage"
+        ShowNewsTip = "Si coché, le jeu affichera automatiquement les actualités non lues au démarrage."
+
+        ShowAlerts = "Afficher les alertes sur l'écran titre"
+        ShowAlertsTip = "Si coché, les \"alertes\" seront affichées dans le bord droit supérieur de l'écran titre."
+
+        ShowFps = "Montrer les I.P.S. (FPS)"
         ShowFpsTip = "Choisissez si les Images Par Secondes doivent être affichées."
         FpsNone = "Désactivé"
         FpsNoneTip = "Ne pas montrer les I.P.S."
@@ -1010,11 +1064,11 @@ Settings
         SendMetrics = "Envoyer les statistiques de jeu et les erreurs"
         SendMetricsTip = "Si cette option est cochée, les statistiques de vos parties et les rapports d'erreurs seront envoyés au développeur et utilisées pour améliorer Cosmoteer."
 
-        WarnOutOfDateGpuDrivers = "Avertir à propos des drivers graphiques obsolètes"
+        WarnOutOfDateGpuDrivers = "Avertir à propos des vieux drivers graphiques"
         WarnOutOfDateGpuDriversTip = "Si cette option est cochée, un avertissement sera affiché au lancement du jeu si vos drivers sont vieux de plus de 12 mois."
 
         ShowTutorials = "Montrer les Tutoriels"
-        ShowTutorialsTip = "Si cette case est cochée, les tutoriels \"Comment Jouer\" seront affichés pendant la partie."
+        ShowTutorialsTip = "Si coché, les tutoriels \"Comment Jouer\" seront affichés pendant la partie."
         ResetTutorials = "Réinitialiser les tutoriels"
         ConfirmResetTutorials = "Cette action fera s'afficher de nouveau tous les tutoriels."
     }
