@@ -1116,15 +1116,15 @@ LoadPaintScheme
 }
 
 Feedback
-{
-    Title = "Envoyer un avis / Rapporter un bug"
+{  // TODO: Revoir le terme feedback. Peut être réutiliser le terme "Envoyer un avis / Rapporter un bug"
+    Title = "Envoyer une remarque"
     Desc = "Veuillez décrire votre appréciation ou votre bug avec autant de détails que possible."
-    Submit = "Soumettre votre avis/rapport"
-    Email = "Votre adresse mail (facultatif):"
+    Submit = "Soumettre votre remarque"
+    Email = "Votre adresse mail (facultative) :"
     EmailTip = "Indiquer votre adresse mail nous permettra de vous répondre afin d'obtenir plus de détails sur votre avis ou votre rapport de bug."
     AttachScreenshot = "Joindre une capture d'écran"
     AttachScreenshotTip = "Prend une capture d'écran du jeu et la joint à votre message. " \
-                          " La capture d'écran incluera tout ce que vous voyez actuellement sauf la fenêtre \"Envoyer un avis / Rapporter un bug\". " \
+                          "La capture d'écran incluera tout ce que vous voyez actuellement sauf la fenêtre \"Envoyer une remarque\". " \
                           "Cela nous facilitera la tâche pour résoudre les bugs."
     AttachSavedGame = "Joindre la sauvegarde de la partie en cours"
     AttachSavedGameTip = "Crée une sauvegarde de la partie en cours et la joint à votre message. " \
@@ -1132,7 +1132,7 @@ Feedback
     AttachErrorLog = "Joindre le rapport d'erreurs";
     AttachErrorLogTip = "Joint le rapport d'erreurs du programme. Cela nous facilitera la tâche pour résoudre les bugs."
     Hint = "Astuce: Vous pouvez nous envoyer un rapport à tout moment en cliquant sur le bouton <btn id='General.SubmitFeedback'/>."
-    Sending = "Envoi en cours..."
+    Sending = "Envoi en cours…"
     Error = "Une erreur s'est produite durant l'envoi du message."
 }
 
@@ -1141,8 +1141,8 @@ VersionCheck
     NewVersionMsg = "Une nouvelle version de Cosmoteer est disponible!"
     DownloadInstall = "Télécharger &amp; Installer"
     ReleaseNotes = "Voir les notes de mise à jour"
-    ProgressFmt = "Téléchargement de la mise à jour en cours... {0}%"
-    ErrorFmt = "Une erreur s'est produite durant le téléchargement de la mise à jour: {0}"
+    ProgressFmt = "Téléchargement de la mise à jour en cours… {0}%"
+    ErrorFmt = "Erreur durant le téléchargement de la mise à jour : {0}"
     ConfirmInstall = "Le téléchargement est terminé. Fermer Cosmoteer et installer la mise à jour ?"
 }
 
