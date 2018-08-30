@@ -355,7 +355,7 @@ ShipLibrary
 
 Inputs
 {
-    PressKeyOrClick = "Appuyez sur la touche que vous souhaitez utiliser ou cliquez ici:"
+    PressKeyOrClick = "Appuyez sur la touche que vous souhaitez utiliser ou cliquez ici :"
     Clear = "Effacer"
     Default = "Par Défaut"
     Defaults = "Par Défaut"
@@ -364,51 +364,67 @@ Inputs
     General
     {
         Name = "Général"
-        UIClick = "U.I. Clic"
-        UIAltClick = "U.I. Clic alternatif"
-        UIFocusClick = "U.I. Clic focalisé"
+        UIClick = "Clic principal"
+        UIAltClick = "Clic alternatif"
+        UIFocusClick = "Clic focalisant"
         Confirm = "Ok / Accepter / Confirmer"
         Cancel = "Annuler / Retour / Menu"
         SuppressConfirmation = "Confirmer la suppression"
-        ToggleFullscreen = "Plein écran"
+        ToggleFullscreen = "Alterner plein écran"
         TakeScreenshot = "Prendre une capture d'écran"
-        SubmitFeedback = "Envoyer un avis / Rapporter un bug"
+        SubmitFeedback = "Envoyer une remarque"
         EmulateRightClick = "Simuler un clic droit"
-        RestartApp = "Redémarrer l'application"
+        RestartApp = "Redémarrer le jeu"
     }
 
     Game
     {
         Name = "Jeu"
-        Selection = "Sélectionner un vaisseau/une partie"
-        SelectParts = "Sélectionner une partie"
+        Move = "Déplacer / Suivre"
+        ForceMove = "Forcer le déplacement"
+        Rotate = "Rotation"
+        Strafe = "Déplacement latéral (straffer)"
+        Attack = "Attaquer"
+        Halt = "Stopper"
+        ToggleAutoFire = "Basculer le tir automatique (auto-fire)"
+        Selection = "Sélectionner un vaisseau/module" // `part` traduit par module plutôt que par morceau ou partie
+        SelectParts = "Sélectionner un module"
         AppendSelection = "Ajouter une sélection"
         ShowCommandWidgets = "Afficher les commandes"
-        WorldRelativeAttackAngle = "Utiliser des angles d'attaque et de poursuite relatifs à la grille d'arrière-plan"
-        Command = "Contrôler vaisseau/module"
+        ShipRelativeAttackAngle = "Utiliser l'angle relatif au vaisseau" // Pas sûr de la traduction
+        WorldRelativeFollowAngle = "Utiliser l'angle relatif à la grille" // Pas sûr de la traduction
+        Command = "Contrôler le vaisseau/module"
         UseTool = "Utiliser l'outil"
         CancelTool = "Annuler l'outil"
-        CancelWeaponTargets = "Annuler le ciblage des canons"
-        ToggleMap = "Afficher/cacher la carte de la galaxie"
-        DoFtlJump = "Enclencher l'hyperpropulsion"
-        CancelFtlJump = "Annuler l'hyperpropulsion"
-        ToggleUI = "Afficher ou cacher l'I.U."
-        Save = "Sauvegarder partie"
-        Load = "Charger partie"
+        TargetWeapon = "Viser (armes)"  // Une meilleur traduction serait possible
+        CancelWeaponTargets = "Annuler la visée (armes)"
+        ToggleMap = "Basculer la carte de la Galaxie"
+        DoFtlJump = "Engager le saut supraluminique" // FTL => supraluminique plutôt que hyperpropulsion
+        CancelFtlJump = "Annuler le saut supraluminique"
+        ToggleUI = "Basculer l'interface utilisateur"
+        Save = "Sauvegarder la partie"
+        Load = "Charger la partie"
         QuickSave = "Sauvegarde rapide"
         QuickLoad = "Chargement rapide"
-        PauseToggle = "Pause"
-        IncreaseSpeed = "Augmenter la vitesse"
+        PauseToggle = "Basculer la pause"
+        IncreaseSpeed = "Augment la vitesse"
         DecreaseSpeed = "Diminuer la vitesse"
         SelectAllShips = "Sélectionner tous les vaisseaux"
         SelectAllParts = "Sélectionner tous les modules"
-        Chat = "Discussion"
+        Chat = "Tchat"
+    }
+
+    PartTriggers
+    {
+        detonate = "Mise à feu des explosifs"
     }
 
     PartToggles
     {
-        on_off = "Allumer/Éteindre ce module"
-        fire_mode = "Mode de tir"
+        on_off = "Basculer l'alimentation du module"
+        fire_mode = "Basculer le mode de tir"
+        fire_alternating = "Basculer le feu en alternance" // Je ne comprends pas le terme d'origine
+        thruster_boost = "Basculer la poussée des réacteurs" // Pas sûr de la traduction
     }
 
     View
@@ -425,36 +441,47 @@ Inputs
         RotateLeft = "Rotation vers la gauche"
         ResetRotation = "Réinitialiser la rotation"
         FocusCursorMode = "Mode vue centrée sur curseur"
-        FocusSelected = "Centrer sur le vaisseau/la partie sélectionné"
+        FocusSelected = "Centrer sur le vaisseau/module sélectionné"
         RotationFocusSelected = "Centrer et verrouiller la rotation"
-        FocusTargets = "Centrer l'ennemi ciblé"
+        FocusTargets = "Centrer sur l'ennemi ciblé"
         RotationFocusTargets = "Centrer l'ennemi et verrouiller la rotation"
-        ToggleInteriors = "Afficher/cacher l'intérieur des vaisseaux"
+        FocusMidpoint = "Centrer sur le point médian sélection/cible"
+        ToggleInteriors = "Basculer l'affichage de l'intérieur des vaisseaux"
         ViewMinimap = "Voir la mini-carte"
+    }
+
+    Multiplayer
+    {
+        Name = "Multijoueur"
+        SendChat = "Envoyer un message sur le tchat"
+        ToggleTeamChat = "Basculer le tchat d'équipe"
     }
 
     Design
     {
-        Name = "Designer de vaisseaux"
+        Name = "Concepteur de vaisseau"
         BuildOpen = "Ouvrir le menu de construction"
         BuildClose = "Fermer le menu de construction"
-        ToggleBlueprints = "Outil plans"
-        PaintOpenClose = "Ouvrir/fermer le panneau de peinture"
+        ToggleBlueprints = "Basculer les plans"
+        PaintOpenClose = "Basculer le menu de peinture"
         Construct = "Appliquer les modifications"
         EraseTool = "Outil de suppression"
         GrabTool = "Outil de déplacement"
         SelectionTool = "Outil de sélection"
-        ToggleMirrorMode = "Activer/Désactiver le mode miroir"
-        SelectAll = "Sélectionner tous les modules/vignettes"
+        ContiguousSelectionMode = "Mode \"baguette magique\" pour la sélection contigue"
+        ToggleMirrorMode = "Basculer le mode miroir"
+        SelectAll = "Sélectionner tous les modules/vignettes" // J'ai laissé `decals` => vignette
         Delete = "Supprimer tous les modules/vignettes"
         DeleteDoors = "Supprimer les portes"
         NoAutoDoors = "Ne pas ajouter de portes automatiquement"
+        FillAllDoors = "Remplissage de portes" // traduction boiteuse
         CopySelected = "Copier la sélection"
         CutSelected = "Couper la sélection"
         Paste = "Coller la sélection"
         EraseCursorMode = "Mode de suppression"
-        FillPartsMode = "Mode de remplissage"
-        ImportPng = "Importer un .PNG"
+        RestrictShapeMode = "Restreindre le mode Forme" // mode Forme me semble mauvais comme traduction
+        AppendShapeMode = "Ajouter un mode Forme"
+        ImportPng = "Importer une image PNG"
         RotateLeft = "Pivoter vers la gauche"
         RotateRight = "Pivoter vers la droite"
         FlipX = "Retourner horizontalement."
@@ -463,15 +490,20 @@ Inputs
         Redo = "Rétablir"
     }
 
+    Brushes
+    {
+        Name = "Concepteur de vaisseau (Brosses)"
+    }
+
     Parts
     {
-        Name = "Designer de vaisseau (Modules)"
+        Name = "Concepteur de vaisseau (Modules)"
     }
 
     Repair
     {
         Name = "Réparations"
-        OpenClose = "Ouvrir/fermer le menu des réparations"
+        OpenClose = "Basculer le menu des réparations"
         RepairAll = "Tout réparer"
         SuppressRepair = "Ne pas réparer (construire à la place)"
     }
@@ -479,7 +511,7 @@ Inputs
     Crew
     {
         Name = "Équipage"
-        OpenClose = "Ouvrir/fermer le menu d'équipage"
+        OpenClose = "Basculer le menu d'équipage"
         FiveAtATime = "Recruter/Virer 5 à la fois"
     }
 
@@ -487,12 +519,13 @@ Inputs
     {
         Name = "Mode créatif"
         DeleteShip = "Supprimer les vaisseaux sélectionnés"
+        MoveShip = "Déplacer les vaisseaux sélectionnées à destination"
         RandomizeAsteroid = "Astéroïdes aléatoires"
-        PlayAsAllPlayers = "Incarner: tous les joueurs"
-        PlayAsFmt = "Incarner: joueur {0}"
-        ShipLibrary = "Galerie de vaisseaux"
-        SpawnNotReady = "Créer sans Munitions/Énergie"
-        AutoBattleCamera = "Activer/Désactiver la caméra de bataille automatique"
+        PlayAsAllPlayers = "Incarner : tous les joueurs"
+        PlayAsFmt = "Incarner : joueur {0}"
+        ShipLibrary = "Bibliothèque de vaisseaux"
+        SpawnNotReady = "Créer sans munitions/énergie"
+        AutoBattleCamera = "Basculer la caméra de bataille automatique"
     }
 
     Formations
@@ -513,10 +546,10 @@ Inputs
     MouseButtonNames
     {
         Left = "Clic gauche"
-        Middle = "Clic central"
+        Middle = "Clic milieu"
         Right = "Clic droit"
-        Button4 = "Touche 4"
-        Button5 = "Touche 5"
+        Button4 = "Bouton souris 4"
+        Button5 = "Bouton souris 5"
     }
 
     KeyNames
@@ -586,7 +619,7 @@ Inputs
         TildeBacktick = "Tilde"
         Home = "Home"
         Insert = "Insert"
-        LeftBracket = "Left Bracket"
+        LeftBracket = "Accolade ouvrante"
         Control = "Ctrl"
         LeftArrow = "Flèche de gauche"
         Alt = "Alt"
@@ -612,7 +645,7 @@ Inputs
         PageUp = "Page Up"
         Pause = "Pause"
         PeriodGreater = "Period"
-        RightBracket = "Right Bracket"
+        RightBracket = "Accolade fermante"
         Enter = "Entrer"
         RightArrow = "Flèche de droite"
         ScrollLock = "Scroll Lock"
