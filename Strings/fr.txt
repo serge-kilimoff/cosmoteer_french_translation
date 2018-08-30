@@ -1874,23 +1874,23 @@ RepairBox
 
     RepairAll = "TOUT RÉPARER"
     NoRepairsNeeded = "AUCUNE RÉPARATION\nNÉCESSAIRE"
-    NoRepairsNeededTip = "Il n'y a aucune réparation nécessaire!"
-    CantRepairInCombatTip = "Impossible de réparer durant un combat!"
+    NoRepairsNeededTip = "Il n'y a aucune réparation nécessaire !"
+    CantRepairInCombatTip = "Impossible de réparer durant un combat !"
     CantRepairInCombatCursor = "<bad>IMPOSSIBLE DE RÉPARER\nDURANT UN COMBAT</bad>"
 
-    HireCrewFmt = "Recruter {0} Équipage: {1}"
-    HireCrewTip = "Recruter des membres d'équipage pour remplacer ceux qui sont morts au combat."
+    HireCrewFmt = "Recruter {0} membres d'équipage : {1}"
+    HireCrewTip = "Recruter des membres d'équipage pour remplacer ceux morts au combat."
     NumCrewTip = "Nombre de membres d'équipage à recruter."
 
     ForgetDestroyed = "Oublier les modules détruits"
     ForgetDestroyedTip = "Oublie tous les modules qui ont été détruits mais pas encore reconstruits."
     NothingToForget = "Rien à oublier."
     ConfirmForgetDestroyed = "Êtes-vous sûr de vouloir oublier tous les modules détruits? "\
-                             "Cette action est irréversible et effacera également votre historique d'annulation!"
+                             "Cette action est irréversible et effacera également votre historique d'annulation !"
 
-    PartsDestroyedFmt = "Modules détruits: {0}"
-    PartsDamagedFmt = "Modules endommagés: {0}"
-    CrewKilledFmt = "Équipage mort au combat: {0}"
+    PartsDestroyedFmt = "Modules détruits : {0}"
+    PartsDamagedFmt = "Modules endommagés : {0}"
+    CrewKilledFmt = "Équipage mort au combat : {0}"
 
     RepairDebtFmt = "Réparer votre vaisseau coûterait <ins_money>{0}</ins_money> mais vous n'avez que {1}. "\
                     "Vous pouvez vous endetter pour réparer, mais tant que vous serez endetté vous ne pourrez acheter aucun nouveau module pour votre vaisseau."
