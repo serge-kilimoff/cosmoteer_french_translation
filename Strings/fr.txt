@@ -1175,7 +1175,7 @@ StarterShips
 BountyModeConfig
 {
     Name = "Chasseur de prime"
-    Description = "<b><good>Apprenez comment jouer:</good></b> Traquez les vaisseaux ennemis pour obtenir des primes et améliorer votre propre vaisseau."
+    Description = "<b><good>Apprenez comment jouer :</good></b> Traquez les vaisseaux ennemis pour obtenir des primes et améliorer votre propre vaisseau."
     Difficulty = "Difficulté"
     MapSize = "Taille de la Galaxie"
     ShipInfoFmt = "<s24>{0}</s24>\n\n{1}\n\nFonds restants: {2}"
@@ -1190,7 +1190,7 @@ BountyModeConfig
               "● Les ennemis n'apparaîtront jamais en flottes.\n"\
 
     Moderate = "Capitaine (Normal)"
-    ModerateTip = "Le niveau de difficulté classique pour joueurs vétérans:\n\n"\
+    ModerateTip = "Le niveau de difficulté classique pour joueurs vétérans :\n\n"\
                   "● Crédits &amp; carburant de départ normaux.\n"\
                   "● Récompenses de primes normales.\n"\
                   "● Vaisseaux ennemis normaux.\n"\
@@ -1198,7 +1198,7 @@ BountyModeConfig
                   "● Impossible de construire ou réparer en combat."
 
     Hard = "Amiral (Difficile)"
-    HardTip = "Un niveau de difficulté plus élevé pour les joueurs désirant un plus grand défi:\n\n"\
+    HardTip = "Un niveau de difficulté plus élevé pour les joueurs désirant un plus grand défi :\n\n"\
               "● Crédits &amp; carburant de départ normaux.\n"\
               "● Récompenses de primes diminuées.\n"\
               "● Vaisseaux ennemis plus imposants.\n"\
