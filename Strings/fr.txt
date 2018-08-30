@@ -1445,15 +1445,15 @@ MapSizes
     None = "Pas de Galaxie"
     NoneTip = "Il n'y aura pas de carte de la galaxie."
     Tiny = "Minuscule"
-    TinyTip = "1 système stellaire."
+    TinyTip = "1 système solaire."
     Small = "Petite"
-    SmallTip = "3 systèmes stellaires."
+    SmallTip = "3 systèmes solaires."
     Standard = "Standard"
-    StandardTip = "6 systèmes stellaires."
+    StandardTip = "6 systèmes solaires."
     Large = "Grande"
-    LargeTip = "12 systèmes stellaires."
+    LargeTip = "12 systèmes solaires."
     Huge = "Énorme"
-    HugeTip = "24 systèmes stellaires."
+    HugeTip = "24 systèmes solaires."
 }
 
 GameMenu
