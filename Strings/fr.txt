@@ -1400,34 +1400,35 @@ VersusModeConfig
 
 TeamVersusModeConfig : VersusModeConfig
 {
-    Name = "Team vs Team"
-    Description = "<b>Team vs Team</b>\nTwo teams of players battle head-to-head in a fight to the death!"
+    Name = "Équipe contre équipe"
+    Description = "<b>Équipe contre équipe</b>\nDeux équipes bataillant face à face dans un terrible combat à mort !"
 
-    Funds = "Credits Per Team"
-    FundsTip = "The total number of credits (₡) that each team has to spend on its entire fleet."
-    FleetDistance = "Distance Between Teams"
-    FleetDistanceTip = "The distance between each team's fleet at the start of the game."
-    ShareFunds = "Share Team Credits"
-    ShareFundsTip = "If checked, the credits for each player on a team will be pooled together."
-    LockTeams = "Lock Teams"
-    LockTeamsTip = "If checked, then players will not be able to change what team they are on. The host will still be able to change the team for any player in the game."
-    PerimeterDistance = "Ring of Death"
-    PerimeterDistanceTip = "The radius of the circle outside of which ships will rapidly take damage."
-    ShrinkingPerimeter = "Shrinking Ring of Death (\"Battle Royale\")"
-    ShrinkingPerimeterTip = "If checked, the Ring of Death will gradually shrink over time."
+    Funds = "Crédits par équipe"
+    FundsTip = "Le nombre total de crédits (₡) que chaque équipe est autorisée à dépenser pour constituer sa flotte."
+    FleetDistance = "Distance entre les équipes"
+    FleetDistanceTip = "La distance entre chaque équipe au début de la partie."
+    ShareFunds = "Partage du crédit au sein de l'équipe"
+    ShareFundsTip = "Si coché, les crédits de chaque joueur seront mis dans un pot commun à l'équipe."
+    LockTeams = "Verouiller les équipes"
+    LockTeamsTip = "Si coché, les joueurs ne seront pas autorisés à changer d'équipe. Toutefois, l'hôte est autorisé à changer un joueur d'équipe."
+    PerimeterDistance = "Le Cercle de la Mort"
+    PerimeterDistanceTip = "Le rayon du cercle en dehors duquel les vaisseaux prendront rapidement des dommages."
+    ShrinkingPerimeter = " (\"Battle Royale\")"
+    ShrinkingPerimeter = "Resserrement du Cercle de la Mort (\"Battle Royale\")"
+    ShrinkingPerimeterTip = "Si coché, le Cercle de la Mort va continuellement se resserer."
 
     PerimeterDistances
     {
-        NearFmt = "Near ({0} meters)"
-        NormalFmt = "Normal ({0} meters)"
-        FarFmt = "Far ({0} meters)"
+        NearFmt = "Proche ({0} mètres)"
+        NormalFmt = "Normal ({0} mètres)"
+        FarFmt = "Loin ({0} mètres)"
     }
 
     FleetDistances
     {
-        ShortFmt = "Short ({0} meters)"
-        NormalFmt = "Normal ({0} meters)"
-        LongFmt = "Long ({0} meters)"
+        ShortFmt = "Courte ({0} mètres)"
+        NormalFmt = "Normale ({0} mètres)"
+        LongFmt = "Lointaine ({0} mètres)"
     }
 }
 
