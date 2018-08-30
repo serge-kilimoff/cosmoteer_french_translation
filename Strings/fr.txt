@@ -1164,10 +1164,10 @@ ShipClasses
 
 StarterShips
 {
-    ModelL = "Le Model-L est très manoeuvrable et comprend trois blasters laser efficaces pour détruire les sous-systèmes ennemis. "\
+    ModelL = "Le Model-L est très manoeuvrable et est livré avec trois blasters laser qui sont efficaces pour détruire les sous-systèmes ennemis. "\
              "Il manque cependant de véritables défenses."
     ModelC = "Le Model-C est lent, bien renforcé et équipé d'une paire de puissants canons qui sont peu précis mais peuvent pénétrer "\
-             "à l'intérieur des vaisseaux ennemis."
+             "l'intérieur des vaisseaux ennemis."
     ModelS = "Le Model-S troque puissance de feu et armure pour un générateur de bouclier et un électro-rayon capable de désactiver "\
              "les armes énergétiques et boucliers ennemis."
 }
