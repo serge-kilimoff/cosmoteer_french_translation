@@ -1612,27 +1612,27 @@ Hud
 
 Formations
 {
-    Line = "Formation Ligne"
-    Wedge = "Formation Chevron"
-    Claw = "Formation Pince"
+    Line = "Formation en ligne"
+    Wedge = "Formation en chevron"
+    Claw = "Formation en pince"
 
-    A = "A"
-    Alpha = "Formation Alpha"
+    A = "A"  // Il y a un alphabet radio français, mais il n'est pas utilisé par l'armée. Dommage car je trouvais ça rigolo.
+    Alpha = "Formation Alpha"  // Anatole
     B = "B"
-    Bravo = "Formation Bravo"
+    Bravo = "Formation Bravo"  // Berthe
     C = "C"
-    Charlie = "Formation Charlie"
+    Charlie = "Formation Charlie"  // Célestine
     D = "D"
-    Delta = "Formation Delta"
+    Delta = "Formation Delta"  // Désiré
     E = "E"
-    Echo = "Formation Echo"
+    Echo = "Formation Echo"  // Eugène
     F = "F"
-    Foxtrot = "Formation Foxtrot"
+    Foxtrot = "Formation Foxtrot"  // François
     G = "G"
-    Gamma = "Formation Gamma"
+    Gamma = "Formation Golf"  // Gaston
 
     NameFmt = "<b>{0}</b>"
-    NameHotkeyTipFmt = "<b>{0}</b>\n\nRaccourci: <b>{1}</b>"
+    NameHotkeyTipFmt = "<b>{0}</b>\n\nRaccourci : <b>{1}</b>"
     Save = "SAUVEGARDER"
     SaveTip = "Sauvegarder une formation personnalisée dans ce slot."
     Delete = "SUPPR"
