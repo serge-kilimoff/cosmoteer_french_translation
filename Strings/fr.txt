@@ -661,14 +661,14 @@ Inputs
 }
 
 Settings
-{
+{   // Les valeurs des TabName ont été volontairement tronqués parce qu'il n'y a pas beaucoup d'espaces de disponible
     RestartRequired = "Un des réglage ayant été modifié ne peut prendre effet qu'au redémarrage du jeu."
     RestartNow = "Redémarrer maintenant"
     RestartLater = "Redémarrer plus tard"
 
     Graphics
     {
-        TabName = "Graphismes"
+        TabName = "Vidéo"
 
         WindowMode = "Type de fenêtre"
         WindowModeTip = "Le style de la fenêtre utilisée pour afficher le jeu."
@@ -778,8 +778,8 @@ Settings
         PreferShipRelativeAttackAngle = "Préférer l'angle d'attaque relatif au vaisseau"
         PreferShipRelativeAttackAngleTip = "Si coché, cliquer droit et glisser sur un vaisseau ennemi utilisera un angle d'attaque relatif au vaisseau ennemi au lieu de l'angle de la grille d'arrière-plan. Maintenez <btn id='Game.ShipRelativeAttackAngle'/> pour utiliser l'autre mode."
 
-        PreferWorldRelativeAttackAngle = "Préférer les angles d'attaque relatifs à la grille"
-        PreferWorldRelativeAttackAngleTip = "Si coché, cliquer droit et glisser sur un vaisseau ennemi utilisera un angle d'attaque relatif à la grille en arrière-plan plutôt qu'au vaisseau ennemi. Maintenez <btn id='Game.WorldRelativeAttackAngle'/> pour utiliser l'autre mode."
+        PreferWorldRelativeFollowAngle = "Préférer les angles d'attaque relatifs à la grille"
+        PreferWorldRelativeFollowAngleTip = "Si coché, cliquer droit et glisser sur un vaisseau ennemi utilisera un angle d'attaque relatif à la grille en arrière-plan plutôt qu'au vaisseau ennemi. Maintenez <btn id='Game.WorldRelativeAttackAngle'/> pour utiliser l'autre mode."
 
         AdHocFormations = "Formations automatiques de vaisseaux"
         AdHocFormationsTip = "Si coché, les vaisseaux seront automatiquement regroupés dans une formation ad hoc lorsque vous donnez un ordre à plusieurs vaisseaux à la fois."
@@ -871,7 +871,7 @@ Settings
 
     Designer
     {
-        TabName = "Concepteur de vaisseaux"
+        TabName = "Concepteur"
 
         BuildAutoFocus = "Centrer automatiquement la vue sur le vaisseau"
         BuildAutoFocusTip = "Si cette option est cochée, l'ouverture du panneau de construction centrera automatiquement la vue sur le vaisseau sélectionné."
@@ -917,7 +917,7 @@ Settings
 
     Painter
     {
-        TabName = "Éditeur de peintures"
+        TabName = "Peintures"
 
         PaintAutoFocus = "Centrer le vaisseau automatiquement"
         PaintAutoFocusTip = "Si coché, l'ouverture du panneau de peinture centrera automatiquement la vue sur le vaisseau sélectionné."
@@ -938,7 +938,7 @@ Settings
 
     Repairs
     {
-        TabName = "Réparations de vaisseau"
+        TabName = "Réparations"
 
         RepairAutoFocus = "Centrer le vaisseau automatiquement"
         RepairAutoFocusTip = "Si coché, l'ouverture du panneau de réparations centrera automatiquement la vue sur le vaisseau sélectionné."
@@ -952,7 +952,7 @@ Settings
 
     Saves
     {
-        TabName = "Sauvegarde automatique"
+        TabName = "Auto-save"
 
         AutoSave = "Sauvegarde automatique"
         AutoSaveTip = "Si coché, le jeu sauvegardera automatiquement la progression à intervalle régulier."
@@ -981,7 +981,7 @@ Settings
 
     Multiplayer
     {
-        TabName = "Multijoueurs"
+        TabName = "Multi"
 
         ColorMode = "Couleurs des vaisseaux"
         ColorModeTip = "Couleurs dans lesquelles les vaisseaux apparaîtront dans les parties multijoueur. Ce réglage n'affecte aucun autre joueur dans la partie."
@@ -1003,7 +1003,7 @@ Settings
 
     Colors
     {
-        TabName = "Mode Daltonien"
+        TabName = "Couleurs"
 
         Description = "Si vous rencontrez des difficultés pour différencier certaines couleurs, essayez de les changer ici pour les rendre plus faciles à distinguer."
         Friendly = "Allié"
@@ -1014,7 +1014,7 @@ Settings
 
     Controls
     {
-        TabName = "Raccourcis clavier"  // Vérifier s'il s'agit bien des raccourcis claviers. Le fichier anglais parle de contrôle sans plus de précision
+        TabName = "Racc. clavier"  // Vérifier s'il s'agit bien des raccourcis claviers. Le fichier anglais parle de contrôle sans plus de précision
         Defaults = "Restaurer les raccourcis par défaut"
         ConfirmDefaults = "Êtes-vous sûr de vouloir réinitialiser tous les raccourcis à leurs réglages par défaut ?"
     }
