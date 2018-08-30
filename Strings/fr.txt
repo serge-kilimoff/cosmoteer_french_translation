@@ -1085,25 +1085,26 @@ Mods
     ModOffFmt = "{0} <bad>(INACTIF)</bad>"
     VersionFmt = "Version {0}"
     AuthorFmt = "Par {0}"
-    ModLoadError = "Une erreur s'est produite durant le chargement du mod {0}: {1}"
-    RestartInfo = "Vous devez redémarrer Cosmoteer pour que les changements de mods prennent effet."
+    ModLoadError = "Erreur durant le chargement du mod {0} : {1}"
+    RestartInfo = "Redémarrez Cosmoteer pour que les changements de mods prennent effet."
     RestartNow = "Redémarrer Maintenant"
     RestartLater = "Redémarrer Plus Tard"
-    InstallMod = "Installer le Mod..."
+    InstallMod = "Installer le Mod…"
     OverwriteConfirm = "Un mod portant ce nom est déja installé. Voulez-vous l'écraser ?"
-    ModInstalled = "Mod installé avec succès! Vous devez l'activer pour qu'il prenne effet."
+    ModInstalled = "Mod installé avec succès ! Vous devez l'activer pour qu'il prenne effet."
     ShowFolder = "Afficher le dossier"
-    FindMods = "Trouver des Mods"
-    FindTranslations = "Trouver des Traductions"
-    UninstallMod = "Désinstaller le Mod"
+    FindMods = "Trouver des mods"
+    FindTranslations = "Trouver des traductions"
+    UninstallMod = "Désinstaller le mod"
     UninstallConfirm = "Êtes-vous sûr de vouloir désinstaller ce mod ?"
     UninstallComplete = "Mod désinstallé avec succès."
     CreatePackage = "Créer un pack de Mods";
-    CreatePackageSuccessful = "Pack de Mods sauvegardé!";
+    CreatePackageSuccessful = "Pack de Mods sauvegardé !";
     IncompatibleWarning = "Ce mod pourrait être incompatible avec cette version de Cosmoteer et causer des erreurs. Êtes-vous sûr de vouloir l'activer ?"
     AutoDisabled = "Certains mods pourraient être incompatibles avec cette version de Cosmoteer et ont été désactivés automatiquement."
-    BuiltInFolder = "Mods Fournis"
-    UserFolder = "Mods d'utilisateurs"
+    BuiltInFolder = "Mods fournis de base"
+    UserFolder = "Mods utilisateur"
+    NoModsMode = "<bad>Cosmoteer est actuellement lancé en mode \"Pas de mods\", signifiant qu'ils ne seront pas chargés, même s'ils sont activés.</bad>"
 }
 
 LoadPaintScheme
