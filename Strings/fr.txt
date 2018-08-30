@@ -1251,17 +1251,23 @@ CreativeModeConfig
 CreativeMode
 {
     NewShip = "Nouveau vaisseau"
-    ShipLibrary = "Galerie de vaisseaux"
+    ShipLibrary = "Bibliothèque de vaisseaux"
 
-    RemoveShip = "Retirer"
-    RemoveShipTip = "Retire le(s) vaisseau(s) sélectionné(s) de la partie.\n\nRaccourci: <btn id='CreativeMode.DeleteShip'/>\nMaintenez <btn id='General.SuppressConfirmation'/> pour supprimer la confirmation."
-    ConfirmRemoveShip = "Retirer le(s) vaisseau(s) sélectionné(s) de la partie? Cette action ne peut pas être annulée."
-    RemoveShipOkay = "Retirer"
-    IllegalShipWarning = "Ce design de vaisseau est illégal. Êtes-vous sûr de vouloir l'utliser?"
+    RemoveShip = "Supprimer"
+    RemoveShipTip = "Supprime le(s) vaisseau(s) sélectionné(s) de la partie.\n\nRaccourci : <btn id='CreativeMode.DeleteShip'/>\nMaintenez <btn id='General.SuppressConfirmation'/> pour supprimer la confirmation."
+    ConfirmRemoveShip = "Supprimer le(s) vaisseau(s) sélectionné(s) de la partie ? Cette action ne peut pas être annulée."
+    RemoveShipOkay = "Supprimer"
+    IllegalShipWarning = "Ce design de vaisseau est illégal. Êtes-vous sûr de vouloir l'utliser ?"
+
     ClearEverything = "Tout effacer"
-    ClearEverythingConfirm = "Êtes-vous sûr de vouloir retirer tous les vaisseaux de la partie? Cette action ne peut pas être annulée."
+    ClearEverythingConfirm = "Êtes-vous sûr de vouloir retirer tous les vaisseaux de la partie ? Cette action ne peut pas être annulée."
     ClearDebris = "Effacer les débris"
-    ClearDebrisConfirm = "Cette action retirera tous les vaisseaux qui n'ont pas de Salle de Contrôle ou d'équipage. Cette action ne peut pas être annulée."
+    ClearDebrisConfirm = "Cette action retirera tous les vaisseaux qui n'ont pas de salle de contrôle ou d'équipage. Cette action ne peut pas être annulée."
+
+    PartDestruct = "Auto Destruction"
+    PartDestructTip = "Détruire les modules sélectionnés."
+    ConfirmPartDestruct = "Détruire les modules sélectionés ? Cette action est irréversible et peut causer des dommages collatéraux !"
+    PartDestructOkay = "DESTRUCTION !!"
 
     SavedShips
     {
@@ -1270,7 +1276,7 @@ CreativeMode
 
     RandomShips
     {
-        Title = "Vaisseaux Procéduraux"
+        Title = "Génération procédurale de vaisseaux"
     }
 
     Doodads
@@ -1282,12 +1288,12 @@ CreativeMode
 
     PlayAs
     {
-        Title = "Jouer en tant que..."
-        Tip = "Changez quel joueur vous contrôlez."
+        Title = "Jouer en tant que…"
+        Tip = "Changer le joueur que vous contrôlez."
         PlayerIndexFmt = "Joueur {0}"
-        PlayerIndexTipFmt = "Vous permet de contrôler les vaisseaux du Joueur  {0}.\n\nLes vaisseaux nouvellement placés seront donnés au joueur {0}."
-        AllPlayers = "Tous les Joueurs"
-        AllPlayersTipFmt = "Vous permet de contrôler les vaisseaux de tous les joueurs.\n\nLes vaisseaux nouvellement placés seront donnés au Joueur 1."
+        PlayerIndexTipFmt = "Vous permet de contrôler les vaisseaux du joueur {0}.\n\nLes vaisseaux nouvellement placés seront donnés au joueur {0}."
+        AllPlayers = "Tous les joueurs"
+        AllPlayersTipFmt = "Vous permet de contrôler les vaisseaux de tous les joueurs.\n\nLes vaisseaux nouvellement placés seront donnés au joueur 1."
     }
 
     Ai
@@ -1301,10 +1307,10 @@ CreativeMode
     {
         Title = "Allégeance"
         PlayerIndexFmt = "Joueur {0}"
-        PlayerIndexTipFmt = "Donne l'allégeance de(s) vaisseau(x) sélectionné(s) au Joueur {0}."
+        PlayerIndexTipFmt = "Donne l'allégeance de(s) vaisseau(x) sélectionné(s) au joueur {0}."
         Neutral = "Neutre"
         NeutralTip = "Les vaisseaux neutres sont amicaux envers tous les autres vaisseaux, sauf les barbares."
-        Barbarian = "Barbares"
+        Barbarian = "Barbares" // Pour l'instant, je laisse le terme barbare. Mais voir s'il peut être remplacer par pirate
         BarbarianTip = "Les vaisseaux \"Barbares\" sont hostiles envers tous les autres vaisseaux, y compris les autres barbares, à l'exception des vaisseaux débris."
         Junk = "Débris"
         JunkTip = "Les vaisseaux débris ne sont hostiles envers aucun autre vaisseau mais sont considérés comme sacrifiables sur la ligne de front."
@@ -1317,16 +1323,42 @@ CreativeMode
         Player2 = "JOUEUR 2"
         ShipFmt = " {0} ({1} {2} membres d'équipage)"
         AddShip = "Ajouter un vaisseau"
-        Go = "C'EST PARTI!"
-        Reset = "Redémarrer la Bataille"
+        Go = "C'EST PARTI !"
+        Reset = "Redémarrer la bataille"
         ResetSwap = "Redémarrer\n+ Inverser"
         Clear = "Effacer Joueurs"
         AI = "I.A."
         InitToMax = "Démarrer avec munitions/énergie pleines."
         AutoCamera = "Caméra Automatique"
-        AutoCameraLbl = "(<btn id='CreativeMode.AutoBattleCamera'/> pour activer/désactiver la caméra automatique)"
-        PlayerDistance = "Distance entre joueurs: "
-        ShipDistance = "Distance entre vaisseaux d'une même flotte: "
+        AutoCameraLbl = "(<btn id='CreativeMode.AutoBattleCamera'/> pour basculer la caméra automatique)"
+        PlayerDistance = "Distance entre joueurs : "
+        ShipDistance = "Distance entre vaisseaux d'une même flotte : "
+        SpawnBlocked = "There is at least one ship or piece of debris blocking the ship from spawning. Do you want to remove them?"
+    }
+
+    CameraHelper
+    {
+        Title = "Assistant caméra"
+        StartFmt = "Début : X={0:.0}, Y={1:.0}, R={2:0}°, Z={3:.0}"
+        StartNone = "Début : non défini"
+        EndFmt = "Fin : X={0:.0}, Y={1:.0}, R={2:0}°, Z={3:.0}"
+        EndNone = "Fin : non défini"
+        Set = "Définir"
+        View = "Vue" // ou voir ? je n'ai pas le contexte
+        Delay = "Différer :"
+        Duration = "Durée :"
+        Tween = "Interpolation :" // Pas sûr de la traduction. Le contexte me fait dire qu'il s'agit de ça.
+        GoWhenUnpaused = "Démarrer à la sortie de la pause"
+        Start = "DÉMARRER"
+        Stop = "ARRÊTER"
+
+        TweenMode
+        {
+            Linear = "Linéaire"
+            EaseIn = "Ease In"  // Je traduirais bien ça par exponentielle mais j'ai un énorme doute
+            EaseOut = "Ease Out"
+            EaseInOut = "Ease In/Out"
+        }
     }
 }
 
