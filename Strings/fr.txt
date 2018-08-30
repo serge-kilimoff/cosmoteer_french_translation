@@ -1911,8 +1911,10 @@ CrewBox
     RemoveOne = "-1"
     RemoveFmt = "-{0}"
     RemoveOneTip = "Virer 1 membre d'équipage.\n\nMaintenez <btn id='Crew.FiveAtATime'/> pour en virer 5."
-    CantHireInCombat = "Impossible de recruter ou virer des membres d'équipage durant un combat!"
+    CantHireInCombat = "Impossible de recruter ou virer des membres d'équipage durant un combat !"
     Full = "PLEIN"
+    ResetCrewPositions = "Réinitialiser la position de l'équipage"
+    ResetCrewPositionsTip = "Réaffecter tous les membres d'équipage à leurs quartiers."
 }
 
 ColorPicker
