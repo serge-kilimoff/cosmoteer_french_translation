@@ -1149,9 +1149,11 @@ VersionCheck
 ShipLibraries
 {
     Saved = "Mes Vaisseaux"
-    Bounty = "Vaisseaux fournis"
-    Starter = "Vaisseaux débutant"
-    Misc = "Vaisseaux divers"
+    SavedTip = "Modèles de vaisseaux que vous avez sauvegardé en vue d'un futur usage."
+    Lost = "Vaisseaux perdus"
+    LostTip = "Modèles de vaisseaux que vous pourriez avoir malencontreusement perdu parce qu'ils n'étaient pas sauvegardé."
+    BuiltIn = "Vaisseaux livrés de base"
+    BuiltInTip = "Modèles de vaisseaux livrés avec Cosmoteer."
 }
 
 ShipClasses
