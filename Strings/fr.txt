@@ -1963,152 +1963,202 @@ CategoryNouns
 
 Parts
 {
-    AmmoFactory = "Usine de munitions pour canon"
-    AmmoFactoryIcon = "Usine de Munitions"
-    AmmoFactoryDesc = "Fabrique des projectiles servant de munition pour canon."
+    // Terran
 
-    AmmoStorage = "Dépôt de munitions pour canon"
-    AmmoStorageIcon = "Dépôt de munitions"
-    AmmoStorageDesc = "Stocke une quantité limitée de munitions pour canon, fabriquées séparément par une Usine de munitions pour canon."
+    AmmoFactory = "Usine d'obus"
+    AmmoFactoryIcon = "Usine d'obus"
+    AmmoFactoryDesc = "Fabrique des obus pour canon."
 
-    Armor = "Armure"
+    AmmoStorage = "Dépôt d'obus"
+    AmmoStorageIcon = "Dépôt d'obus"
+    AmmoStorageDesc = "Entrepose une quantité limitée d'obus, fabriqués séparément par une usine d'obus."
+
+    Armor = "Blindage"  // Je n'aimais pas le terme "Armure" d'origine
     ArmorIcon = &Armor
-    ArmorDesc = "Absorbe une grande partie des tirs ennemis, protégeant l'intérieur de votre vaisseau."
+    ArmorDesc = "Absorbe une grande partie des tirs ennemis, protégeant les entrailles du vaisseau."
 
-    Armor2 = "Armure 2x1"
-    Armor2Icon = &Armor2
-    Armor2Desc = &ArmorDesc
+    Armor1x2WedgeL = "Blindage en coin 1x2 (gauche)"
+    Armor1x2WedgeLIcon = "Blindage en coin 1x2 (G)"
+    Armor1x2WedgeLDesc = &ArmorDesc
 
-    ArmorWedge = "Armure Coin"
-    ArmorWedgeIcon = &ArmorWedge
-    ArmorWedgeDesc = &ArmorDesc
+    Armor1x2WedgeR = "Blindage en coin 1x2 (droite)"
+    Armor1x2WedgeRIcon = "Armor 1x2 Wedge (D)"
+    Armor1x2WedgeRDesc = &ArmorDesc
 
-    ArmorTri = "Armure Triangle"
+    Armor2x1 = "Blindage 2x1"
+    Armor2x1Icon = &Armor2x1
+    Armor2x1Desc = &ArmorDesc
+
+    ArmorTri = "Blindage en triangle"
     ArmorTriIcon = &ArmorTri
     ArmorTriDesc = &ArmorDesc
 
-    Armor2WedgeL = "Armure 1x2 Coin (Gauche)"
-    Armor2WedgeLIcon = "Armure 1x2 Coin (G)"
-    Armor2WedgeLDesc = &ArmorDesc
+    ArmorWedge = "Blindage en coin" // Pour wedge, j'hésite entre coin, join, calle, angle
+    ArmorWedgeIcon = &ArmorWedge
+    ArmorWedgeDesc = &ArmorDesc
 
-    Armor2WedgeR = "Armure 1x2 Coin (Droite)"
-    Armor2WedgeRIcon = "Armure 1x2 Coin (D)"
-    Armor2WedgeRDesc = &ArmorDesc
+    CannonLarge = "Grand canon"
+    CannonLargeIcon = &CannonLarge
+    CannonLargeDesc = "Fusionne 4 obus pour augmenter grandement la force de pénétration et les dégâts par rapport au canon standard."
 
-    BigCannon = "Grand Canon"
-    BigCannonIcon = &BigCannon
-    BigCannonDesc = "Fusionne quatre cartouches de munitions projectiles pour augmenter grandement les dégâts et la profondeur de pénétration par rapport au Canon Standard"
+    CannonMed = "Canon standard"
+    CannonMedIcon = &CannonMed
+    CannonMedDesc = "Tire un obus à la fois, perçant les vaisseaux ennemis et y causant parfois des incendies."
 
-    BigThruster = "Grand Propulseur"
-    BigThrusterIcon = &BigThruster
-    BigThrusterDesc = "Un moteur à propulsion deux fois plus gros capable de propulser le vaisseau avec deux fois plus de force que le Propulseur Standard."
-
-    Bunk = "Couchettes d'équipage"
-    BunkIcon = "Couchettes"
-    BunkDesc = "Pourvoit des lits pour 2 membres d'équipage."
-
-    Cockpit = "Salle de Contrôle"
-    CockpitIcon = &Cockpit
-    CockpitDesc = "Un vaisseau sans Salle de Contrôle ne peut ni voler ni utiliser ses armes."
-
-    Corridor = "Couloir"
-    CorridorIcon = "Couloir"
-    CorridorDesc = "Un couloir dans lequel l'équipage peut se déplacer rapidement."
+    ControlRoomSmall = "Passerelle (commandement)" // aussi la timonerie
+    ControlRoomSmallIcon = &ControlRoomSmall
+    ControlRoomSmallDesc = "Un vaisseau sans passerelle (aussi appellé timonerie) ne peut voler ou coordonner ses tirs."
 
     Conveyor = "Tapis roulant"
     ConveyorIcon = &Conveyor
     ConveyorDesc = "Permet à l'équipage de se déplacer plus vite, mais dans une seule direction."
 
-    Door = "Porte"
+    Corridor = "Coursive"
+    CorridorIcon = &Corridor
+    CorridorDesc = "Une coursive à travers laquelle l'équipage peut se déplacer rapidement."
+
+    CrewQuartersMed = "Poste d'équipage"  // Quartier désigne autre chose
+    CrewQuartersMedIcon = &CrewQuartersMed
+    CrewQuartersMedDesc = "Pourvoit des lits pour 6 membres d'équipage."
+
+    CrewQuartersSmall = "Cabine d'équipage"
+    CrewQuartersSmallIcon = "Cabine"
+    CrewQuartersSmallDesc = "Pourvoit des lits pour 2 membres d'équipage."
+
+    Door = "Porte" // Écoutille ne se rapporte que pour les portes menant vers l'extérieur
     DoorIcon = &Door
-    DoorDesc = "Permet à l'équipage (et au feu!) de se déplacer d'une pièce à l'autre."
+    DoorDesc = "ermet à l'équipage (et au feu !) de se déplacer d'une pièce à l'autre."
 
-    IonBeam = "Émetteur à Faisceau Ionique"
-    IonBeamIcon = "Faisceau Ionique"
-    IonBeamDesc = "Tire un puissant rayon d'énergie dans une direction fixe."
+    ElectroBolter = "Bolter électrique"  // plutôt qu'Électro-Rayon, le bolter semblant être un truc spécifique à warhammer
+    ElectroBolterIcon = &ElectroBolter
+    ElectroBolterDesc = "Tire des rayons d'énergie électrique qui font peu de dégâts mais peuvent court-circuiter les systèmes ennemis, les privant d'énergie. Peut pénétrer les boucliers dont il aspire l'énergie."
 
-    MedCannon = "Canon Standard"
-    MedCannonIcon = &MedCannon
-    MedCannonDesc = "Tire une seule cartouche de munition projectile pouvant pénétrer dans les vaisseau ennemi, causant parfois un incendie."
+    EngineRoom = "Salle des machines"  // Plutôt appelé compartiment machine par les marins
+    EngineRoomIcon = &EngineRoom
+    EngineRoomDesc = "Augmente la puissance des propulseurs adjacent de 75%."
 
-    MedThruster = "Propulseur Standard"
-    MedThrusterIcon = &MedThruster
-    MedThrusterDesc = "Un moteur à propulsion de taille standard capable de propulser votre vaisseau avec une force modeste."
+    ExplosiveCharge = "Charge explosive"
+    ExplosiveChargeIcon = &ExplosiveCharge
+    ExplosiveChargeDesc = "Un petit engin explosif pouvant être déclenché manuellement. Principalement utilisé pour diviser délibérément les vaisseaux en plusieurs morceaux."
 
-    PowerStorage = "Dépôt d'énergie"
-    PowerStorageIcon = "Dépôt"
-    PowerStorageDesc = "Stocke une quantité limitée de piles à plasma qui peuvent être utilisées par les systèmes environnants du vaisseau."
+    FireExtinguisher = "Extincteur"
+    FireExtinguisherIcon = &FireExtinguisher
+    FireExtinguisherDesc = "Contient un extincteur que l'équipage peut utiliser pour éteindre les incendies."
 
-    Quarters = "Quartiers d'équipage"
-    QuartersIcon = "Quartiers"
-    QuartersDesc = "Pourvoit des lits pour 6 membres d'équipage."
-
-    Reactor = "Coeur de réacteur"
-    ReactorIcon = "Réacteur"
-    ReactorDesc = "Produit continuellement les piles à plasma utilisées pour alimenter la plupart des systèmes du vaisseau."
-
-    FtlDrive = "Hyperpropulsion"
+    FtlDrive = "Moteur à saut supraluminique"
     FtlDriveIcon = &FtlDrive
-    FtlDriveDesc = "Permet au vaisseau de sauter vers d'autres endroits de la galaxie en utilisant l'hyperpropulsion."
+    FtlDriveDesc = "Autorise le vaisseau à sauter vers un autre endroit de la galaxie, en utilisant les technologies exploitant l'Hyperespace."
 
-    ShieldGen = "Générateur de bouclier"
-    ShieldGenIcon = &ShieldGen
-    ShieldGenDesc = "Projette un bouclier d'énergie défensif en arc-de-cercle autour du vaisseau, bloquant la plupart des tirs entrants."
+    IonBeamEmitter = "Émetteur à faisceau ionique"
+    IonBeamEmitterIcon = "Faisceau ionique"
+    IonBeamEmitterDesc = "Tire un puissant rayon d'énergie dans une direction fixe."
 
-    PointDefense = "Système d'Auto-Défense"
-    PointDefenseIcon = "Auto-Défense"
+    LaserBlasterSmall = "Blaster laser"
+    LaserBlasterSmallIcon = &LaserBlasterSmall
+    LaserBlasterSmallDesc = "Une arme très précise et polyvalent tirant des décharges d'énergie, causant des dégâts modérés aux vaisseaux ennemis."
+
+    LaserBlasterLarge = "Blaster lourd laser"
+    LaserBlasterLargeIcon = &LaserBlasterLarge
+    LaserBlasterLargeDesc = "Assemble deux gros canons lasers sur une seule tourelle, se traduisant par des dommages bien plus important au détriment de la précision et la polyvalence."
+
+    MissileFactory = "Usine de missile"
+    MissileFactoryIcon = &MissileFactory
+    MissileFactoryDesc = "Fabrique des missiles utilisés par les lance-missiles."
+
+    MissileLauncher = "lance-missile"
+    MissileLauncherIcon = &MissileLauncher
+    MissileLauncherDesc = "Tire des missiles guidés à longue portée infligeant des dégâts sur une large zone."
+
+    MissileStorage = "Dépôt de missile"
+    MissileStorageIcon = &MissileStorage
+    MissileStorageDesc = "Entrepose une quantité limitée de missiles, qui sont fabriqués séparément par une usine de missiles."
+
+    PointDefense = "Système de défense anti-missile"
+    PointDefenseIcon = "Défense anti-missile"
     PointDefenseDesc = "Un système défensif automatisé qui abat les missiles ennemis en utilisant des cartouches de plasma surchauffé. Inefficace contre les vaisseaux."
 
-    SmallLaser = "Petit Blaster Laser"
-    SmallLaserIcon = "Petit Laser"
-    SmallLaserDesc = "Une arme très précise et versatile qui tire des décharges d'énergie, causant des dégâts modérés aux vaisseaux ennemis."
+    PowerStorage = "Dépôt d'énergie" // Pas fan de la traduction, mais traduit bien l'utilité
+    PowerStorageIcon = "Dépôt"
+    PowerStorageDesc = "Entrepose une quantité limitée de piles à plasma, pouvant être utilisé pour alimenter les systèmes environnants."
 
-    ElectroBolt = "Électro-Rayon"
-    ElectroBoltIcon = &ElectroBolt
-    ElectroBoltDesc = "Tire des rayons d'énergie électrique qui font peu de dégâts mais peuvent court-circuiter les systèmes ennemis, les privant d'énergie. Peut pénétrer les boucliers dont il aspire l'énergie."
+    RailgunLauncher = "Module de lancement pour canon électrique" // ou canon à rail
+    RailgunLauncherIcon = "Lanceur pour canon électrique"
+    RailgunLauncherDesc = "Composant essentiel pour les canons électriques. À associer avec un chargeur et éventuellement à des accélérateurs.\n\n"\
+                        "Les canons électriques tirent des projectiles accélérés par une force électromagnétique, qui peuvent pénétrer profondément les vaisseaux ennemis, causant d'importants dommages."
+                        // Il y avait une ligne ici, mais elle était redondante avec la première ligne
 
-    SmallThruster = "Petit Propulseur"
-    SmallThrusterIcon = &SmallThruster
-    SmallThrusterDesc = "Un petit moteur à propulsion capable de propulser le vaisseau avec une force minime. Principalement utile pour manoeuvrer."
+    RailgunLoader = "Module de chargement pour canon électrique"
+    RailgunLoaderIcon = "Chargeur pour canon électrique"  // Chargeur en français se réfère plutôt au magasin d'une arme
+    RailgunLoaderDesc = "Composant essentiel pour les canons électriques. À associer avec un lanceur et éventuellement à des accélérateurs.\n\n"\
+                        "Les canons électriques tirent des projectiles accélérés par une force électromagnétique, qui peuvent pénétrer profondément les vaisseaux ennemis, causant d'importants dommages."
+                         // Il y avait une ligne ici, mais elle était redondante avec la première ligne
 
-    Structure = "Armature"
-    StructureIcon = &Structure
-    StructureDesc = "L'armature sous-jacente qui maintient le vaisseau. L'armature est inclue automatiquement avec toutes les pièces et couloirs."
+    RailgunAccelerator = "Module d'accélérateur pour canon électrique"
+    RailgunAcceleratorIcon = "Accélérateur pour canon électrique"
+    RailgunAcceleratorDesc = "Composant facultatif à placer entre le lanceur et le chargeur du canon électrique. Chaque accélérateur augmente la vélocité des projectiles, augmentant ainsi les dommages et la force de pénétration.\n\n"\
+                        "Les canons électriques tirent des projectiles accélérés par une force électromagnétique, qui peuvent pénétrer profondément les vaisseaux ennemis, causant d'importants dommages."
+                         // Il y avait une ligne ici, mais elle était redondante avec la première ligne
 
-    StructureWedge = "Armature Coin"
-    StructureWedgeIcon = &StructureWedge
-    StructureWedgeDesc = &StructureDesc
-
-    Structure2WedgeL = "Armature 1x2 Coin (Gauche)"
-    Structure2WedgeLIcon = "Armature\n1x2 Coin (G)"
-    Structure2WedgeLDesc = &StructureDesc
-
-    Structure2WedgeR = "Armature 1x2 Coin (Droite)"
-    Structure2WedgeRIcon = "Armature\n1x2 Coin (D)"
-    Structure2WedgeRDesc = &StructureDesc
+    ReactorSmall = "Cœur de réacteur"
+    ReactorSmallIcon = "Réacteur"
+    ReactorSmallDesc = "Produit continuellement les piles à plasma utilisées pour alimenter la plupart des systèmes du vaisseau."
 
     SensorArray = "Réseau de capteurs"
     SensorArrayIcon = "Capteurs"
     SensorArrayDesc = "Augmente la portée des capteurs de votre vaisseau."
 
-    FireExtinguisher = "Extincteur"
-    FireExtinguisherIcon = &FireExtinguisher
-    FireExtinguisherDesc = "Stocke un extincteur que l'équipage peut utiliser pour éteindre les incendies."
+    ShieldGenSmall = "Générateur de bouclier"
+    ShieldGenSmallIcon = &ShieldGenSmall
+    ShieldGenSmallDesc = "Projette un bouclier d'énergie défensif en arc-de-cercle à l'extérieur du vaisseau, bloquant la plupart des tirs entrants."
 
-    MissileLauncher = "Lance-Missile"
-    MissileLauncherIcon = &MissileLauncher
-    MissileLauncherDesc = "Lance des missiles guidés à longue portée infligeant des dégâts sur une large zone."
+    Structure = "Armature"
+    StructureIcon = &Structure
+    StructureDesc = "L'armature sous-jacente qui maintient le vaisseau. L'armature est inclue automatiquement avec toutes les pièces et couloirs."
 
-    MissileFactory = "Usine à Missiles"
-    MissileFactoryIcon = &MissileFactory
-    MissileFactoryDesc = "Fabrique des missiles utilisés par les Lance-Missiles."
+    Structure1x2WedgeL = "Armature en coin 1x2 (gauche)"  // Même problématique que le blindage en coin
+    Structure1x2WedgeLIcon = "Armature en coin 1x2 (G)"
+    Structure1x2WedgeLDesc = &StructureDesc
 
-    MissileStorage = "Dépôt à Missiles"
-    MissileStorageIcon = &MissileStorage
-    MissileStorageDesc = "Stocke une quantité limitée de missiles, qui sont fabriqués séparément par une Usine à Missiles."
+    Structure1x2WedgeR = "Armature en coin 1x2 (droite)"
+    Structure1x2WedgeRIcon = "Armature en coin 1x2 (D)"
+    Structure1x2WedgeRDesc = &StructureDesc
+
+    StructureWedge = "Armature en coin"
+    StructureWedgeIcon = &StructureWedge
+    StructureWedgeDesc = &StructureDesc
+
+    ThrusterBoost = "Propulseur de poussée"
+    ThrusterBoostIcon = &ThrusterBoost
+    ThrusterBoostDesc = "Variante du grand propulseur, pouvant injecter du plasma brut directement dans la chambre à combustion, pour une accélération puissante et éphémère."
+
+    ThrusterHuge = "Immense propulseur"  // Pour les propulseurs, plutôt utiliser des classes types Mark IV ou autre
+    ThrusterHugeIcon = &ThrusterHuge
+    ThrusterHugeDesc = "Un immense moteur capable de propulser le vaisseau avec plus de deux fois de force qu'un grand propulseur. A besoin d'un long temps d'accélération pour être à pleine pousée."  // J'ai un doute. Est-ce une accélération soudaine ou une accélération progressive ?
+
+    ThrusterLarge = "Grand propulseur"
+    ThrusterLargeIcon = &ThrusterLarge
+    ThrusterLargeDesc = "Un moteur deux fois plus gros capable de propulser le vaisseau avec plus de deux fois de force qu'un propulseur standard. A besoin d'un temps moyen d'accélération pour être à pleine poussée"
+
+    ThrusterMed = "Propulseur standard"
+    ThrusterMedIcon = &ThrusterMed
+    ThrusterMedDesc = "Un moteur de taille standard capable de propulser le vaisseau avec une force modeste. A besoin d'un court temps d'accélération pour être à pleine poussée"
+
+    ThrusterSmall = "Petit propulseur"
+    ThrusterSmallIcon = &ThrusterSmall
+    ThrusterSmallDesc = "Un petit moteur utilisé principalement pour manœuvrer."
+
+    ThrusterSmall2Way = "Petit propulseur bi-directionel"
+    ThrusterSmall2WayIcon = &ThrusterSmall2Way
+    ThrusterSmall2WayDesc = "Un petit moteur à deux directions utilisé principalement pour manœuvrer."
+
+    ThrusterSmall3Way = "Petit propulseur tri-directionel"
+    ThrusterSmall3WayIcon = &ThrusterSmall3Way
+    ThrusterSmall3WayDesc = "Un petit moteur à trois directions utilisé principalement pour manœuvrer."
 
     WallHole = "Trou"
-    WallHoleDesc = "Un Trou infligé à un mur"
+    WallHoleDesc = "Un trou percé à travers la coque"
+
+    // Asteroid
 
     Rubble1 = "Décombres 1"
     Rubble2 = "Décombres 2"
