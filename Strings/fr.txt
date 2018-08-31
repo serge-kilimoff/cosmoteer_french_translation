@@ -2183,25 +2183,26 @@ PartToggles
 
 GalaxyMap
 {
-    PlanetInfoFmt = "Classe: <b>{0}</b>\nMasse: <b>{1}</b>\nDistance: <b><ftl>{2}</ftl></b>"
-    CurPlanetInfoFmt = "Classe: <b>{0}</b>\nMasse: <b>{1}</b>"
+    PlanetInfoFmt = "Classe : <b>{0}</b>\nMasse : <b>{1}</b>\nDistance : <b><ftl>{2}</ftl></b>"
+    CurPlanetInfoFmt = "Classe : <b>{0}</b>\nMasse : <b>{1}</b>"
     ViewSector = "Voir le secteur"
-    PlotCourseFmt = "Enclencher l'hyperpropulsion\n{0}"
-    PlotCourseNoFtl = "Hyperpropulsion Non Disponible"
-    PlotCourseNoFtlTip = "Aucun de vos vaisseaux ne dispose de l'hyperpropulsion et d'une salle de contrôle. Ajoutez un moteur à hyperpropulsion ET une Salle de Contrôle à vos vaisseaux pour pouvoir activer le saut hyperpropulsé."
-    PlotCourseNoFuel = "Il vous faut plus de carburant à hyperpropulsion pour pouvoir faire un saut de cette distance."
-    PlotCourseOnlySelectedMsg = "Voulez enclencher l'hyperpropulsion sur <b>tous</b> vos vaisseaux ou seulement ceux <b>sélectionnés</b>?"
+    ViewSectorNotSaveable = "Vous ne pouvez pas voir un autre secteur tant que le jeu est dans un état non sauvegardable."
+    PlotCourseFmt = "Enclencher le saut supraluminique\n{0}"
+    PlotCourseNoFtl = "Saut supraluminique Non Disponible"
+    PlotCourseNoFtlTip = "Aucun de vos vaisseaux ne dispose du moteur de saut supraluminique et d'une paserelle de commandement. Il vous faut impérativement ces deux modules pour effectuer un saut supraluminique."
+    PlotCourseNoFuel = "Il vous faut plus de carburant dans le moteur de saut supraluminique avant de pouvoir sauter."
+    PlotCourseOnlySelectedMsg = "Voulez enclencher le moteur de saut supraluminique sur <b>tous</b> vos vaisseaux ou seulement ceux <b>sélectionnés</b>?"
     PlotCourseAllShipsFmt = "Tous les vaisseaux\n{0}"
     PlotCourseSelectedShipsFmt = "Sélectionnés Uniquement\n{0}"
     PlotCourseNoneSelected = "Aucun vaisseau n'a été sélectionné!"
-    CancelCourseFmt = "Annuler le saut hyperpropulsé\n{0}"
+    CancelCourseFmt = "Annuler le saut supraluminique\n{0}"
     CurrentLocation = "POSITION ACTUELLE"
 }
 
 Planets
 {
     Alien = "Exotique"
-    Barren = "Aride"
+    Barren = "Stérile"
     Gas = "Géante Gazeuse"
     Lava = "Volcanique"
     Rocky = "Rocheuse"
@@ -2211,8 +2212,8 @@ Planets
 
 AI
 {
-    Easy = "Facile"
-    Normal = "Normal"
+    Easy = "I.A. Facile"
+    Normal = "I.A. Normal"
 }
 
 Tutorials
