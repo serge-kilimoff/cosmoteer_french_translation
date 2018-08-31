@@ -2127,8 +2127,8 @@ Parts
     StructureWedgeIcon = &StructureWedge
     StructureWedgeDesc = &StructureDesc
 
-    ThrusterBoost = "Propulseur de poussée"
-    ThrusterBoostIcon = &ThrusterBoost
+    ThrusterBoost = "Propulsion magnéto-plasmique à impulsion spécifique variable"  // https://fr.wikipedia.org/wiki/Propulsion_magn%C3%A9to-plasmique_%C3%A0_impulsion_sp%C3%A9cifique_variable
+    ThrusterBoostIcon = "Propulsion magnéto-plasmique"
     ThrusterBoostDesc = "Variante du grand propulseur, pouvant injecter du plasma brut directement dans la chambre à combustion, pour une accélération puissante et éphémère."
 
     ThrusterHuge = "Immense propulseur"  // Pour les propulseurs, plutôt utiliser des classes types Mark IV ou autre
@@ -2164,12 +2164,21 @@ Parts
     Rubble2 = "Décombres 2"
 }
 
+PartTriggers
+{
+    Detonate = "Déclencher la charge explosive\n\nRaccourci : <btn id='PartTriggers.detonate'/>"
+}
+
 PartToggles
 {
-    OnOff_Off = "<b>Alimentation: <bad>Éteint</bad></b>\n\nRaccourci: <btn id='PartToggles.on_off'/>"
-    OnOff_On = "<b>Alimentation: <good>Allumé</good></b>\n\nRaccourci: <btn id='PartToggles.on_off'/>"
-    FireMode_Hold = "<b>Mode de Tir: Retenu</b>\nNe tire pas avant d'avoir reçu une cible.\n\nRaccourci: <btn id='PartToggles.fire_mode'/>"
-    FireMode_AtWill = "<b>Mode de Tir: À Volonté</b>\nTire sur toutes les cibles ennemies à portée.\n\nRaccourci: <btn id='PartToggles.fire_mode'/>"
+    OnOff_Off = "<b>Alim. : <bad>éteint</bad></b>\n\nRaccourci : <btn id='PartToggles.on_off'/>"
+    OnOff_On = "<b>Alim. : <good>allumé</good></b>\n\nRaccourci : <btn id='PartToggles.on_off'/>"
+    FireMode_Hold = "<b>Tir : en attente</b>\nNe tire que si une cible est désignée.\n\nRaccourci : <btn id='PartToggles.fire_mode'/>"
+    FireMode_AtWill = "<b>Tir : feu à volonté</b>\nTire sur toutes les cibles ennemies à portée.\n\nRaccourci : <btn id='PartToggles.fire_mode'/>"
+    Fire_Synchronized = "<b>Tir : synchronisé</b>\n\nRaccourci : <btn id='PartToggles.fire_alternating'/>"
+    Fire_Alternating = "<b>Tir : en alternance</b>\n\nRaccourci : <btn id='PartToggles.fire_alternating'/>"
+    Boost_Off = "<b>Booster : éteint</b>\n\nRaccourci : <btn id='PartToggles.thruster_boost'/>"
+    Boost_On = "<b>Booster : allumé</b>\n\nRaccourci : <btn id='PartToggles.thruster_boost'/>"
 }
 
 GalaxyMap
