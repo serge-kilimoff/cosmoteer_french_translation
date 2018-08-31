@@ -466,7 +466,7 @@ Inputs
         PaintOpenClose = "Basculer le menu de peinture"
         Construct = "Appliquer les modifications"
         EraseTool = "Outil de suppression"
-        GrabTool = "Outil de déplacement"
+        GrabTool = "Outil de saisie"
         SelectionTool = "Outil de sélection"
         ContiguousSelectionMode = "Mode \"baguette magique\" pour la sélection contigue"
         ToggleMirrorMode = "Basculer le mode miroir"
@@ -785,10 +785,10 @@ Settings
         AdHocFormationsTip = "Si coché, les vaisseaux seront automatiquement regroupés dans une formation ad hoc lorsque vous donnez un ordre à plusieurs vaisseaux à la fois."
 
         EnableCollisionAvoidance = "Détection de collision lors d'un clic droit"
-        EnableCollisionAvoidanceTip = "Si coché, cliquer droit pour déplacer le vaisseau l'obligera à manoeuvrer pour tenter éviter des collisions avec d'autres vaisseaux. "\
+        EnableCollisionAvoidanceTip = "Si coché, cliquer droit pour déplacer le vaisseau l'obligera à manœuvrer pour tenter éviter des collisions avec d'autres vaisseaux. "\
                                       "Vous pouvez utiliser les commandes \"Déplacement\" et \"Déplacement forcé\" pour utiliser ou non explicitement la détection de collision."
 
-        BreakFormationToAttack = "Biser la formation pour attaquer"
+        BreakFormationToAttack = "Briser la formation pour attaquer"
         BreakFormationToAttackTip = "Si coché, la flotte brisera automatiquement la formation lors de l'entrée de la zone d'attaque de l'ennemi."
     }
 
@@ -885,8 +885,8 @@ Settings
         BuildAllowOverwrite = "Écraser les modules existantes"
         BuildAllowOverwriteTip = "Si cette option est cochée, essayer d'ajouter un module à un vaisseau remplacera les modules existants."
 
-        GrabLeavesCorridors = "Déplacer laisse des couloirs"
-        GrabLeavesCorridorsTip = "Lorsqu'un module est déplacé à l'aide de l'Outil Déplacement, des cases de couloir seront laissées à sa place."
+        GrabLeavesCorridors = "Saisir laisse des couloirs"
+        GrabLeavesCorridorsTip = "Lorsqu'un module est saisi à l'aide de l'Outil Déplacement, des cases de couloir seront laissées à sa place."
 
         BuildAutoDoors = "Ajouter des portes automatiquement"
         BuildAutoDoorsTip = "Si cette option est cochée, des portes seront automatiquement créées lorsque vous ajoutez un module à un vaisseau."
@@ -906,8 +906,8 @@ Settings
 
         DefaultBuildTool = "Outil par défaut"
         DefaultBuildToolTip = "L'outil à sélectionner par défaut lors de l'ouverture du panneau de construction."
-        BuildGrabTool = "Outil de déplacement"
-        BuildGrabToolTip = "\"L'Outil de déplacement\" sera l'outil par défaut lors de l'ouverture du panneau de construction."
+        BuildGrabTool = "Outil de saisie"
+        BuildGrabToolTip = "\"L'Outil de saisie\" sera l'outil par défaut lors de l'ouverture du panneau de construction."
         BuildSelectTool = "Outil de sélection"
         BuildSelectToolTip = "\"L'Outil de sélection\" sera l'outil par défaut lors de l'ouverture du panneau de construction."
 
@@ -930,8 +930,8 @@ Settings
 
         DefaultPaintTool = "Outil par défaut"
         DefaultPaintToolTip = "L'outil à sélectionner par défaut lorsque l'un des onglets 'Vignettes' du panneau de peinture est ouvert."
-        PaintGrabTool = "Outil de déplacement"
-        PaintGrabToolTip = "L' \"Outil de déplacement\" sera sélectionné par défaut à l'ouverture du panneau de peintures."
+        PaintGrabTool = "Outil de saisie"
+        PaintGrabToolTip = "L' \"Outil de saisie\" sera sélectionné par défaut à l'ouverture du panneau de peintures."
         PaintSelectTool = "Outil de sélection"
         PaintSelectToolTip = "L' \"Outil de sélection\" sera sélectionné par défaut à l'ouverture du panneau de peintures."
     }
@@ -1164,7 +1164,7 @@ ShipClasses
 
 StarterShips
 {   // La description a été réduite pour pouvoir voir toutes les informations
-    ModelL = "Très manoeuvrable et livré avec trois blasters lasers pour détruire les sous-systèmes ennemis. "\
+    ModelL = "Très manœuvrable et livré avec trois blasters lasers pour détruire les sous-systèmes ennemis. "\
              "Mais manque de véritables défenses."
     ModelC = "Lent, bien renforcé et équipé d'une paire de canons peu précis mais pouvant pénétrer "\
              "l'intérieur des vaisseaux ennemis."
@@ -2218,232 +2218,248 @@ AI
 
 Tutorials
 {
-    Okay = "J'ai compris!"
-    HowToPlay = "Comment jouer:"
+    Okay = "J'ai compris !"
+    HowToPlay = "Comment jouer :"
     HowToPlayDialog = "Comment jouer"
+
+    AdvancedCommands1
+    {
+        Title = "Contrôles avancés du vaisseau"
+        Info = "Dans le coin inférieur gauche se situe des commandes vous permettant de mieux contrôler le vaisseau :"
+        Move = "La commande <yellow>Déplacement</yellow> (<btn id='Game.Move'/>) permet de se rendre à un point donné ou de suivre n'importe quel autre vaisseau."
+        Attack = "La commande <yellow>Attaquer</yellow> (<btn id='Game.Attack'/>) permet d'attaquer n'importe quel vaisseau, y comris le vôtre. "\
+                 "Elle permet aussi d'ajuster rapidement l'angle et la distance d'un vaisseau exécutant déjà une commande d'attaque."
+        Halt = "La commande <yellow>Stopper</yellow> (<btn id='Game.Halt'/>) annule tous les ordres en cours."
+        ForceMove = "La commande <yellow>Déplacement forcé</yellow> (<btn id='Game.ForceMove'/>) contraint le déplacement vers un point donné et coupe toutes les mesures anti-collisions."
+        Rotate = "La commande <yellow>Pivoter</yellow> (<btn id='Game.Rotate'/>) effectue une rotation du vaisseau sur son axe sans se déplacer."
+        Strafe = "La commande <yellow>Translater</yellow> (<btn id='Game.Strafe'/>) déplace le vaisseau latéralement vers un point sans tourner son nez."
+    }
 
     Ammo1
     {
         Title = "Vaisseaux: Canons & Missiles"
-        Cannon = "Les <yellow>Canons</yellow> et les <yellow>Lance-Missile</yellow> sont des armes à projectiles utilisant des <yellow>munitions</yellow> et des <yellow>missiles</yellow> au lieu d'énergie."
-        Factory = "Les munitions sont fabriquées par une <yellow>Usine à Munitions</yellow>, et les missiles sont fabriqués par une <yellow>Usine à Missiles</yellow>."
-        Crew = "Votre <yellow>équipage</yellow> transportera les munitions et les missiles de vos usines à vos canons et lance-missiles."
-        Tip = "<green><b>ASTUCE:</b></green> La fréquence à laquelle un canon ou un lance-missile peut tirer dépend de la vitesse à laquelle votre équipage peut lui apporter des munitions ou des missiles."
+        Cannon = "Les <yellow>canons</yellow> et <yellow>lance-missiles</yellow> utilisent des <yellow>obus</yellow> et des <yellow>missiles</yellow> au lieu d'énergie."
+        Factory = "Les obus sont créés dans des <yellow>usines d'obus</yellow> et les missiles dans les <yellow>usines de missiles</yellow>."
+        Crew = "L'<yellow>équipage</yellow> transporte ces munitions des usines vers les canons et lance-missiles."
+        Tip = "<green><b>Astuce :</b></green> la fréquence à laquelle peuvent tirer canons et lance-missiles dépent de la vitesse à laquelle l'équipage les ravitaille en munitions."
     }
 
     Blueprints1
     {
-        Title = "Design de vaisseau avancé"
-        MirrorMode = "Activer le <yellow>mode miroir</yellow> pour créer rapidement des designs de vaisseau symétriques."
-        SelectCopyPaste = "Utilisez l'<yellow>outil sélection</yellow> pour copier, coller, projeter, pivoter ou effacer des sections entières de votre vaisseau."
-        Button = "Pour modifier les <blue>plans</blue> de votre vaisseau, cliquez sur le bouton <b>Activer le Mode Plans</b>."
-        Ship = "Utilisez les plans pour apporter temporairement des changemnts à votre vaisseau qui seraient autrement illégaux, et pour expérimenter avant de dépenser des crédits <green>₡</green>."
-        Commit = "Lorsque vous êtes satisfait de votre design, cliquez sur le bouton <b>FAIRE COMME ÇA</b>. Votre vaisseau sera modifié et le prix sera déduit de vos crédits <green>₡</green>."
+        Title = "Design avancé des vaisseaux"
+        Brush = "En sélectionnant une tuile de module, il est possible de choisir entre différentes <yellow>brosses</yellow> de tailles et de formes variables."
+        MirrorMode = "Activer <yellow>le mode miroir</yellow> permet de créer rapidement un vaisseau symétrique."
+        SelectCopyPaste = "Les <yellow>outils de sélections</yellow> permettent de copier, coller, inverser, pivoter ou effacer des sections entières du vaisseau."
+        Button = "La modification des <yellow>plans</yellow> du vaisseau se fait en cliquant sur le bouton <b>Basculer les plans</b>."
+        Ship = "Les plans permettent de faire des changements (potentiellement illégaux) temporaire sur un design de vaisseau et d'expérimenter avant de dépenser des <green>₡</green> crédits."
+        Commit = "Une fois le design finalisé, un click sur le bouton <b>Appliquer les modifications</b> effectuera la mise à jour du vaisseau et les coûts seront déduits des <green>₡</green> credits de l'utilisateur."
     }
 
     Build1
     {
-        Title = "Améliorer votre vaisseau"
-        Button = "Pour <yellow>améliorer votre vaisseau</yellow>, cliquez sur le bouton <b>Construire</b> en bas à gauche."
-        Parts = "Pour <yellow>ajouter un module</yellow> à votre vaisseau, <b>sélectionnez-le</b> dans le menu ci-dessous. Puis <b>cliquez</b> là où vous voulez l'ajouter sur votre vaisseau."
-        Rotate = "Pour <yellow>pivoter un module</yellow> avant de l'ajouter, utilisez les boutons de rotation ou <b>le clic droit</b>."
-        Tip = "<green><b>ASTUCE:</b></green> Vous ne pouvez pas améliorer votre vaisseau lorsque vous êtes sous le feu ennemi!"
+        Title = "Améliorer le vaisseau"
+        Button = "Pour <yellow>améliorer le vaisseau</yellow>, cliquez sur le bouton <b>Construire</b> en bas à gauche."
+        Parts = "Pour ajouter un <yellow>module</yellow> au vaisseau, le sélectionner dans la boite correspondante en bas et cliquez gauche à l'endroit voulu sur le vaisseau."
+        Rotate = "Pour faire <yellow>pivoter</yellow> un module avant de l'ajouter, appuyez sur le bouton de rotation ou <b>cliquez droit</b>."
+        Tip = "<green><b>Précision :</b></green> votre vaisseau ne peut pas être améliorer sous le feu adverse !"
     }
 
     Build2
     {
-        Title = "Améliorer votre vaisseau (Suite)"
-        Grab = "Pour <yellow>saisir un module</yellow> et le déplacer ailleurs, utilisez l'outil <b>Déplacement</b>."
-        Delete = "Pour <yellow>retirer un module</yellow> de votre vaisseau, utlisez l'outil <b>Suppression</b>. Vous serez remboursé à 75%."
-        Tip = "<green><b>ASTUCE:</b></green> Vous avez fait une erreur ? Cliquez simplement sur le bouton <b>Annuler</b> ou appuyez sur <btn id='Design.Undo'/>."
-        Close = "Lorsque vous avez <yellow>terminé</yellow> d'améliorer votre vaisseau, appuyez de nouveau sur <b>Construire</b> ou <btn id='General.Cancel'/> pour sortir du mode Construction."
+        Title = "Améliorer le vaisseau (suite)"
+        Grab = "Pour <yellow>saisir</yellow> et <yellow>déplacer</yellow> ailleurs un module déjà en place sur le vaisseau, utilisez l'outil de <b>saisie</b>."
+        Delete = "La <yellow>suppression</yellow> d'un module s'effectue en utilisant l'outil de <b>suppression</b> (75% de la valeur initiale du module vous sera alors remboursée)."
+        Tip = "<green><b>Astuce :</b></green> Une erreur ? Pour rattraper cela, cliquez sur le bouton <b>annuler</b> ou appuyer sur <btn id='Design.Undo'/>."
+        Close = "Une fois les améliorations <yellow>terminées</yellow>, la sortie du menu se fait cliquant de nouveau sur le bouton <b>Construction</b> ou en appuyant <btn id='General.Cancel'/>."
     }
 
-    CameraControls1
+    Camera1
     {
-        Title = "Contrôler la Caméra"
-        EdgePan = "Pour <yellow>déplacer la caméra</yellow>, déplacez le <b>curseur de la souris</b> vers le bord de l'écran ou appuyez sur les <b>flèches directionnelles ou les touches WASD</b>."
-        Zoom = "Pour <yellow>zoomer en avant ou en arrière</yellow>, utilisez la <b>molette</b> de votre souris ou les touches <btn id='View.ZoomIn'/> et <btn id='View.ZoomOut'/>."
-        Tip = "<green><b>ASTUCE:</b></green> Vous ne trouvez pas votre vaisseau? Cliquez sur son icône dans le coin supérieur gauche ou appuyez sur la touche <btn id='View.FocusSelected'/> (Centrer)."
+        Title = "Contrôler la caméra"
+        EdgePan = "Pour <yellow>déplacer la caméra</yellow>, poussez le <b>curseur</b> contre les rebords de l'écran ou appuyez sur les <b>touches fléchées ou ZQSD</b> (WASD)."
+        Zoom = "Pour <yellow>(dé-)zoomer</yellow>, faites défiler la <b>molette de la souris</b> ou appuyer sur <btn id='View.ZoomIn'/> et <btn id='View.ZoomOut'/>."
+        Tip = "<green><b>Astuce :</b></green> Impossible de trouver votre vaisseau ? Suffit de cliquer sur l'icône dans le coin en bas à gauche ou d'appuyer sur <btn id='View.FocusSelected'/> !"
     }
 
-    CameraControls2
+    Camera2
     {
-        Title = "Contrôler la Caméra (Avancé)"
-        Drag = "Pour <yellow>glisser la caméra</yellow>, cliquez, maintenez, puis glissez le <b>bouton central de la souris</b>."
-        FocusClick = "Pour <yellow>centrer la caméra</yellow> sur un vaisseau, cliquez dessus avec le <b>bouton central de la souris</b>.\n\nVous pouvez aussi utiliser le <b>bouton central de la souris</b> à un endroit vide pour centrer la caméra dessus."
-        AltDrag = "Pour <yellow>centrer sur plusieurs</yellow>, maintenez la touche <btn id='View.FocusCursorMode'/>, puis <b>avec le clic gauche</b> sélectionnez une zone autour de ces vaisseaux."
-        Tip = "<green><b>ASTUCE:</b></green> Appuyez sur la touche <btn id='View.FocusSelected'/> pour centrer la caméra sur votre vaisseau."
+        Title = "Contrôler la caméra (suite)"
+        Drag = "Pour <yellow>déplacer la caméra</yellow>, déplacez la souris tout en maintenant le boutou <b>milieu de la souris</b>."
+        FocusClick = "Pour <yellow>mettre le focus</yellow> sur n'importe quel vaisseau, cliquez dessus avec <b>bouton milieu de la souris</b>.\n\nCliquer <b>milieu</b> sur un espace libre centre aussi la caméra sur cet espace."
+        AltDrag = "Pour <yellow>mettre le focus sur plusieurs vaisseaux</yellow>, maintenez <btn id='View.FocusCursorMode'/> et <b>clic gauche</b> et glisser la boite de sélection autour des vaisseaux."
+        Tip = "<green><b>Astuce :</b></green> Appuyez sur <btn id='View.FocusSelected'/> pour remettre le focus sur votre vaisseau."
     }
 
     Minimap1
     {
-        Title = "La Mini-Carte"
-        BasicInfo = "La <yellow>mini-carte</yellow> dans le coin inférieur droit affivhe l'emplacement des vaisseaux dans la zone."
-        ShipDots = "L'emplacement de votre vaisseau est indiqué par le <green>point vert</green>.\n\nL'emplacement des vaisseaux ennemis est indiqué par les <red>points rouges</red>."
-        LeftClick = "<b>Cliquez</b> sur la mini-carte pour déplacer la caméra à cet endroit."
+        Title = "La mini-carte"
+        BasicInfo = "La <yellow>mini-carte</yellow> en bas à droite affiche la position des vaisseaux dans la zone."
+        ShipDots = "La localisation de votre vaisseau est indiquée avec <green>un point vert</green>.\n\nLa localisation des vaisseaux ennemis est indiqué avec des <red>points rouges</red>."
+        LeftClick = "<b>Cliquer gauche</b> sur la mini-carte pour déplacer la caméra à cet endroit."
     }
 
     Combat1
     {
-        Title = "Attaquer l'Ennemi"
-        Blips = "Les vaisseaux ennemis qui sont trop loin pour que vous puissiez les voir directement sont indiqués par des <red>échos radar</red> clignotants."
-        Attack = "Pour <yellow>attaquer un vaisseau ennemi</yellow>, <b>faites un clic droit</b> sur le vaisseau ennemi ou sur son écho radar.\n\nVotre vaisseau se dirigera automatiquement vers lui et l'attaquera."
-        Tip = "<green><b>ASTUCE:</b></green> Certains vaisseaux ennemis seront trop puissants pour que vous puissiez les vaincre! Fuyez et <yellow>améliorez</yellow> votre vaisseau avant de les attaquer."
+        Title = "Combattre l'ennemi"
+        Blips = "Les vaisseaux ennemis trop loin pour être en visuel direct sont signalés par des <red>échos rouges</red> pulsant."
+        Attack = "Pour <yellow>attaquer</yellow> un vaisseau ennemi, <b>cliquez droit</b> sur le vaisseau ennemi ou sur son écho radar.\n\nVotre vaisseau va automatiquement foncer vers l'ennemi et attaquer."
+        Tip = "<green><b>Astuce :</b></green> Certains ennemis sont bien trop puissant pour que vous puissiez les défaire ! Fuyez et <yellow>améliorez</yellow> votre vaisseau avant d'attaquer de nouveau."
     }
 
-    CreativeMode1
+    Creative1
     {
-        Title = "Mode Créatif"
-        Unlimited = "Le mode créatif vous permet de créer et combattre des vaisseaux avec des crédits <green>₡</green> virtuellement illimités."
-        NewShip = "Pour <yellow>concevoir un nouveau vaisseau</yellow> depuis le début, cliquez sur le bouton <b>Nouveau Vaisseau</b>."
-        SaveShip = "Pour <yellow>sauvegarder</yellow> votre design de vaisseau, cliquez sur le bouton <img name='hamburger'/> sur le panneau de construction puis sélectionnez <b>Sauvegarder le Design de vaisseau</b>."
-        AddShip = "Pour <yellow>ajouter un vaisseau sauvegardé</yellow> à la partie, cliquez sur le bouton <b>Galerie de Vaisseaux</b>."
-        Allegiance = "Pour <yellow>faire combattre les vaisseaux</yellow>, cliquez qur le petit bouton <img name='hamburger'/> à côté du nom du vaisseau, sélectionnez <b>Allégeance</b>, puis choisissez un joueur différent pour chaque vaisseau. "\
-                     "Les vaisseaux assignés à des joueurs différents peuvent recevoir l'ordre de s'attaquer entre eux et feront feu automatiquement une fois à portée."
-        PlayAs = "Pour changer de quel joueur vous pouvez <yellow>contrôler</yellow> les vaisseaux, cliquez sur le bouton <img name='hamburger'/> en haut et sélectionnez <b>Jour en tant que...</b>."
+        Title = "Mode créatif"
+        Unlimited = "Le mode créatif vous autorise à créer un vaisseau et à combattre sans aucune limite de <green>₡</green> crédits."
+        NewShip = "Pour <yellow>designer un nouveau vaisseau</yellow> depuis zéro, cliquez sur le bouton <b>Nouveau vaisseau</b>."
+        SaveShip = "Pour <yellow>sauvegarder</yellow> le design de votre vaisseau, cliquez sur le bouton <img name='hamburger'/> sur le panneau de construction et sélectionnez <b>Sauvegarder le design du vaisseau</b>."
+        AddShip = "Pour <yellow>ajouter un vaisseau sauvegardé</yellow> à la partie, cliquez sur le bouton <b>Biblithèque de vaisseau</b>."
+        Allegiance = "Pour <yellow>combattre dans des joutes spatiales</yellow>, cliquer sur le bouton <img name='hamburger'/> à côté du nom du vaisseau, sélectionnez <b>Allégeance</b> et assignez un joueur différent pour chaque vaisseau. "\
+                     "Les vaisseaux assignés à d'autres joueurs peuvent s'attaquer mutuellement et faire feu automatiquement si on leur demande."
+        PlayAs = "Pour changer le vaisseau dirigé par un joueur, vous pouvez <yellow>contrôler</yellow>, cliquez sur le bouton <img name='hamburger'/> en haut et sélectionnez <b>Jouer comme</b>."
     }
 
     Crew1
     {
-        Title = "Vaisseaux: Équipage"
-        InteriorButton = "Pour <yellow>voir l'intérieur</yellow> de votre vaisseau, cliquez sur le bouton <b>Afficher/cacher l'intérieur</b>."
-        Crew = "<yellow>L'Équipage</yellow> fait fonctionner votre vaisseau en contrôlant les armes, en pilotant, et en transportant l'approvisionnement. Plus un vaisseau a d'équipage, plus il peut fonctionner efficacement!"
-        Indicator = "Un module qui n'a aucun membre d'équipage pour le faire fonctionner aura un <red>icône rouge</red>."
+        Title = "Vaisseau: l'équipage"
+        InteriorButton = "Pour <yellow>voir l'intérieur</yellow> de votre vaisseau, cliquez sur le bouton <b>basculer l'intérieur</b>."
+        Crew = "<yellow>Les membres d'équipage</yellow> maintiennent à flot votre rafiot en lustrant les armes, en pilotant à travers les astéroïdes et en suant pour transporter le ravitaillement. Plus il y a de camarades à bord, plus votre monture sera invincible !"
+        Indicator = "Un module sans membre d'équipage pour le manœuvrer apparait avec une <red>icône rouge</red>."
     }
 
     Crew2
     {
-        Title = "Vaisseaux: Équipage (Suite)"
-        Button = "Pour faire de la place pour <yellow>plus de membres d'équipage</yellow>, cliquez de nouveau sur le bouton <b>Construire</b>."
-        Quarters = "Ajoutez des <yellow>Couchettes d'équipage</yellow> ou des <yellow>Quartiers d'équipage</yellow> pour augmenter le nombre de membres d'équipage à bord du vaisseau. Vous n'en aurez jamais trop!"
-        Door = "Ajoutez des <yellow>portes</yellow> à votre vaisseau pour que l'équipage puisse circuler entre les pièces."
-        Meter = "La <b>Jauge d'équipage</b> suggère le nombre <bad>minimum</bad> et <good>recommandé</good> de membres d'équipage pour votre vaisseau."
+        Title = "Vaisseau: l'équipage (suite)"
+        Button = "Pour recruter <yellow>plus de membres</yellow>, cliquer sur le bouton <b>Construction</b>."
+        Quarters = "Ajoutez une <yellow>cabine</yellow> ou un <yellow>poste</yellow> d'équipage pour augmenter le nombre de personnes à bord de votre vaisseau. Vous n'en aurez jamais assez !"
+        Door = "Ajoutez des <yellow>portes</yellow> à votre vaisseau pour que vos hommes puissent circuler à travers le vaisseau."
+        Meter = "Le <b>compteur d'équipage</b> vous suggère un niveau <bad>minimum</bad> et <good>recommandé</good> de personnes à recruter."
     }
 
     Micro1
     {
-        Title = "Microgestion de votre vaisseau"
-        Select = "Avec un vaisseau sélectionné, <b>cliquez</b> sur l'un de ses modules pour le<yellow>sélectionner</yellow>.\n\nVous pouvez aussi sélectionner une zone autour de plusieurs modules ou double-cliquer pour sélectionner tous les modules du même type."
-        Power = "Appuyez sur le bouton <b>Alimentation</b> pour <yellow>l'éteindre</yellow>. Tout membre d'équipage opérant ce module le quittera et ira aider ailleurs."
-        HoldFire = "Appuyez sur le bouton <b>Mode de Tir</b> pour ordonner à une arme de <yellow>ne pas tirer</yellow> tant que vous ne lui avez pas donné une cible précise."
-        Target = "Avec une arme sélectionnée, <b>faites un clic-droit</b> sur un module ennemi pour le <yellow>cibler</yellow> uniquement avec cette arme."
+        Title = "Micromanager votre vaisseau"
+        Select = "<b>Cliquez gauche</b> sur un module en particulier pour le <yellow>sélectionner</yellow>.\n\nVous pouvez également en sélectionner plusieurs avec <b>shift-click</b> ou une sélection glissante à la souris."
+        Power = "Fermez le bouton <b>Puissance</b> pour <yellow>éteindre</yellow> le module. Tout membre d'équipe manœuvrant le module le quittera sur le champ et ira donner un coup de main ailleurs."
+        HoldFire = "Appuyez sur le bouton <b>Mode de tir</b> pour ordonner à un module d'arme de <yellow>cesser-le-feu</yellow> jusqu'à ce que vous lui donniez une nouvelle cible."
+        Target = "Tout en ayant une arme sélectionnée, <b>cliquez droit</b> sur un module ennemi pour <yellow>cibler</yellow> votre arme sur celui-ci."
+        ControlGroups = "<green><b>Astuce :</b></green> crééez un <yellow>groupe de contrôle</yellow> en sélectionnant un ou plusieurs modules, et en appuyant sur <b>Ctrl + 0-9</b>. Basculez ensuite vers un de ces groupe en appuyant sur <b>0-9</b>."
     }
 
     Movement1
     {
-        Title = "Piloter Votre Vaisseau"
-        Move = "Pour <yellow>piloter votre vaisseau</yellow>, <b>faites un clic-droit</b> n'importe où dans l'espace. Votre vaisseau s'y dirigera automatiquement."
+        Title = "Manœuvrer votre vaisseau"
+        Move = "Pour <yellow>manœuvrer votre vaisseau</yellow>, <b>cliquez droit</b> n'importe où. Votre vaisseau se mettra alors en branle."
     }
 
     Movement2
     {
-        Title = "Piloter Votre Vaisseau (Avancé)"
-        Drag = "Pour <yellow>ajuster l'orientation</yellow> de votre vaisseau, <b>faites un clic-droit</b> puis <b>glissez</b>."
-        Queue = "Pour <yellow>ajouter des points de passage</yellow>, maintenez <btn id='Game.AppendSelection'/> en cliquant droit."
-        Handles = "Pour <yellow>déplacer ou pivoter</yellow> des points de passage existants, maintenez <btn id='Game.AppendSelection'/> puis glissez l'un des icônes qui apparaît.\n\nPour <yellow>supprimer</yellow> un point de passage, faites un <b>clic-droit</b> sur l'un de ces icônes."
+        Title = "Manœuvrer votre vaisseau (suite)"
+        Drag = "Pour <yellow>ajuster l'orientation</yellow> de votre vaisseau, <b>cliquez droit</b> et <b>glissez</b>."
+        Queue = "Pour <yellow>ajouter des points de passages</yellow>, maintenez <btn id='Game.AppendSelection'/> pendant le clic droit."
+        Handles = "Pour <yellow>déplacer ou pivoter</yellow> un point de passage existant, maintenez <btn id='Game.AppendSelection'/> et glissez une des poignées qui apparaît.\n\nPour <yellow>supprimer</yellow> un point de passage, <b>cliquez droit</b> sur une des poignées."
     }
 
     Multiship1
     {
-        Title = "Agrandir votre Flotte"
-        BuyShip = "Pour <yellow>agrandir votre flotte</yellow>, cliquez sur le bouton <b>Acheter un vaisseau</b> au-dessus de la mini-carte."
-        Selected = "Lorsque vous avez plusieurs vaisseaux, <b>cliquez</b> sur le vaisseau que vous voulez <yellow>contrôler</yellow>.\n\nLe vaisseau contrôlé a un <green>cercle vert </green> autour de lui."
-        BoxSelect = "Pour <yellow>contrôler plusieurs vaisseaux</yellow> à la fois, <b>cliquez et tracez</b> une zone autour de ces vaisseaux.\n\nOu alors, maintenez <btn id='Game.AppendSelection'/> puis <b>cliquez</b> sur chaque vaisseau."
+        Title = "Étendre la flotte"
+        BuyShip = "Pour <yellow>étendre votre flotte</yellow>, appuyez sur le bouton <b>Acheter un vaisseau</b>, au dessus de la mini-carte."
+        Selected = "Si vous avez plus d'un vaisseau, <b>cliquez gauche</b> sur le vaisseau que vous souhaitez <yellow>contrôler</yellow>.\n\nLe vaisseau contrôlé a un <green>cercle vert</green> autour de lui."
+        BoxSelect = "Pour <yellow>contrôler plusieurs vaisseaux</yellow> à la fois, <b>cliquez gauche et glissez</b> la boite autour des vaisseaux.\n\nOu maintenez <btn id='Game.AppendSelection'/> et <b>cliquez gauche</b> sur chacun des vaisseaux."
+        ControlGroups = "<green><b>Astuce :</b></green> Créez un <yellow>groupe de contrôle</yellow> en sélectionnant un ou plusieurs vaisseaux et pressez <b>Ctrl + F1-F8</b>. Basculez ensuite vers un de ces groupe en appuyant sur <b>F1-F8</b>."
     }
 
     Formations1
     {
         Title = "Formations"
-        BasicFormations = "Pour ordonner à vos vaisseaux de <yellow>voler en formation</yellow>, sélectionnez au moins deux vaisseaux, cliquez sur le bouton <b>Formations</b>, puis choisissez la formation à utiliser."
-        CustomFormations = "Pour créer une <yellow>formation personnalisée</yellow>, sélectionnez un vaisseau puis placez-le près d'un autre vaisseau en faisant un <b>clic-droit</b> sur un autre vaisseau, puis en maintenant le bouton droit de la souris et en <b>glissant depuis ce vaisseau</b>."
-        SavingFormations = "Pour <yellow>sauvegarder une formation personnalisée</yellow>, cliquez sur la petite flèche puis sur l'un des boutons <b>SAUVEGARDER</b> pour sauvegarder le formation dans un emplacement de formation personnalisée."
+        BasicFormations = "Pour ordonner à vos vaisseaux de <yellow>naviguer en formation</yellow>, sélectionnez au moins deux vaisseaux, cliquez sur le bouton <b>Formations</b>, et choisissez la formation à utiliser."
+        CustomFormations = "Pour créer une <yellow>formation personnalisée</yellow>, sélectionnez un vaisseau, positionnez le près d'un autre vaisseau en <b>cliquant droit</b> sur l'autre vaisseau, maintenez le bouton souris milieu, et <b>éloignez-vous</b> de lui."
+        SavingFormations = "Pour <yellow>sauvegarder une formation personnalisée</yellow>, cliquez sur la petite flèche and cliquez ensuite sur le bouton <b>SAUVEGARDER</b> pour enregistrer la formation dans un emplacement de formation vide."
     }
 
     Paint1
     {
-        Title = "Peindre votre vaisseau"
-        Button = "Pour <yellow>peindre l'extérieur de votre vaisseau</yellow>, cliquez sur le bouton <b>Peindre</b> en bas à gauche."
-        ColorWheel = "Ici vous pouvez changer la <yellow>couleur de base</yellow> ainsi que le <yellow>motif</yellow> de votre vaisseau."
-        Decals = "Vous pouvez aussi peindre des <yellow>vignettes</yellow> sur votre vaisseau.\n\nUn vaisseau peut avoir jusqu'à deux couches de vignettes. Chaque couche peut avoir une couleur différente, et toutes les vignettes de cette couche partagent cette couleur."
-        Tip = "<green><b>ASTUCE:</b></green> Peindre votre vaisseau est gratuit et n'a aucun effet sur ses capacités."
+        Title = "Peindre le vaisseau"
+        Button = "Pour <yellow>peindre l'extérieur du vaisseau</yellow>, cliquez sur le bouton <b>Peindre</b> en bas à gauche."
+        ColorWheel = "Vous pouvez modifier <yellow>la couleur de base de la carlingue</yellow> et les <yellow>motifs</yellow>."
+        Decals = "Vous pouvez aussi peindre des <yellow>vignettes</yellow> sur votre vaisseau.\n\nUn vaisseau possède deux couches de vignettes. Chaque couche peut avoir une couleur différente, et toutes les vignettes sur la même couche partagent la même couleur."
+        Tip = "<green><b>Note :</b></green> peindre votre vaisseau est gratuit et n'a aucun effet sur ses capacités."
     }
 
     Power1
     {
-        Title = "Vaisseaux: Énergie"
-        Reactor = "Les <yellow>Réacteurs</yellow> génèrent les batteries à plasma utilisées par vos propulseurs, vos armes énergétiques, et d'autres modules."
-        Crew = "Votre <yellow>équipage</yellow> transportera les piles à plasma depuis le <b>Réacteur</b> ou le <b>Dépôt d'énergie</b> jusqu'aux modules de votre vaisseau."
-        Meter = "La <b>Jauge d'Énergie</b> suggère les niveaux d'énergie <bad>minimum</bad> et <good>recommandés</good> pour votre vaisseau."
-        Indicator = "Un module qui n'a pas assez d'énergie pour opérer aura un <red>icône rouge</red>."
-        Tip = "<green><b>ASTUCE:</b></green> La fréquence à laquelle une arme énergétique peut tirer dépend de la vitesse à laquelle l'équipage peut l'alimenter en énergie."
+        Title = "Vaisseau : énergie"
+        Reactor = "Les <yellow>réacteurs</yellow> génère des piles de plasma pour les propulseurs, les arme à énergie et d'autres modules."
+        Crew = "L'<yellow>équipage</yellow> transporte les piles d'un <b>réacteur</b> ou d'un <b>dépôt d'énergie</b> vers les modules."
+        Meter = "La <b>jauge d'énergie</b> suggère un niveau <bad>minimum</bad> et un <good>recommandé</good> pour votre vaisseau."
+        Indicator = "Un module n'ayant pas assez d'énergie pour être utilisé par l'équipage aura une <red>icône rouge</red>."
+        Tip = "<green><b>Astuce :</b></green> la fréquence de tir d'une arme à énergie dépend directement de la vitesse à laquelle votre équipage ravitaille l'arme."
     }
 
     Repairs1
     {
-        Title = "Réparer votre vaisseau"
-        Button = "Lorsque votre vaisseau a besoin de réparations, un bouton <b>Réparer</b> rouge apparaîtra en haut à gauche. Cliquez dessus pour <yellow>ouvrir le mode réparation</yellow>."
-        Parts = "Pour <yellow>réparer un module</yellow> qui est endommagé ou détruit, <b>cliquez</b> dessus."
-        RepairAll = "Ou alors, pour<yellow>réparer votre vaisseau entier</yellow>, cliquez sur le bouton <b>Tout Réparer</b>."
+        Title = "Réparer le vaisseau"
+        Button = "Lorsque votre vaisseau a besoin de réparation, un bouton rouge <b>Réparer</b> apparaît en bas à gauche. Cliquez dessus pour accéder au <yellow>mode de réparation</yellow>."
+        Parts = "Pour <yellow>réparer un seul module</yellow> endommagés ou détruit, <b>cliquez gauche</b> dessus."
+        RepairAll = "Ou pour <yellow>réparer le vaisseau intégralement</yellow>, cliquez sur le bouton <b>Tout réparer</b>."
     }
 
     Tactics1
     {
-        Title = "Tactiques de Combat"
-        Target = "Après avoir attaqué un ennemi, faites un <b>clic-droit</b> de nouveau sur un module particulier du vaisseau ennemi pour le <yellow>cibler</yellow> avec vos armes."
-        Reactor = "<green><b>ASTUCE:</b></green> Détruisez le <yellow>réacteur</yellow> du vaisseau ennemi pour le transformer en coque sans vie!\n\n"
+        Title = "Tactiques de combat"
+        Target = "Après avoir donné l'ordre d'attaquer un ennemi, <b>cliquez droit</b> de nouveau sur un module du vaisseau ennemi pour que vos armes <yellow>ciblent</yellow> ce module."
+        Reactor = "<green><b>Astuce :</b></green> Détruisez le <yellow>réacteur</yellow> du vaisseau ennemi pour le transformer en carcasse sans vie !\n\n"
     }
 
     Tactics2
     {
-        Title = "Tactiques de Combat (Avancé)"
-        Drag = "Pour choisir une <yellow>distance</yellow> et une <yellow>direction</yellow> d'attaque, faites un <b>clic-droit</b> sur le vaisseau ennemi, maintenez et <b>glissez</b> depuis votre cible."
-        Handles = "Pour ajuster la <yellow>distance</yellow>, la <yellow>direction</yellow>, ou <yellow>l'orientation</yellow> après avoir attaqué, maintenez <btn id='Game.AppendSelection'/> puis glissez l'un des icônes qui apparaissent."
-        TargetQueue = "Pour <yellow>mettre en attente des cibles additionnelles</yellow>, maintenez <btn id='Game.AppendSelection'/> puis faites un clic-droit sur les modules."
+        Title = "Tactiques de combat (suite)"
+        Drag = "Pour choisir la <yellow>distance</yellow> et la <yellow>direction</yellow> d'où attaquer, <b>cliquez droit</b> sur le vaisseau ennemi et <b>glisser</b> loin de lui."
+        Handles = "Pour ajuster la <yellow>distance</yellow>, la <yellow>direction</yellow> ou la <yellow>rotation</yellow> après avoir donné l'ordre d'attaquer, maintenez <btn id='Game.AppendSelection'/> et glissé la poignée qui apparaît."
+        TargetQueue = "Pour <yellow>mettre en file d'attente des cibles supplémentaires</yellow>, maintenez <btn id='Game.AppendSelection'/> pendant que vous cliquez droit sur les modules."
     }
 
     Thrusters1
     {
-        Title = "Vaisseaux: Propulseurs"
-        Thruster = "Ajoutez des <yellow>propulseurs</yellow> pour augmenter la vitesse et la manoeuvrabilité de votre vaisseau. Un vaisseau avec trop peu de propulseurs ne peut pas voler."
-        Many = "Les propulseurs propulsent votre vaisseau dans la direction opposée.\n\nLa vitesse et la manoeuvrabilité de votre vaisseau dépendent du nombre, de la position, de l'orientation et de la taille de ses propulseurs."
-        Tip = "<green><b>ASTUCE:</b></green> Un vaisseau rapide et manoeuvrable possède plusieurs propulseurs à des endroits et des orientations différents."
+        Title = "Vaisseau : propulseurs"
+        Thruster = "Ajoutez des <yellow>propulseurs</yellow> pour augmenter la vitesse et la manœuvrabilité de votre vaisseau. Un vaisseau avec trop peu de propulseurs ne pourra pas bouger."
+        Many = "Les propulseurs poussent votre vaisseau dans la direction opposée.\n\nLa vitesse et la manœuvrabilité de votre vaisseau dépend de leurs localisations, leurs orientations et leurs tailles."
+        Tip = "<green><b>Astuce :</b></green> Un vaisseau rapide et maniable a de nombreux propulseurs disposés à différents endroits et à différentes orientations."
     }
 
     Time1
     {
-        Title = "Contrôler le Temps"
-        Buttons = "Pour <yellow>mettre la partie en pause</yellow> à tout moment, cliquez sur le bouton <b>||</b> dans le coin supérieur gauche ou appuyez sur la touche <btn id='Game.PauseToggle'/>."
-        Faster = "Pour <yellow>accélérer</yellow> ou <yellow>décélérer</yellow> le temps, cliquez sur les boutons <b>&gt;&gt;</b> ou <b>&lt;&lt;</b>."
-        Tip = "<green><b>ASTUCE:</b></green> Si jamais vous avez des difficultés à cliquer sur quelque chose parce que ça bouge trop vite, appuyez simplement sur <btn id='Game.PauseToggle'/> pour mettre la partie en pause."
+        Title = "Contrôle du temps"
+        Buttons = "Pour <yellow>mettre en pause le jeu</yellow> à n'importe quel moment, cliquez sur le bouton <b>||</b> dans le coin haut-gauche, ou appuyez sur <btn id='Game.PauseToggle'/>."
+        Faster = "Pour faire défiler le temps <yellow>plus rapidement</yellow> ou <yellow>plus lentement</yellow>, cliquez sur les boutons <b>&gt;&gt;</b> ou <b>&lt;&lt;</b>."
+        Tip = "<green><b>Astuce :</b></green> si vous avez du mal à gérer la situation parce que tout va trop vite, appuyez simplement sur <btn id='Game.PauseToggle'/> pour mettre en pause le jeu et de prendre le temps de réfléchir à la situation !"
     }
 
     Ftl1
     {
-        Title = "Hyperpropulsion"
-        NoEnemies = "Une fois tous les vaisseaux ennemis vaincus, il est temps de <yellow>voyager</yellow> vers un autre <yellow>secteur</yellow>!\n"
-        BuildFtl = "Construisez un <yellow>Moteur à Hyperpropulsion</yellow> pour pouvoir effectuer un <yellow>Saut Hyperpropulsé</yellow>."
-        Efficiency = "Un grand vaisseau requiert plusieurs moteurs à hyperpropulsion répartis à son bord afin d'économiser du <fuel>CARBURANT</fuel>. "\
-                     "Les vaisseaux avec une jauge d'<yellow>Éfficacité de l'hyperpropulsion</yellow> consommeront moins de carburant que d'autres vaisseaux de même taille."
-        Map = "Pour enclencher un saut, ouvrez la <b>Carte de la Galaxie</b> en cliquant sur le bouton au-dessus de la mini-carte ou en appuyant sur la touche <btn id='Game.ToggleMap'/>."
+        Title = "Voyage supraluminique"
+        NoEnemies = "Une fois tous les ennemis vaincus, il est temps de <yellow>sauter</yellow> vers un autre <yellow>secteur</yellow> !\n"
+        BuildFtl = "Construisez un <yellow>moteur de saut supraluminique</yellow> pour voyager <yellow>plus rapidement que la lumière</yellow> !"
+        Efficiency = "Un grand vaisseau aura besoin d'avoir de multiples moteurs de saut répartis équitablement pour pouvoir économiser du <fuel>CARBURANT</fuel>. "\
+                     "Un vaisseau avec une jauge <yellow>d'efficience supraluminique</yellow> consommera moins de carburant comparé à d'autres vaisseaux de même classe."
+        Map = "Pour planifier un saut, ouvrez <b>la carte galactique</b> en cliquant sur le bouton en haut de la minimap ou en appuyant sur <btn id='Game.ToggleMap'/>."
     }
 
     Ftl2
     {
-        Title = "Hyperpropulsion (Suite)"
-        ViewNode = "Cliquez sur un <yellow>secteur</yellow> avoisinant afficher des informations le concernant. Chaque secteur a des ennemis de difficulté différente.\n\nChoisissez une destination puis cliquez sur le bouton <b>Enclencher l'Hyperpropulsion</b>."
-        PlotCourse = "Votre équipage allumera automatiquement les moteurs à hyperpropulsion de votre vaisseau.\n\nUne fois alimentés à <ftl>100%</ftl>, cliquez sur <b>SAUTER</b> ou appuyez sur la touche <btn id='Game.DoFtlJump'/>."
-        Fuel = "<green><b>ASTUCE:</b></green> La quantité de <fuel>CARBURANT</fuel> utilisée dépend de la distance parcourue, de la taille de votre vaisseau, et de l'efficacité de ses moteurs à hyperpropulsion."
+        Title = "Voyage supraluminique (suite)"
+        ViewNode = "Cliquez sur un <yellow>secteur</yellow> proche pour obtenir des informations à son propos. Chaque secteur a un niveau de difficulté, selon les ennemis qui s'y trouve.\n\nOptez pour un secteur et appuyez sur le bouton <b>Saut supraluminique</b>."
+        PlotCourse = "Votre équipage va automatiquement alimenter en énergie le moteur de saut.\n\nUne fois l'énergie chargée à <ftl>100%</ftl>, cliquez sur <b>SAUTER</b> ou appuyez sur <btn id='Game.DoFtlJump'/>."
+        Fuel = "<green><b>Astuce :</b></green> Le montant de <fuel>CARBURANT</fuel> consommé dépend de la distance à parcourir, la taille de votre vaisseau et de l'efficacité de ses moteurs supraluminique."
     }
 
     Fire1
     {
         Title = "Incendies"
-        Cause = "Des <red>Incendies</red> peuvent se déclarer lorsque vous êtes touché par certaines armes et lorsque des modules inflammables explosent. Si ils ne sont pas maîtrisés, "\
-                "les incendies se répandront rapidement, causant des dommages et tuant l'équipage."
-        FireExtinguisher = "Ajoutez des <yellow>extincteurs</yellow> à votre vaisseau pour aider à combattre les incendies. Votre équipage va prendre "\
-                           "les extincteurs et les utiliser pour éteindre les incendies."
-        Spread = "<green><b>ASTUCE:</b></green> Les incendies peuvent se répandre à travers les pièces ouvertes et les portes, mais pas à travers les murs. "\
-                 "Ajouter beaucoup de portes à votre vaisseau le rendra plus vulnérable aux incendies."
+        Cause = "Des <red>incendies</red> peuvent se déclencher lorsque certaines armes frappent ou quand certains modules explosent. Sans intervention, "\
+                "l'incendie va rapidement se propager, provoquant des dommages importants et tuant l'équipage à petit feu."
+        FireExtinguisher = "Ajoutez des <yellow>extincteurs</yellow> à votre vaisseau pour combattre le feu. Votre équipage ira les chercher "\
+                           "et les utilisera pour éteindre les flammes."
+        Spread = "<green><b>Astuce :</b></green> un incendie peut se propager dans les espaces libres et à travers les portes, mais pas à travers les murs. "\
+                 "Ajouter des tas de portes au vaisseau rendra le vaisseau plus vulnérable aux flammes."
     }
 }
