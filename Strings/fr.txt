@@ -662,7 +662,7 @@ Inputs
 
 Settings
 {   // Les valeurs des TabName ont été volontairement tronqués parce qu'il n'y a pas beaucoup d'espaces de disponible
-    RestartRequired = "Un des réglage ayant été modifié ne peut prendre effet qu'au redémarrage du jeu."
+    RestartRequired = "Un des réglage ayant été modifié ne prendra effet qu'au prochain démarrage du jeu."
     RestartNow = "Redémarrer maintenant"
     RestartLater = "Redémarrer plus tard"
 
@@ -670,14 +670,14 @@ Settings
     {
         TabName = "Vidéo"
 
-        WindowMode = "Type de fenêtre"
-        WindowModeTip = "Le style de la fenêtre utilisée pour afficher le jeu."
-        ExclusiveFullScreen = "Plein écran exclusif"
+        WindowMode = "Mode"
+        WindowModeTip = "Le mode de fenêtre utilisée pour afficher le jeu."
+        ExclusiveFullScreen = "Plein écran"
         ExclusiveFullScreenTip = "Le jeu utilisera tout l'écran et vous permettra de choisir la résolution d'affichage. "\
                                  "Ce mode peut être nécessaire pour utiliser des fonctionnalités avancées du GPU comme G-SYNC et FreeSync."
-        ResizableWindow = "Fenêtre réajustable" // Le terme "réajustable" d'origine est plus joli et juste que "redimensionnable"
-        ResizableWindowTip = "Le jeu tournera dans une fenêtre sur votre bureau. Vous pourrez bouger et redimensionner la fenêtre librement."
-        BorderlessFullScreen = "Plein écran sans bordures"
+        ResizableWindow = "Fenêtré"
+        ResizableWindowTip = "Le jeu tournera dans une fenêtre de votre bureau. Vous pourrez bouger et redimensionner la fenêtre librement."
+        BorderlessFullScreen = "Fenêtré plein écran sans bordures"
         BorderlessFullScreenTip = "Le jeu va utiliser tout votre écran et s'adapter à la résolution de votre bureau. "\
                                   "Utilisez ce mode si le plein écran cause des problèmes ou si vous voulez être capable de changer d'application rapidement."
 
@@ -692,7 +692,7 @@ Settings
         RefreshRateTip = "Le nombre d'images que le moniteur affichera chaque seconde."
         RefreshRateFmt = "{0}hz"
 
-        VSync = "Synchronisation verticale"
+        VSync = "VSync"
         VSyncTip = "Synchronise le jeu avec la fréquence de rafraîchissement de votre écran, ce qui élimine l'effet de déchirure mais augmente la latence d'entrée."
         VSyncOff = "Désactivée"
         VSyncOffTip = "Le jeu ne va pas être synchronisé avec la fréquence de rafraîchissement de votre écran. Il va tourner avec le maximum de fps possible et le minimum de latence d'entrée."
@@ -702,7 +702,7 @@ Settings
         VSyncTriBuf = "Activée (Triple-Buffered)"
         VSyncTriBufTip = "Cette variante de la synchronisation verticale peut améliorer votre fréquence d'affichage mais peut aussi augmenter la latence d'entrée."
 
-        DpiScaling = "Mise à l'échelle PPP"
+        DpiScaling = "UI DPI"  // Les termes en anglais sont plus usités
         DpiScalingTip = "Réglage de la taille de l'interface utilisateur. Augmenter cette valeur à plus de 100% peut rendre le jeu plus agréable à jouer à haute résolution."
         DpiScaleDisabledTip = "La taille de la fenêtre ou la résolution écran n'est pas suffisamment grande pour supporter cette mise à l'échelle PPI."
         Dpi100 = "100%"
@@ -764,8 +764,8 @@ Settings
         AllowShipDeselection = "Autoriser la dé-sélection de vaisseau"
         AllowShipDeselectionTip = "Si cette option est cochée, un clic gauche sur un endroit vide désélectionnera tout vaisseau actuellement sélectionné."
 
-        ShowAdvancedCommands = "Affichage des contrôles avancés pour les vaisseaux"
-        ShowAdvancedCommandsTip = "Si coché, les contrôles avancés seront affichés dans l'interface utilisateur. "\
+        ShowAdvancedCommands = "Afficher les contrôles avancés"
+        ShowAdvancedCommandsTip = "Si coché, les contrôles avancés pour diriger les vaisseaux seront affichés dans l'interface utilisateur. "\
                                   "Et même si ce n'est pas coché, les raccourcis claviers seront tout de même utilisable."
 
         CtrlSelectsParts = "Forcer <btn id='Game.SelectParts' xml='false'/> pour sélectionner des modules"
@@ -778,8 +778,8 @@ Settings
         PreferShipRelativeAttackAngle = "Préférer l'angle d'attaque relatif au vaisseau"
         PreferShipRelativeAttackAngleTip = "Si coché, cliquer droit et glisser sur un vaisseau ennemi utilisera un angle d'attaque relatif au vaisseau ennemi au lieu de l'angle de la grille d'arrière-plan. Maintenez <btn id='Game.ShipRelativeAttackAngle'/> pour utiliser l'autre mode."
 
-        PreferWorldRelativeFollowAngle = "Préférer les angles d'attaque relatifs à la grille"
-        PreferWorldRelativeFollowAngleTip = "Si coché, cliquer droit et glisser sur un vaisseau ennemi utilisera un angle d'attaque relatif à la grille en arrière-plan plutôt qu'au vaisseau ennemi. Maintenez <btn id='Game.WorldRelativeAttackAngle'/> pour utiliser l'autre mode."
+        PreferWorldRelativeFollowAngle = "Préférer les angles d'attaque relatifs à la grille"  // La ligne qui suit fait planter le jeu
+        // PreferWorldRelativeFollowAngleTip = "Si coché, cliquer droit et glisser sur un vaisseau ennemi utilisera un angle d'attaque relatif à la grille en arrière-plan plutôt qu'au vaisseau ennemi. Maintenez <btn id='Game.WorldRelativeAttackAngle'/> pour utiliser l'autre mode."
 
         AdHocFormations = "Formations automatiques de vaisseaux"
         AdHocFormationsTip = "Si coché, les vaisseaux seront automatiquement regroupés dans une formation ad hoc lorsque vous donnez un ordre à plusieurs vaisseaux à la fois."
@@ -983,11 +983,11 @@ Settings
     {
         TabName = "Multi"
 
-        ColorMode = "Couleurs des vaisseaux"
-        ColorModeTip = "Couleurs dans lesquelles les vaisseaux apparaîtront dans les parties multijoueur. Ce réglage n'affecte aucun autre joueur dans la partie."
+        ShipColorMode = "Couleurs des vaisseaux"
+        ShipColorModeTip = "Couleurs dans lesquelles les vaisseaux apparaîtront dans les parties multijoueur. Ce réglage n'affecte aucun autre joueur dans la partie."
         BlipColorMode = "Couleurs des échos radars"
         BlipColorModeTip = "Les couleurs des échos vaisseaux sur la mini-carte et dans le brouillard de guerre apparaîtront comme dans les parties multijoueurs. Ce réglage n'affecte aucun autre joueur dans la partie."
-        RandomPerPlayer = "Couleurs aléatoire par joueur"
+        RandomPerPlayer = "Aléatoire par joueur"
         RandomPerPlayerTip = "Les vaisseaux auront des couleurs aléatoires désignant le joueur qui les contrôle."
         FriendAndFoe = "Amis et ennemis"
         FriendAndFoeTip = "Les vaisseaux que vous contrôlez seront verts, les vaisseaux des autre joueurs de votre équipe seront jaunes, et les vaisseaux de l'équipe ennemie seront rouges."
@@ -1034,7 +1034,7 @@ Settings
         LostFocusPauseTip = "Si cette option est cochée, le jeu se mettra automatiquement en pause lorsque vous changez de fenêtre active ou cliquez en dehors du jeu. "\
                             "Cette option n'a pas d'effet en multijoueur."
 
-        VersionCheckModeLbl = "Vérifier les mises-à-jour"
+        VersionCheckModeLbl = "Vérifier MàJ"
         VersionCheckModeLblTip = "Choisissez si vous souhaitez ou non rechercher des mises-à-jour au démarrage et de quel type de mises-à-jour vous souhaitez vérifier la disponibilité."
         VersionCheckMode
         {
@@ -1052,7 +1052,7 @@ Settings
         ShowAlerts = "Afficher les alertes sur l'écran titre"
         ShowAlertsTip = "Si coché, les \"alertes\" seront affichées dans le bord droit supérieur de l'écran titre."
 
-        ShowFps = "Montrer les I.P.S. (FPS)"
+        ShowFps = "Montrer FPS"
         ShowFpsTip = "Choisissez si les Images Par Secondes doivent être affichées."
         FpsNone = "Désactivé"
         FpsNoneTip = "Ne pas montrer les I.P.S."
@@ -2295,7 +2295,7 @@ Tutorials
         Title = "La mini-carte"
         BasicInfo = "La <yellow>mini-carte</yellow> en bas à droite affiche la position des vaisseaux dans la zone."
         ShipDots = "La localisation de votre vaisseau est indiquée avec <green>un point vert</green>.\n\nLa localisation des vaisseaux ennemis est indiqué avec des <red>points rouges</red>."
-        LeftClick = "<b>Cliquer gauche</b> sur la mini-carte pour déplacer la caméra à cet endroit."
+        LeftClick = "<b>Cliquez gauche</b> sur la mini-carte pour déplacer la caméra à cet endroit."
     }
 
     Combat1
@@ -2303,7 +2303,7 @@ Tutorials
         Title = "Combattre l'ennemi"
         Blips = "Les vaisseaux ennemis trop loin pour être en visuel direct sont signalés par des <red>échos rouges</red> pulsant."
         Attack = "Pour <yellow>attaquer</yellow> un vaisseau ennemi, <b>cliquez droit</b> sur le vaisseau ennemi ou sur son écho radar.\n\nVotre vaisseau va automatiquement foncer vers l'ennemi et attaquer."
-        Tip = "<green><b>Astuce :</b></green> Certains ennemis sont bien trop puissant pour que vous puissiez les défaire ! Fuyez et <yellow>améliorez</yellow> votre vaisseau avant d'attaquer de nouveau."
+        Tip = "<green><b>Astuce :</b></green> Certains ennemis sont bien trop puissant pour que vous puissiez vous en défaire ! Fuyez et <yellow>améliorez</yellow> votre vaisseau avant d'attaquer de nouveau."
     }
 
     Creative1
