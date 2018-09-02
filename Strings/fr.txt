@@ -399,8 +399,8 @@ Inputs
         TargetWeapon = "Viser (armes)"  // Une meilleur traduction serait possible
         CancelWeaponTargets = "Annuler la visée (armes)"
         ToggleMap = "Basculer la carte de la Galaxie"
-        DoFtlJump = "Engager le saut supraluminique" // FTL => supraluminique plutôt que hyperpropulsion
-        CancelFtlJump = "Annuler le saut supraluminique"
+        DoFtlJump = "Engager le saut SSL" // FTL => supraluminique plutôt que hyperpropulsion
+        CancelFtlJump = "Annuler le saut SSL"
         ToggleUI = "Basculer l'interface utilisateur"
         Save = "Sauvegarder la partie"
         Load = "Charger la partie"
@@ -746,8 +746,8 @@ Settings
     {
         TabName = "Gameplay"
 
-        AutoFtlJump = "Enclencher automatiquement la propulsion supraluminique"
-        AutoFtlJumpTip = "Si cette option est cochée, la propulsion supraluminique sera enclenchée automatiquement dès que tous les vaisseaux sont prêts à sauter."
+        AutoFtlJump = "Enclencher automatiquement le moteur SSL"
+        AutoFtlJumpTip = "Si cette option est cochée, le moteur SSL sera enclenchée automatiquement dès que tous les vaisseaux sont prêts à sauter."
 
         OnShipIndicators = "Afficher les indicateurs d'état du vaisseau"
         OnShipIndicatorsTip = "Si cette option est cochée, affiche des indicateurs lorsqu'il n'y a plus de membres d'équipage, de munitions ou d'énergie."
@@ -960,8 +960,8 @@ Settings
         AutoSaveEveryMinutes = " minutes"
         AutoSaveEveryMinutesTip = "Intervalle en minutes entre deux sauvegardes automatiques."
 
-        FtlAutoSave = "Sauvegarde automatique avant le saut supraluminique"
-        FtlAutoSaveTip = "Si coché, la progression sera sauvegardée automatiquement avant chaque saut supraluminique."
+        FtlAutoSave = "Sauvegarde automatique avant le saut SSL"
+        FtlAutoSaveTip = "Si coché, la progression sera sauvegardée automatiquement avant chaque saut SSL."
 
         AutoSavesToKeep1 = "Conserve les "
         AutoSavesToKeep2 = " sauvegardes automatiques les plus récentes."
@@ -1536,9 +1536,9 @@ Hud
     CancelTargetTip = "Annuler le ciblage des armes.\n\nRaccourci : <btn id='Game.CancelWeaponTargets'/>"
 
     MoneyTip = "Crédits Intergalactiques "
-    FtlFuelTip = "Carburant pour saut supraluminique"
+    FtlFuelTip = "Carburant pour moteur SSL"
 
-    FtlGuiTitle = "Activation du moteur de saut supraluminique…"
+    FtlGuiTitle = "Activation du moteur SSL"
     FtlStatusPercentFmt = "{0:0}%"
     FtlStatusReady = "<good>PRÊT</good>"
     FtlStatusCanceled = "<bad><s12>RESTANT</s12></bad>"
@@ -1546,8 +1546,8 @@ Hud
     FtlDoJumpFmt = "SAUTER<s6>\n\n</s6>{0}"
     FtlDoJumpTip = "Tous les vaisseaux qui sont <good>PRÊTS</good> vont sauter vers le secteur de destination.\n\nRaccourci : <btn id='Game.DoFtlJump'/>"
     FtlCancelJump = "Annuler"
-    FtlCancelJumpTip = "Tous les vaisseaux vont éteindre leur moteur supraluminique et le saut sera annulé.\n\nRaccourci : <btn id='Game.CancelFtlJump'/>"
-    FtlShipsNotReady = "Tous les vaisseaux ne sont pas prêts pour le saut supraluminique. Sauter quand même et laisser ces vaisseaux sur place ?"
+    FtlCancelJumpTip = "Tous les vaisseaux vont éteindre leur moteur SSL et le saut sera annulé.\n\nRaccourci : <btn id='Game.CancelFtlJump'/>"
+    FtlShipsNotReady = "Tous les vaisseaux ne sont pas prêts pour le saut SSL. Sauter quand même et laisser ces vaisseaux sur place ?"
 
     SelectSingleShip = "Sélectionnez un seul vaisseau."
     SelectShip = "Sélectionnez au moins un vaisseau."
@@ -1652,7 +1652,7 @@ BuildBox
     InsufficientFunds = "FONDS INSUFFISANTS"
     Power = "Énergie"
     Crew = "Équipage"
-    FtlEfficiency = "Efficacité du moteur de saut supraluminique"
+    FtlEfficiency = "Efficacité du moteur SSL"
     StatBarTipFmtMinIdeal = "<s20><b>{0}</b></s20>\n<bad>Minimum : <b>{1}</b></bad>\n<good>Recommandé : <b>{2}</b></good>"
     StatBarTipFmt = "<s20><b>{0}</b></s20>"
     TotalValueFmt = "Valeur totale du vaisseau :\n{0}"
@@ -1965,60 +1965,60 @@ Parts
 {
     // Terran
 
-    AmmoFactory = "Usine d'obus"
-    AmmoFactoryIcon = "Usine d'obus"
-    AmmoFactoryDesc = "Fabrique des obus pour canon."
+    AmmoFactory = "Fabrique d'obus"
+    AmmoFactoryIcon = "Fab. obus"
+    AmmoFactoryDesc = "Fabrique des obus pour canons."
 
     AmmoStorage = "Dépôt d'obus"
-    AmmoStorageIcon = "Dépôt d'obus"
-    AmmoStorageDesc = "Entrepose une quantité limitée d'obus, fabriqués séparément par une usine d'obus."
+    AmmoStorageIcon = "Dépôt obus"
+    AmmoStorageDesc = "Entrepose une quantité limitée d'obus, assemblé séparément par une fabrique dédiée."
 
     Armor = "Blindage"  // Je n'aimais pas le terme "Armure" d'origine
     ArmorIcon = &Armor
     ArmorDesc = "Absorbe une grande partie des tirs ennemis, protégeant les entrailles du vaisseau."
 
     Armor1x2WedgeL = "Blindage en coin 1x2 (gauche)"
-    Armor1x2WedgeLIcon = "Blindage en coin 1x2 (G)"
+    Armor1x2WedgeLIcon = "Bl. 1x2 (G)"
     Armor1x2WedgeLDesc = &ArmorDesc
 
     Armor1x2WedgeR = "Blindage en coin 1x2 (droite)"
-    Armor1x2WedgeRIcon = "Armor 1x2 Wedge (D)"
+    Armor1x2WedgeRIcon = "Bl. 1x2 (D)"
     Armor1x2WedgeRDesc = &ArmorDesc
 
     Armor2x1 = "Blindage 2x1"
-    Armor2x1Icon = &Armor2x1
+    Armor2x1Icon = "Bl. 2x1"
     Armor2x1Desc = &ArmorDesc
 
     ArmorTri = "Blindage en triangle"
-    ArmorTriIcon = &ArmorTri
+    ArmorTriIcon = "Bl. triangle"
     ArmorTriDesc = &ArmorDesc
 
     ArmorWedge = "Blindage en coin" // Pour wedge, j'hésite entre coin, joint, cale, angle
-    ArmorWedgeIcon = &ArmorWedge
+    ArmorWedgeIcon = "Bl. coin"
     ArmorWedgeDesc = &ArmorDesc
 
-    CannonLarge = "Grand canon"
+    CannonLarge = "Gros canon"
     CannonLargeIcon = &CannonLarge
     CannonLargeDesc = "Fusionne 4 obus pour augmenter grandement la force de pénétration et les dégâts par rapport au canon standard."
 
-    CannonMed = "Canon standard"
-    CannonMedIcon = &CannonMed
+    CannonMed = "Canon"
+    CannonMedIcon = "Canon"
     CannonMedDesc = "Tire un obus à la fois, perçant les vaisseaux ennemis et y causant parfois des incendies."
 
-    ControlRoomSmall = "Passerelle (commandement)" // aussi la timonerie
+    ControlRoomSmall = "Passerelle" // ou timonerie
     ControlRoomSmallIcon = &ControlRoomSmall
-    ControlRoomSmallDesc = "Un vaisseau sans passerelle (aussi appelé timonerie) ne peut voler ou coordonner ses tirs."
+    ControlRoomSmallDesc = "Un vaisseau sans timonerie ne peut voler ou coordonner ses tirs."
 
     Conveyor = "Tapis roulant"
     ConveyorIcon = &Conveyor
     ConveyorDesc = "Permet à l'équipage de se déplacer plus vite, mais dans une seule direction."
 
     Corridor = "Coursive"
-    CorridorIcon = &Corridor
+    CorridorIcon = "Cours."
     CorridorDesc = "Une coursive à travers laquelle l'équipage peut se déplacer rapidement."
 
     CrewQuartersMed = "Poste d'équipage"  // Quartier désigne autre chose
-    CrewQuartersMedIcon = &CrewQuartersMed
+    CrewQuartersMedIcon = "Poste"
     CrewQuartersMedDesc = "Pourvoit des lits pour 6 membres d'équipage."
 
     CrewQuartersSmall = "Cabine d'équipage"
@@ -2029,74 +2029,74 @@ Parts
     DoorIcon = &Door
     DoorDesc = "Permet à l'équipage (et au feu !) de se déplacer d'une pièce à l'autre."
 
-    ElectroBolter = "Bolter électrique"  // plutôt qu'Électro-Rayon, le bolter semblant être un truc spécifique à Warhammer
-    ElectroBolterIcon = &ElectroBolter
+    ElectroBolter = "Aiguille à impulsion électromagnétique"
+    ElectroBolterIcon = "Aiguille IEM"
     ElectroBolterDesc = "Tire des rayons d'énergie électrique qui font peu de dégâts mais peuvent court-circuiter les systèmes ennemis, les privant d'énergie. Peut pénétrer les boucliers dont il aspire l'énergie."
 
-    EngineRoom = "Salle des machines"  // Plutôt appelé compartiment machine par les marins
-    EngineRoomIcon = &EngineRoom
+    EngineRoom = "Salle des  machines" // Compartiments des machines est plus utilisé par les marins, mais est moins connu
+    EngineRoomIcon = "Salle mech."
     EngineRoomDesc = "Augmente la puissance des propulseurs adjacent de 75%."
 
     ExplosiveCharge = "Charge explosive"
-    ExplosiveChargeIcon = &ExplosiveCharge
+    ExplosiveChargeIcon = "Ch. explosive"
     ExplosiveChargeDesc = "Un petit engin explosif pouvant être déclenché manuellement. Principalement utilisé pour diviser délibérément les vaisseaux en plusieurs morceaux."
 
     FireExtinguisher = "Extincteur"
     FireExtinguisherIcon = &FireExtinguisher
     FireExtinguisherDesc = "Contient un extincteur que l'équipage peut utiliser pour éteindre les incendies."
 
-    FtlDrive = "Moteur à saut supraluminique"
+    FtlDrive = "Moteur SSL"
     FtlDriveIcon = &FtlDrive
-    FtlDriveDesc = "Autorise le vaisseau à sauter vers un autre endroit de la galaxie, en utilisant les technologies exploitant l'Hyperespace."
+    FtlDriveDesc = "Le moteur de Saut SupraLuminique autorise le vaisseau à sauter vers un autre endroit de la galaxie, en utilisant les technologies exploitant l'Hyperespace."
 
     IonBeamEmitter = "Émetteur à faisceau ionique"
-    IonBeamEmitterIcon = "Faisceau ionique"
+    IonBeamEmitterIcon = "Faisceau ion."
     IonBeamEmitterDesc = "Tire un puissant rayon d'énergie dans une direction fixe."
 
     LaserBlasterSmall = "Blaster laser"
-    LaserBlasterSmallIcon = &LaserBlasterSmall
-    LaserBlasterSmallDesc = "Une arme très précise et polyvalent tirant des décharges d'énergie, causant des dégâts modérés aux vaisseaux ennemis."
+    LaserBlasterSmallIcon = "Laser"
+    LaserBlasterSmallDesc = "Une arme très précise et polyvalente tirant des décharges d'énergie, causant des dégâts modérés aux vaisseaux ennemis."
 
-    LaserBlasterLarge = "Blaster lourd laser"
-    LaserBlasterLargeIcon = &LaserBlasterLarge
+    LaserBlasterLarge = "Blaster laser lourd "
+    LaserBlasterLargeIcon = "Laser lourd"
     LaserBlasterLargeDesc = "Assemble deux gros canons lasers sur une seule tourelle, se traduisant par des dommages bien plus important au détriment de la précision et la polyvalence."
 
-    MissileFactory = "Usine de missile"
-    MissileFactoryIcon = &MissileFactory
+    MissileFactory = "Fabrique de missile"
+    MissileFactoryIcon = "Fab. missile"
     MissileFactoryDesc = "Fabrique des missiles utilisés par les lance-missiles."
 
-    MissileLauncher = "lance-missile"
+    MissileLauncher = "Lance-missile"
     MissileLauncherIcon = &MissileLauncher
     MissileLauncherDesc = "Tire des missiles guidés à longue portée infligeant des dégâts sur une large zone."
 
     MissileStorage = "Dépôt de missile"
-    MissileStorageIcon = &MissileStorage
-    MissileStorageDesc = "Entrepose une quantité limitée de missiles, qui sont fabriqués séparément par une usine de missiles."
+    MissileStorageIcon = "Dépôt missile"
+    MissileStorageDesc = "Entrepose une quantité limitée de missiles, assemblé séparément par une fabrique dédiée."
 
     PointDefense = "Système de défense anti-missile"
-    PointDefenseIcon = "Défense anti-missile"
+    PointDefenseIcon = "Déf. missile"
     PointDefenseDesc = "Un système défensif automatisé qui abat les missiles ennemis en utilisant des cartouches de plasma surchauffé. Inefficace contre les vaisseaux."
 
-    PowerStorage = "Dépôt d'énergie" // Pas fan de la traduction, mais traduit bien l'utilité
-    PowerStorageIcon = "Dépôt"
+    PowerStorage = "Dépôt de piles à plasma"
+    PowerStorageIcon = "Dépôt piles"
     PowerStorageDesc = "Entrepose une quantité limitée de piles à plasma, pouvant être utilisé pour alimenter les systèmes environnants."
 
-    RailgunLauncher = "Module de lancement pour canon électrique" // ou canon à rail
-    RailgunLauncherIcon = "Lanceur pour canon électrique"
-    RailgunLauncherDesc = "Composant essentiel pour les canons électriques. À associer avec un chargeur et éventuellement à des accélérateurs.\n\n"\
-                        "Les canons électriques tirent des projectiles accélérés par une force électromagnétique, qui peuvent pénétrer profondément les vaisseaux ennemis, causant d'importants dommages."
+    RailgunLauncher = "Gueule de Gauss"
+    RailgunLauncherIcon = "Gueule Gauss"
+    RailgunLauncherDesc = "Composant essentiel pour les canons de Gauss. À associer obligatoirement avec une chambre, et optionnellement des tubes pour plus de puissances.\n\n"\
+                        "Les canons de Gauss tirent des obus accélérés par une force magnétique, qui peuvent pénétrer profondément les vaisseaux ennemis, causant d'importants dommages."
                         // Il y avait une ligne ici, mais elle était redondante avec la première ligne
 
-    RailgunLoader = "Module de chargement pour canon électrique"
-    RailgunLoaderIcon = "Chargeur pour canon électrique"  // Chargeur en français se réfère plutôt au magasin d'une arme
-    RailgunLoaderDesc = "Composant essentiel pour les canons électriques. À associer avec un lanceur et éventuellement à des accélérateurs.\n\n"\
-                        "Les canons électriques tirent des projectiles accélérés par une force électromagnétique, qui peuvent pénétrer profondément les vaisseaux ennemis, causant d'importants dommages."
+    RailgunLoader = "Chambre de Gauss"
+    RailgunLoaderIcon = "Chmbr Gauss"
+    RailgunLoaderDesc = "Composant essentiel pour les canons de Gauss. À associer obligatoirement avec une gueule, et optionnellement des tubes pour plus de puissances.n\n"\
+                        "Les canons de Gauss tirent des obus accélérés par une force magnétique, qui peuvent pénétrer profondément les vaisseaux ennemis, causant d'importants dommages."
                          // Il y avait une ligne ici, mais elle était redondante avec la première ligne
 
-    RailgunAccelerator = "Module d'accélérateur pour canon électrique"
-    RailgunAcceleratorIcon = "Accélérateur pour canon électrique"
-    RailgunAcceleratorDesc = "Composant facultatif à placer entre le lanceur et le chargeur du canon électrique. Chaque accélérateur augmente la vélocité des projectiles, augmentant ainsi les dommages et la force de pénétration.\n\n"\
-                        "Les canons électriques tirent des projectiles accélérés par une force électromagnétique, qui peuvent pénétrer profondément les vaisseaux ennemis, causant d'importants dommages."
+    RailgunAccelerator = "Tube de Gauss"
+    RailgunAcceleratorIcon = "Tube Gauss"
+    RailgunAcceleratorDesc = "Composant facultatif à placer entre la chambre et la gueule d'un canon de Gauss. Chaque tube augmente la vélocité des obus, augmentant ainsi les dommages et la force de pénétration.\n\n"\
+                        "Les canons de Gauss tirent des obus accélérés par une force magnétique, qui peuvent pénétrer profondément les vaisseaux ennemis, causant d'importants dommages."
                          // Il y avait une ligne ici, mais elle était redondante avec la première ligne
 
     ReactorSmall = "Cœur de réacteur"
@@ -2108,51 +2108,51 @@ Parts
     SensorArrayDesc = "Augmente la portée des capteurs de votre vaisseau."
 
     ShieldGenSmall = "Générateur de bouclier"
-    ShieldGenSmallIcon = &ShieldGenSmall
+    ShieldGenSmallIcon = "Gen. bouclier"
     ShieldGenSmallDesc = "Projette un bouclier d'énergie défensif en arc-de-cercle à l'extérieur du vaisseau, bloquant la plupart des tirs entrants."
 
     Structure = "Armature"
     StructureIcon = &Structure
     StructureDesc = "L'armature sous-jacente qui maintient le vaisseau. L'armature est inclue automatiquement avec toutes les pièces et couloirs."
 
-    Structure1x2WedgeL = "Armature en coin 1x2 (gauche)"  // Même problématique que le blindage en coin
-    Structure1x2WedgeLIcon = "Armature en coin 1x2 (G)"
+    Structure1x2WedgeL = "Armature en coin 1x2 (gauche)"
+    Structure1x2WedgeLIcon = "Ar. c. 1x2 (G)"
     Structure1x2WedgeLDesc = &StructureDesc
 
     Structure1x2WedgeR = "Armature en coin 1x2 (droite)"
-    Structure1x2WedgeRIcon = "Armature en coin 1x2 (D)"
+    Structure1x2WedgeRIcon = "Ar. c. 1x2 (D)"
     Structure1x2WedgeRDesc = &StructureDesc
 
     StructureWedge = "Armature en coin"
-    StructureWedgeIcon = &StructureWedge
+    StructureWedgeIcon = "Ar. coin"
     StructureWedgeDesc = &StructureDesc
 
     ThrusterBoost = "Propulsion magnéto-plasmique à impulsion spécifique variable"  // https://fr.wikipedia.org/wiki/Propulsion_magnéto-plasmique_à_impulsion_spécifique_variable
-    ThrusterBoostIcon = "Propulsion magnéto-plasmique"
+    ThrusterBoostIcon = "Prop. MPISV"
     ThrusterBoostDesc = "Variante du grand propulseur, pouvant injecter du plasma brut directement dans la chambre à combustion, pour une accélération puissante et éphémère."
 
     ThrusterHuge = "Immense propulseur"  // Pour les propulseurs, plutôt utiliser des classes types Mark IV ou autre
-    ThrusterHugeIcon = &ThrusterHuge
+    ThrusterHugeIcon = "Prop. XL"
     ThrusterHugeDesc = "Un immense moteur capable de propulser le vaisseau avec plus de deux fois de force qu'un grand propulseur. A besoin d'un long temps d'accélération pour être à pleine poussé."  // J'ai un doute. Est-ce une accélération soudaine ou une accélération progressive ?
 
     ThrusterLarge = "Grand propulseur"
-    ThrusterLargeIcon = &ThrusterLarge
+    ThrusterLargeIcon = "Prop. L"
     ThrusterLargeDesc = "Un moteur deux fois plus gros capable de propulser le vaisseau avec plus de deux fois de force qu'un propulseur standard. A besoin d'un temps moyen d'accélération pour être à pleine poussée"
 
     ThrusterMed = "Propulseur standard"
-    ThrusterMedIcon = &ThrusterMed
+    ThrusterMedIcon = "Prop. M"
     ThrusterMedDesc = "Un moteur de taille standard capable de propulser le vaisseau avec une force modeste. A besoin d'un court temps d'accélération pour être à pleine poussée"
 
     ThrusterSmall = "Petit propulseur"
-    ThrusterSmallIcon = &ThrusterSmall
+    ThrusterSmallIcon = "Prop. S"
     ThrusterSmallDesc = "Un petit moteur utilisé principalement pour manœuvrer."
 
     ThrusterSmall2Way = "Petit propulseur bi-directionnel"
-    ThrusterSmall2WayIcon = &ThrusterSmall2Way
+    ThrusterSmall2WayIcon = "Bi-prop. S"
     ThrusterSmall2WayDesc = "Un petit moteur à deux directions utilisé principalement pour manœuvrer."
 
     ThrusterSmall3Way = "Petit propulseur tri-directionnel"
-    ThrusterSmall3WayIcon = &ThrusterSmall3Way
+    ThrusterSmall3WayIcon = "Tri-prop. S"
     ThrusterSmall3WayDesc = "Un petit moteur à trois directions utilisé principalement pour manœuvrer."
 
     WallHole = "Trou"
@@ -2187,15 +2187,15 @@ GalaxyMap
     CurPlanetInfoFmt = "Classe : <b>{0}</b>\nMasse : <b>{1}</b>"
     ViewSector = "Voir le secteur"
     ViewSectorNotSaveable = "Vous ne pouvez pas voir un autre secteur tant que le jeu n'autorise pas la sauvegarde."
-    PlotCourseFmt = "Enclencher le saut supraluminique\n{0}"
-    PlotCourseNoFtl = "Saut supraluminique Non Disponible"
-    PlotCourseNoFtlTip = "Aucun de vos vaisseaux ne dispose du moteur de saut supraluminique et d'une passerelle de commandement. Il vous faut impérativement ces deux modules pour effectuer un saut supraluminique."
-    PlotCourseNoFuel = "Il vous faut plus de carburant dans le moteur de saut supraluminique avant de pouvoir sauter."
-    PlotCourseOnlySelectedMsg = "Voulez enclencher le moteur de saut supraluminique sur <b>tous</b> vos vaisseaux ou seulement ceux <b>sélectionnés</b>?"
+    PlotCourseFmt = "Enclencher le saut SSL\n{0}"
+    PlotCourseNoFtl = "SSL non disponible"
+    PlotCourseNoFtlTip = "Aucun de vos vaisseaux ne dispose d'un moteur SSL et d'une passerelle. Il vous faut impérativement ces deux modules pour effectuer un saut SSL."
+    PlotCourseNoFuel = "Il vous faut plus de carburant dans le moteur SSL avant de pouvoir sauter."
+    PlotCourseOnlySelectedMsg = "Voulez enclencher les moteurs SSL de <b>tous</b> vos vaisseaux ou seulement ceux <b>sélectionnés</b>?"
     PlotCourseAllShipsFmt = "Tous les vaisseaux\n{0}"
     PlotCourseSelectedShipsFmt = "Sélectionnés Uniquement\n{0}"
     PlotCourseNoneSelected = "Aucun vaisseau n'a été sélectionné!"
-    CancelCourseFmt = "Annuler le saut supraluminique\n{0}"
+    CancelCourseFmt = "Annuler le saut SSL\n{0}"
     CurrentLocation = "POSITION ACTUELLE"
 }
 
@@ -2239,8 +2239,8 @@ Tutorials
     {
         Title = "Vaisseaux: Canons &amp; Missiles"
         Cannon = "Les <yellow>canons</yellow> et <yellow>lance-missiles</yellow> utilisent des <yellow>obus</yellow> et des <yellow>missiles</yellow> au lieu d'énergie."
-        Factory = "Les obus sont créés dans des <yellow>usines d'obus</yellow> et les missiles dans les <yellow>usines de missiles</yellow>."
-        Crew = "L'<yellow>équipage</yellow> transporte ces munitions des usines vers les canons et lance-missiles."
+        Factory = "Les obus sont créés dans des <yellow>fabriques d'obus</yellow> et les missiles dans les <yellow>fabriques de missiles</yellow>."
+        Crew = "L'<yellow>équipage</yellow> transporte ces munitions des fabriques vers les canons et lance-missiles."
         Tip = "<green><b>Astuce :</b></green> la fréquence à laquelle peuvent tirer canons et lance-missiles dépend de la vitesse à laquelle l'équipage les ravitaille en munitions."
     }
 
@@ -2438,18 +2438,18 @@ Tutorials
     {
         Title = "Voyage supraluminique"
         NoEnemies = "Une fois tous les ennemis vaincus, il est temps de <yellow>sauter</yellow> vers un autre <yellow>secteur</yellow> !\n"
-        BuildFtl = "Construisez un <yellow>moteur de saut supraluminique</yellow> pour voyager <yellow>plus rapidement que la lumière</yellow> !"
+        BuildFtl = "Construisez un <yellow>moteur SSL</yellow> pour voyager <yellow>plus rapidement que la lumière</yellow> !"
         Efficiency = "Un grand vaisseau aura besoin d'avoir de multiples moteurs de saut répartis équitablement pour pouvoir économiser du <fuel>CARBURANT</fuel>. "\
-                     "Un vaisseau avec une jauge <yellow>d'efficience supraluminique</yellow> consommera moins de carburant comparé à d'autres vaisseaux de même classe."
+                     "Un vaisseau avec une jauge <yellow>d'efficience SSL</yellow> consommera moins de carburant comparé à d'autres vaisseaux de même classe."
         Map = "Pour planifier un saut, ouvrez <b>la carte galactique</b> en cliquant sur le bouton en haut de la minimap ou en appuyant sur <btn id='Game.ToggleMap'/>."
     }
 
     Ftl2
     {
         Title = "Voyage supraluminique (suite)"
-        ViewNode = "Cliquez sur un <yellow>secteur</yellow> proche pour obtenir des informations à son propos. Chaque secteur a un niveau de difficulté, selon les ennemis qui s'y trouve.\n\nOptez pour un secteur et appuyez sur le bouton <b>Saut supraluminique</b>."
+        ViewNode = "Cliquez sur un <yellow>secteur</yellow> proche pour obtenir des informations à son propos. Chaque secteur a un niveau de difficulté, selon les ennemis qui s'y trouve.\n\nOptez pour un secteur et appuyez sur le bouton <b>Saut SSL</b>."
         PlotCourse = "Votre équipage va automatiquement alimenter en énergie le moteur de saut.\n\nUne fois l'énergie chargée à <ftl>100%</ftl>, cliquez sur <b>SAUTER</b> ou appuyez sur <btn id='Game.DoFtlJump'/>."
-        Fuel = "<green><b>Astuce :</b></green> Le montant de <fuel>CARBURANT</fuel> consommé dépend de la distance à parcourir, la taille de votre vaisseau et de l'efficacité de ses moteurs supraluminique."
+        Fuel = "<green><b>Astuce :</b></green> Le montant de <fuel>CARBURANT</fuel> consommé dépend de la distance à parcourir, la taille de votre vaisseau et de l'efficacité de ses moteurs SSL."
     }
 
     Fire1
